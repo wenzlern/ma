@@ -36,4 +36,4 @@ for filename in glob.iglob(os.path.join(folder, '*.vtk')):
 
 for timestep in concentration:
   for i in range(len(timestep[:][0][0])):
-  mean(timestep[i][:][:])
+    mean(timestep[i][:][:])

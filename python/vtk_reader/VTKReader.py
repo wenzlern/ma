@@ -16,8 +16,8 @@ import os
 from vtk.util.numpy_support import vtk_to_numpy
 import numpy as np
 from PointsToCell import *
-from ClassElectrode import *
-import scipy
+import scipy.io as spio
+import tables
 
 def RunMatch(points, cells, PointGridSpacing, xrng, yrng, zrng):
   MatchIndices = CellIndices(points, cells, PointGridSpacing)
@@ -39,44 +39,65 @@ def VTKToXYZ(Array, xsize, ysize, zsize):
 ## Parse command line arguments
 parser = argparse.ArgumentParser()
 # Command line arguments
-parser.add_argument('foldername', nargs='+', type=str,  
+parser.add_argument('foldername', nargs='?', type=str,  
                     help='The Simulation output folder name')
 
-parser.add_argument('-d', '--destination', nargs='?', type=str,
-                    help='The destination for the array files to be saved.
-                          Default is the simulation output folder')
+parser.add_argument('-d', '--destination', nargs='+', type=str,
+                    help='The destination for the array files to be saved.'
+                          + 'Default is the simulation output folder')
 
-parser.add_argument('-c', '--check', nargs='?', action='store_true',
-                    default=False, help='Enable the checking of the 
-                    geometry. Usually not necessary, but do once on 
-                    new geometries')
+parser.add_argument('-c', '--check', action='store_true',
+                    default=False, help='Enable the checking of the'
+                    +'geometry. Usually not necessary, but do once on'
+                    +'new geometries')
 
 parser.add_argument('-g', '--gridspacing', nargs='?', type=float,
-                    default=6.5e-5, help='Provide the grid spacing, 
-                    default is 6.5e-5')
+                    default=6.5e-5, help='Provide the grid spacing,' 
+                    +'default is 6.5e-5')
 
-parser.add_argument('-d', '--dimension', nargs='*', type=int,
+parser.add_argument('-s', '--dimension', nargs='*', type=int,
                       help='The size of the electrode in voxels {x y z}')
 
-parser.add_argument('-t', '--timestep', nargs='?', type=int, default=30
+parser.add_argument('-t', '--timestep', nargs='?', type=int, default=30,
                       help='The timestep of the vtk writeout, default is 30')
 
-parser.add_argument('-m', '--matlab', nargs='?', action='store_true', default=False 
-                      help='Store arrays in matlab format (.mat),
-                            default is numpy (.npy)')
+parser.add_argument('-m', '--matlab', action='store_true', default=False, 
+                      help='Store arrays in matlab format (.mat),'
+                            +'default is numpy (.npy)')
 
-parser.add_argument('-z', '--compress', nargs='?', action='store_true', default=False 
+parser.add_argument('-z', '--compress', action='store_true', default=False, 
                       help='Store in compresses .npz file, default is false')
 
 args = parser.parse_args()
 
+#Sanitize input
+if not args.destination:
+  args.destination = args.foldername
 
 #For convenience store sizes
 xsize = args.dimension[0]
 ysize = args.dimension[1]
 zsize = args.dimension[2]
 
-for filename in glob.iglob(os.path.join(folder, '/output/*.vtk')):
+#Get the number of files to process
+#NrFiles = len([item for item in os.listdir(args.foldername + '/output') if os.path.isfile(os.path.join(args.foldername + '/output', item))])
+#print str(NrFiles) + ' files to process'
+
+#Empty lists for easy appending of all vtk data
+Concentration      = [] 
+Potential          = [] 
+Overpotential      = [] 
+MaterialIdentifier = []
+IndividualOCV      = [] 
+ParticleFlux       = [] 
+CurrentDensity     = []
+FileIndex          = []
+
+#Get reader for UnstructuredGrid
+reader = vtkUnstructuredGridReader()
+
+for filename in glob.iglob(os.path.join(args.foldername + '/output/', '*.vtk')):
+  print 'Reading ' + filename
   reader.SetFileName(filename)
   reader.ReadAllScalarsOn()
   reader.ReadAllVectorsOn()
@@ -84,7 +105,7 @@ for filename in glob.iglob(os.path.join(folder, '/output/*.vtk')):
   reader.Update()
   ugrid = reader.GetOutput()
 
-  if filename == 'output_default_0.vtk' && args.check == True:
+  if filename == 'output_default_0.vtk' and args.check == True:
     points = ugrid.GetPoints().GetData()
     cells = ugrid.GetCells().GetData()
     
@@ -101,47 +122,94 @@ for filename in glob.iglob(os.path.join(folder, '/output/*.vtk')):
       print "You might want to adapt the script to reflect the changes"
       sys.exit()
      
+  #Get Index to write to from filename
+  FileIndex.append(int(str.split(str.split(filename,'.')[0],'_')[-1]))
 
   #Read out Scalars
-  Concentration      = VTKToXYZ(ugrid.GetCellData().GetScalars("concentration"),
-                       xsize, ysize, zsize)
-  Potential          = VTKToXYZ(ugrid.GetCellData().GetScalars("potential"),
-                       xsize, ysize, zsize)
-  Overpotential      = VTKToXYZ(ugrid.GetCellData().GetScalars("overpotential"),
-                       xsize, ysize, zsize)
-  MaterialIdentifier = VTKToXYZ(ugrid.GetCellData().GetScalars("MaterialIdentifier"),
-                       xsize, ysize, zsize)
-  IndividualOCV      = VTKToXYZ(ugrid.GetCellData().GetScalars("IndividualOCV"),
-                       xsize, ysize, zsize)
+  Concentration.append(VTKToXYZ(ugrid.GetCellData().GetScalars("concentration"),
+                                   xsize, ysize, zsize))
+  Potential.append(VTKToXYZ(ugrid.GetCellData().GetScalars("potential"),
+                                   xsize, ysize, zsize))
+  Overpotential.append(VTKToXYZ(ugrid.GetCellData().GetScalars("overpotential"),
+                                   xsize, ysize, zsize))
+  MaterialIdentifier.append(VTKToXYZ(ugrid.GetCellData().GetScalars("materialIdentifier"),
+                                   xsize, ysize, zsize))
+  IndividualOCV.append(VTKToXYZ(ugrid.GetCellData().GetScalars("individualOCV"),
+                                   xsize, ysize, zsize))
 
   #Read out Vectors
-  ParticleFlux   = VTKToXYZ(ugrid.GetCellData().GetScalars("particle_flux"),
-                       xsize, ysize, zsize)
-  CurrentDensity = VTKToXYZ(ugrid.GetCellData().GetScalars("current_density"),
-                       xsize, ysize, zsize)
-
-  #Store the output files
-  if args.matlab:
-    scipy.io.savemat(args.foldername + '/' + args.foldername +'.mat',
-                     dict(Concentration=Concentration, Potential=Potential,
-                          Overpotential=Overpotential, MaterialIdentifier=MaterialIdentifier,
-                          IndividualOCV=IndividualOCV, ParticleFlux=ParticleFlux,
-                          CurrentDensity=CurrentDensity))
-  else if args.compressed:
-    savez_compressed(args.foldername + '/' + args.foldername +'.npz',
-                     Concentration=Concentration, Potential=Potential,
-                     Overpotential=Overpotential, MaterialIdentifier=MaterialIdentifier,
-                     IndividualOCV=IndividualOCV, ParticleFlux=ParticleFlux,
-                     CurrentDensity=CurrentDensity))
-
-  else:
-    savez(args.foldername + '/' + args.foldername +'.npy',
-          Concentration=Concentration, Potential=Potential,
-          Overpotential=Overpotential, MaterialIdentifier=MaterialIdentifier,
-          IndividualOCV=IndividualOCV, ParticleFlux=ParticleFlux,
-          CurrentDensity=CurrentDensity))
+#  ParticleFlux   = VTKToXYZ(ugrid.GetCellData().GetVectors("particle_flux"),
+#                       xsize, ysize, zsize)
+#  CurrentDensity = VTKToXYZ(ugrid.GetCellData().GetVectors("current_density"),
+#                       xsize, ysize, zsize)
 
 
+#Convert lists to arrays and Sort arrays according to FileIndex
+FileIndex = np.asarray(FileIndex)
+Concentration = np.asarray(Concentration)
+Potential = np.asarray(Potential)
+Overpotential = np.asarray(Overpotential)
+MaterialIdentifier = np.asarray(MaterialIdentifier)
+IndividualOCV = np.asarray(IndividualOCV)
+ParticleFlux = np.asarray(ParticleFlux)
+CurrentDensity = np.asarray(CurrentDensity)
+
+#Dictionary of arrays to store
+#arrays = {'Concentration'     : Concentration,
+#          'Potential'         : Potential,
+#          'Overpotential'     : Overpotential, 
+#          'MaterialIdentifier': MaterialIdentifier,
+#          'IndividualOCV'     : IndividualOCV} 
+#          'ParticleFlux'      : ParticleFlux,
+#          'CurrentDensity'    : CurrentDensity}
+
+#Extract File name
+Filename = str.split(args.foldername,'/')[-1]
+
+#Store the output files, we use Hfd5, since both matlab and python can use it
+#FileHandler = h5py.File(args.destination + '/' + Filename + '.h5', 'w')
+#FileHandler = tables.openFile(args.destination + '/' + Filename + '.h5', 'w')
+#root = FileHandler.root
+#
+#FileHandler.createArray(root, 'Concentration', Concentration)
+#FileHandler.createArray(root, 'Potential', Potential)
+#FileHandler.createArray(root, 'OverPotential', Overpotential)
+#FileHandler.createArray(root, 'MaterialIdentifier', MaterialIdentifier)
+#FileHandler.createArray(root, 'IndividualOCV', IndividualOCV)
+
+
+#Create datasets
+#FileHandler.create_dataset('Concentration', data=Concentration)
+#FileHandler.create_dataset('Potential', data=Potential)
+#FileHandler.create_dataset('OverPotential', data=Overpotential)
+#FileHandler.create_dataset('MaterialIdentifier', data=MaterialIdentifier)
+#FileHandler.create_dataset('IndividualOCV', data=IndividualOCV)
+
+#FileHandler.close()
+
+if args.matlab:
+  spio.savemat(args.destination + '/' + Filename + '.mat',
+               {'Concentration':Concentration,
+                'Potential':Potential,
+                'Overpotential':Overpotential, 
+                'MaterialIdentifier':MaterialIdentifier,
+                'IndividualOCV':IndividualOCV})
+
+elif args.compress:
+  np.savez_compressed(args.destination + '/' + Filename, Concentration=Concentration,
+                      Potential=Potential, OverPotential=Overpotential,
+                      MaterialIdentifier=MaterialIdentifier, IndividualOCV=IndividualOCV,
+                      ParticleFlux=ParticleFlux, CurrentDensity=CurrentDensity)
+  print 'Storing to ' + args.destination + '/' + Filename + 'npz'
+
+else:
+  np.savez(args.destination + '/' + Filename, Concentration=Concentration,
+           Potential=Potential, OverPotential=Overpotential,
+           MaterialIdentifier=MaterialIdentifier, IndividualOCV=IndividualOCV,
+           ParticleFlux=ParticleFlux, CurrentDensity=CurrentDensity)
+
+  print 'Storing to ' + args.destination + '/' + Filename + '.npy'
+  
 #  #Now lets sort them into our electrode object
 #  Electrode.append(args.dimension[0], args.dimension[1], args.dimension[2],
 #                   args.timestep)
