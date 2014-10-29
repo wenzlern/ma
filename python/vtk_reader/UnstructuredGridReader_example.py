@@ -4,6 +4,7 @@
 # by Panos Mavrogiorgos, email: pmav99 <> gmail
  
 from vtk import *
+import glob
  
 # The source file
 file_name = "uGridEx.vtk"
