@@ -7,32 +7,34 @@ __copyright__  = "Nils Wenzler"
 __maintainer__ = "Nils Wenzler"
 __email__      = "wenzlern@ethz.ch"
 
-#imports
+##imports
 import sys
 import argparse
-from vtk import *
 import glob
 import os
-from vtk.util.numpy_support import vtk_to_numpy
 import numpy as np
-from PointsToCell import *
 import scipy.io as spio
-import tables
 
+from vtk import *
+from vtk.util.numpy_support import vtk_to_numpy
+
+from PointsToCell import *
+
+
+##Some general functions
+#Run a Match
 def RunMatch(points, cells, PointGridSpacing, xrng, yrng, zrng):
   MatchIndices = CellIndices(points, cells, PointGridSpacing)
   return MatchIndices.FindCellIndices(xrng, yrng, zrng)
 
+#Reorder arrays
 def VTKToXYZ(Array, xsize, ysize, zsize):
   NumpyArray = vtk_to_numpy(Array)
-#  XYArray = []
-#  XYZArray = []
-#  #Reassemble in 2 steps to a 3D list
-#  for y in range(ysize):
-#    XYArray.append([y*xsize:((y+1)*xsize)-1])
-#  for z in range(zsize):
-#    XYZArray.append(XYArray[z*ysize:((z+1)*ysize)-1])
   return NumpyArray.reshape((xsize,ysize,zsize), order='F')
+
+#Sorting function
+def FileNumber(s):
+  return int(str.split(str.split(s,'_')[-1],'.')[0])
 
 
 
@@ -70,26 +72,24 @@ parser.add_argument('-z', '--compress', action='store_true', default=False,
 
 args = parser.parse_args()
 
-#Sanitize input
+##Sanitize input
+#Default dest is input folder
 if not args.destination:
   args.destination = args.foldername
 
-#For convenience store sizes
+#For convenience store sizes to vars
 xsize = args.dimension[0]
 ysize = args.dimension[1]
 zsize = args.dimension[2]
 
-#Define sorting function
-def FileNumber(s):
-  return int(str.split(str.split(s,'_')[-1],'.')[0])
-
-#Get the files to process
+#Get the files to process and sort them by number
 Files = []
 for i in glob.iglob(os.path.join(args.foldername + '/output/', '*.vtk')):
   Files.append(i)
 
 Files.sort(key=FileNumber)
 
+##Main
 #Empty lists for easy appending of all vtk data
 Concentration      = [] 
 Potential          = [] 
@@ -103,6 +103,7 @@ FileIndex          = []
 #Get reader for UnstructuredGrid
 reader = vtkUnstructuredGridReader()
 
+#Go through all files
 for filename in Files:
   print 'Reading ' + filename
   reader.SetFileName(filename)
@@ -112,6 +113,7 @@ for filename in Files:
   reader.Update()
   ugrid = reader.GetOutput()
 
+  #Only perform this check if specified on one file
   if filename == 'output_default_0.vtk' and args.check == True:
     points = ugrid.GetPoints().GetData()
     cells = ugrid.GetCells().GetData()
@@ -122,6 +124,7 @@ for filename in Files:
     indices = RunMatch(points, cells, args.gridspacing, 
                        range(xsize), range(ysize), range(zsize))
     
+    #If nothing changes when sorting, it is ok
     if indices.sort() == indices:
       print "Geometry passed check, Format as expected"
     else:
@@ -158,29 +161,9 @@ IndividualOCV = np.asarray(IndividualOCV)
 ParticleFlux = np.asarray(ParticleFlux)
 CurrentDensity = np.asarray(CurrentDensity)
 
+##Store the arrays into npy, npz or mat files
 #Extract File name
 Filename = str.split(args.foldername,'/')[-1]
-
-#Store the output files, we use Hfd5, since both matlab and python can use it
-#FileHandler = h5py.File(args.destination + '/' + Filename + '.h5', 'w')
-#FileHandler = tables.openFile(args.destination + '/' + Filename + '.h5', 'w')
-#root = FileHandler.root
-#
-#FileHandler.createArray(root, 'Concentration', Concentration)
-#FileHandler.createArray(root, 'Potential', Potential)
-#FileHandler.createArray(root, 'OverPotential', Overpotential)
-#FileHandler.createArray(root, 'MaterialIdentifier', MaterialIdentifier)
-#FileHandler.createArray(root, 'IndividualOCV', IndividualOCV)
-
-
-#Create datasets
-#FileHandler.create_dataset('Concentration', data=Concentration)
-#FileHandler.create_dataset('Potential', data=Potential)
-#FileHandler.create_dataset('OverPotential', data=Overpotential)
-#FileHandler.create_dataset('MaterialIdentifier', data=MaterialIdentifier)
-#FileHandler.create_dataset('IndividualOCV', data=IndividualOCV)
-
-#FileHandler.close()
 
 if args.matlab:
   spio.savemat(args.destination + '/' + Filename + '.mat',
@@ -206,16 +189,4 @@ else:
            ParticleFlux=ParticleFlux, CurrentDensity=CurrentDensity)
 
   print 'Storing to ' + args.destination + '/' + Filename + '.npy'
-  
-#  #Now lets sort them into our electrode object
-#  Electrode.append(args.dimension[0], args.dimension[1], args.dimension[2],
-#                   args.timestep)
-#  for z in range(args.dimension[2]):
-#     for y in range(args.dimension[1]):
-#        for x in range(args.dimension[0]:
-#          #Calculate the index: we step through x then y then z
-#          i = z*(
-#          Electrode.SetCell(x,y,z, 
-  
-
 
