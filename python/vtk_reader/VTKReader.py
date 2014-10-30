@@ -79,9 +79,16 @@ xsize = args.dimension[0]
 ysize = args.dimension[1]
 zsize = args.dimension[2]
 
-#Get the number of files to process
-#NrFiles = len([item for item in os.listdir(args.foldername + '/output') if os.path.isfile(os.path.join(args.foldername + '/output', item))])
-#print str(NrFiles) + ' files to process'
+#Define sorting function
+def FileNumber(s):
+  return int(str.split(str.split(s,'_')[-1],'.')[0])
+
+#Get the files to process
+Files = []
+for i in glob.iglob(os.path.join(args.foldername + '/output/', '*.vtk')):
+  Files.append(i)
+
+Files.sort(key=FileNumber)
 
 #Empty lists for easy appending of all vtk data
 Concentration      = [] 
@@ -96,7 +103,7 @@ FileIndex          = []
 #Get reader for UnstructuredGrid
 reader = vtkUnstructuredGridReader()
 
-for filename in glob.iglob(os.path.join(args.foldername + '/output/', '*.vtk')):
+for filename in Files:
   print 'Reading ' + filename
   reader.SetFileName(filename)
   reader.ReadAllScalarsOn()
@@ -122,9 +129,6 @@ for filename in glob.iglob(os.path.join(args.foldername + '/output/', '*.vtk')):
       print "You might want to adapt the script to reflect the changes"
       sys.exit()
      
-  #Get Index to write to from filename
-  FileIndex.append(int(str.split(str.split(filename,'.')[0],'_')[-1]))
-
   #Read out Scalars
   Concentration.append(VTKToXYZ(ugrid.GetCellData().GetScalars("concentration"),
                                    xsize, ysize, zsize))
@@ -144,7 +148,7 @@ for filename in glob.iglob(os.path.join(args.foldername + '/output/', '*.vtk')):
 #                       xsize, ysize, zsize)
 
 
-#Convert lists to arrays and Sort arrays according to FileIndex
+#Convert lists to arrays
 FileIndex = np.asarray(FileIndex)
 Concentration = np.asarray(Concentration)
 Potential = np.asarray(Potential)
@@ -153,15 +157,6 @@ MaterialIdentifier = np.asarray(MaterialIdentifier)
 IndividualOCV = np.asarray(IndividualOCV)
 ParticleFlux = np.asarray(ParticleFlux)
 CurrentDensity = np.asarray(CurrentDensity)
-
-#Dictionary of arrays to store
-#arrays = {'Concentration'     : Concentration,
-#          'Potential'         : Potential,
-#          'Overpotential'     : Overpotential, 
-#          'MaterialIdentifier': MaterialIdentifier,
-#          'IndividualOCV'     : IndividualOCV} 
-#          'ParticleFlux'      : ParticleFlux,
-#          'CurrentDensity'    : CurrentDensity}
 
 #Extract File name
 Filename = str.split(args.foldername,'/')[-1]
@@ -193,7 +188,9 @@ if args.matlab:
                 'Potential':Potential,
                 'Overpotential':Overpotential, 
                 'MaterialIdentifier':MaterialIdentifier,
-                'IndividualOCV':IndividualOCV})
+                'IndividualOCV':IndividualOCV,
+                'ParticleFlux':ParticleFlux,
+                'CurrentDensity':CurrentDensity})
 
 elif args.compress:
   np.savez_compressed(args.destination + '/' + Filename, Concentration=Concentration,
