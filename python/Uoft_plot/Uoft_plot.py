@@ -20,10 +20,13 @@ parser = argparse.ArgumentParser()
 # Command line arguments
 parser.add_argument('filenames', nargs='+', type=str,  
                     help='The folder that contains the Uoft.log file')
+
 parser.add_argument('-l', '--legend', nargs='*', type=str,
-                    help='Provide a list of names: [labelA,labelB]')
+                    help='Provide a list of names: labelA labelB ...')
+
 parser.add_argument('-c', '--crate', nargs='*', type=int,
                     help='C-Rate of the simulation')
+
 parser.add_argument('-t', '--title', nargs='*', type=str,
                     help='Title for the graph')
 args = parser.parse_args()
