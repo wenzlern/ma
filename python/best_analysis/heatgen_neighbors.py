@@ -42,6 +42,7 @@ args = parser.parse_args()
 #Load file, just temporary a mat...
 print args.filename
 data = spio.loadmat(args.filename[0])
+#data = np.load(args.filename[0])
 
 #Find neighbors and append them to the dictionary
 data['NrSameNeighbors'] = FindNrNeighbors(data)
@@ -51,10 +52,10 @@ data['NrSameNeighbors'] = FindNrNeighbors(data)
 data['AbsCurrent'] = AbsCurrent(data, (0.65e-6)**3)
 
 #Ugly Hack since there is a mistake in the vtkreader that i can only fix tmrw.
-abscurrhack = []
-for i in range(56):
-    abscurrhack.append(data['AbsCurrent'])
-data['AbsCurrent'] = np.asarray(abscurrhack)
+#abscurrhack = []
+#for i in range(56):
+#    abscurrhack.append(data['AbsCurrent'])
+#data['AbsCurrent'] = np.asarray(abscurrhack)
 
 #Species to search for
 species = ['Cathode', 'Electrolyte']
@@ -70,7 +71,29 @@ MeanNrNeighborsE = []
 
 HeatGen = data['AbsCurrent']*(data['IndividualOCV'] 
           - data['Potential'])
-for j in range(56):
+
+#Plot colors
+#We need as many colors as timesteps
+timesteps = np.shape(data['Concentration'])[0]
+ColorMap = plt.get_cmap('gist_rainbow')
+
+plt.subplot(121)
+plt.title('Active Material')
+plt.grid(True)
+plt.ylabel('Mean heat generation')
+plt.xlabel('Number of neighbors with same species')
+plt.gca().set_color_cycle([ColorMap(1.*i/timesteps) for i in range(timesteps)])
+
+
+plt.subplot(122)
+plt.title('Electrolyte')
+plt.grid(True)
+plt.ylabel('Mean heat generation')
+plt.xlabel('Number of neighbors with same species')
+plt.gca().set_color_cycle([ColorMap(1.*i/timesteps) for i in range(timesteps)])
+
+
+for j in range(timesteps):
     #We have a maximum of 8 neighbors
     TempC = []
     TempE = []    
@@ -78,18 +101,25 @@ for j in range(56):
         CathodeIndexMat = ((FilteredData['NrSameNeighborsCathode']-i) == 0)
         ElectrolyteIndexMat = ((FilteredData['NrSameNeighborsElectrolyte']-i) == 0)
         
-        TempC.append(np.mean(HeatGen[j][CathodeIndexMat])) 
-        TempE.append(np.mean(HeatGen[j][ElectrolyteIndexMat])) 
+        TempC.append(-np.mean(HeatGen[j][CathodeIndexMat])) 
+        TempE.append(-np.mean(HeatGen[j][ElectrolyteIndexMat])) 
 
     MeanNrNeighborsC.append(np.asarray(TempC))
     MeanNrNeighborsE.append(np.asarray(TempE))
+    
+    plt.subplot(121)
+    plt.plot(range(9)[::-1], MeanNrNeighborsC[j], color = ColorMap(1.0*j/timesteps))
+    plt.subplot(122)
+    plt.plot(range(9)[::-1], MeanNrNeighborsE[j], color = ColorMap(1.0*j/timesteps))
 
-    plt.plot(range(9)[::-1], MeanNrNeighborsC[j], color = str(j/100))
-    plt.plot(range(9)[::-1], MeanNrNeighborsE[j], color = str(j/100),linestyle = '--')
-
-plt.grid(True)
-
-plt.ylabel('Mean heat generation')
-plt.xlabel('Number of neighbors with same species')
+#    if j > 0:
+#        if  not(np.allclose(MeanNrNeighborsC[j-1], MeanNrNeighborsC[j], rtol=0.0001)):
+#            plt.subplot(211)
+#            plt.title('Active Material')
+#            plt.plot(range(9)[::-1], MeanNrNeighborsC[j], color = ColorMap(1.*j/timesteps))
+#        if  not(np.allclose(MeanNrNeighborsE[j-1], MeanNrNeighborsE[j], rtol=0.00001)):
+#            plt.subplot(212)
+#            plt.title('Electrolyte')
+#            plt.plot(range(9)[::-1], MeanNrNeighborsE[j], color = ColorMap(1.*j/timesteps))
 
 plt.show()

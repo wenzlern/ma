@@ -38,6 +38,16 @@ def FilterForSpecies(data, fields, species):
     return output
 
 
+def FindSpecies(data, species):
+    """Returns a Boolean matrix with True for the fields of that species""" 
+    if type(species) == type(str()):
+        MaterialID = Materials[species]
+    else:
+        MaterialID = species
+
+    return ((data['MaterialIdentifier']-MaterialID)==0)[0]
+
+
 def FindNrNeighbors(data):
     """Returns a matrix with the same shape of data with the number of neighbors
        with the same material for each voxel."""
