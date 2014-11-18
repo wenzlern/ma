@@ -27,10 +27,15 @@ def RunMatch(points, cells, PointGridSpacing, xrng, yrng, zrng):
   MatchIndices = CellIndices(points, cells, PointGridSpacing)
   return MatchIndices.FindCellIndices(xrng, yrng, zrng)
 
-#Reorder arrays
-def VTKToXYZ(Array, xsize, ysize, zsize):
+#Reorder Scalars
+def VTKScalarToXYZ(Array, xsize, ysize, zsize):
   NumpyArray = vtk_to_numpy(Array)
   return NumpyArray.reshape((xsize,ysize,zsize), order='F')
+
+#Reorder arrays
+def VTKVectorToXYZ(Array, xsize, ysize, zsize):
+  NumpyArray = vtk_to_numpy(Array)
+  return NumpyArray.reshape((xsize,ysize,zsize,3), order='F')
 
 #Sorting function
 def FileNumber(s):
@@ -114,7 +119,7 @@ for filename in Files:
   ugrid = reader.GetOutput()
 
   #Only perform this check if specified on one file
-  if filename == 'output_default_0.vtk' and args.check == True:
+  if FileNumber(filename) == 0 and args.check == True:
     points = ugrid.GetPoints().GetData()
     cells = ugrid.GetCells().GetData()
     
@@ -133,22 +138,22 @@ for filename in Files:
       sys.exit()
      
   #Read out Scalars
-  Concentration.append(VTKToXYZ(ugrid.GetCellData().GetScalars("concentration"),
+  Concentration.append(VTKScalarToXYZ(ugrid.GetCellData().GetScalars("concentration"),
                                    xsize, ysize, zsize))
-  Potential.append(VTKToXYZ(ugrid.GetCellData().GetScalars("potential"),
+  Potential.append(VTKScalarToXYZ(ugrid.GetCellData().GetScalars("potential"),
                                    xsize, ysize, zsize))
-  Overpotential.append(VTKToXYZ(ugrid.GetCellData().GetScalars("overpotential"),
+  Overpotential.append(VTKScalarToXYZ(ugrid.GetCellData().GetScalars("overpotential"),
                                    xsize, ysize, zsize))
-  MaterialIdentifier.append(VTKToXYZ(ugrid.GetCellData().GetScalars("materialIdentifier"),
+  MaterialIdentifier.append(VTKScalarToXYZ(ugrid.GetCellData().GetScalars("materialIdentifier"),
                                    xsize, ysize, zsize))
-  IndividualOCV.append(VTKToXYZ(ugrid.GetCellData().GetScalars("individualOCV"),
+  IndividualOCV.append(VTKScalarToXYZ(ugrid.GetCellData().GetScalars("individualOCV"),
                                    xsize, ysize, zsize))
 
   #Read out Vectors
-#  ParticleFlux   = VTKToXYZ(ugrid.GetCellData().GetVectors("particle_flux"),
-#                       xsize, ysize, zsize)
-#  CurrentDensity = VTKToXYZ(ugrid.GetCellData().GetVectors("current_density"),
-#                       xsize, ysize, zsize)
+  ParticleFlux.append(VTKVectorToXYZ(ugrid.GetCellData().GetVectors("particle_flux"),
+                       xsize, ysize, zsize))
+  CurrentDensity.append(VTKVectorToXYZ(ugrid.GetCellData().GetVectors("current_density"),
+                       xsize, ysize, zsize))
 
 
 #Convert lists to arrays
@@ -174,6 +179,7 @@ if args.matlab:
                 'IndividualOCV':IndividualOCV,
                 'ParticleFlux':ParticleFlux,
                 'CurrentDensity':CurrentDensity})
+  print 'Storing to ' + args.destination + '/' + Filename + '.npy'
 
 elif args.compress:
   np.savez_compressed(args.destination + '/' + Filename, Concentration=Concentration,

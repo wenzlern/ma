@@ -54,4 +54,5 @@ class CellIndices:
       for y in yrng:
         for x in xrng:
           Indices.append(self.FindCellIndex(x, y, z))
+          print Indices[-1]
   
