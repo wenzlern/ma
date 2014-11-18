@@ -9,6 +9,7 @@ __email__      = "wenzlern@ethz.ch"
 #imports
 import numpy as np
 import scipy.io as spio
+import matplotlib.pyplot as plt
 import argparse
 from HelperFunctions import *
 
@@ -39,15 +40,56 @@ args = parser.parse_args()
 
 
 #Load file, just temporary a mat...
-data = spio.loadmat(args.filenames)
+print args.filename
+data = spio.loadmat(args.filename[0])
 
 #Find neighbors and append them to the dictionary
 data['NrSameNeighbors'] = FindNrNeighbors(data)
 
+#The current-density we just have in the form of vectors, 
+#get the norm for each cell and scale it by the cell volume
+data['AbsCurrent'] = AbsCurrent(data, (0.65e-6)**3)
+
+#Ugly Hack since there is a mistake in the vtkreader that i can only fix tmrw.
+abscurrhack = []
+for i in range(56):
+    abscurrhack.append(data['AbsCurrent'])
+data['AbsCurrent'] = np.asarray(abscurrhack)
+
 #Species to search for
 species = ['Cathode', 'Electrolyte']
-fields = ['']
+fields = ['Potential', 'IndividualOCV', 'AbsCurrent', 'NrSameNeighbors']
 FilteredData = {}
 #Filter for a species, and find heatgen rate
 for i in range(len(species)):
-    FilteredData.update((FilterForSpecies(data, ))
+    FilteredData.update((FilterForSpecies(data, fields, species[i])))
+
+#Generate some arrays to plot:
+MeanNrNeighborsC = []
+MeanNrNeighborsE = []
+
+HeatGen = data['AbsCurrent']*(data['IndividualOCV'] 
+          - data['Potential'])
+for j in range(56):
+    #We have a maximum of 8 neighbors
+    TempC = []
+    TempE = []    
+    for i in range(9):
+        CathodeIndexMat = ((FilteredData['NrSameNeighborsCathode']-i) == 0)
+        ElectrolyteIndexMat = ((FilteredData['NrSameNeighborsElectrolyte']-i) == 0)
+        
+        TempC.append(np.mean(HeatGen[j][CathodeIndexMat])) 
+        TempE.append(np.mean(HeatGen[j][ElectrolyteIndexMat])) 
+
+    MeanNrNeighborsC.append(np.asarray(TempC))
+    MeanNrNeighborsE.append(np.asarray(TempE))
+
+    plt.plot(range(9)[::-1], MeanNrNeighborsC[j], color = str(j/100))
+    plt.plot(range(9)[::-1], MeanNrNeighborsE[j], color = str(j/100),linestyle = '--')
+
+plt.grid(True)
+
+plt.ylabel('Mean heat generation')
+plt.xlabel('Number of neighbors with same species')
+
+plt.show()
