@@ -14,6 +14,7 @@ import glob
 import os
 import numpy as np
 import scipy.io as spio
+import xml.etree.ElementTree as et
 
 from vtk import *
 from vtk.util.numpy_support import vtk_to_numpy
@@ -24,22 +25,22 @@ from PointsToCell import *
 ##Some general functions
 #Run a Match
 def RunMatch(points, cells, PointGridSpacing, xrng, yrng, zrng):
-  MatchIndices = CellIndices(points, cells, PointGridSpacing)
-  return MatchIndices.FindCellIndices(xrng, yrng, zrng)
+    MatchIndices = CellIndices(points, cells, PointGridSpacing)
+    return MatchIndices.FindCellIndices(xrng, yrng, zrng)
 
 #Reorder Scalars
 def VTKScalarToXYZ(Array, xsize, ysize, zsize):
-  NumpyArray = vtk_to_numpy(Array)
-  return NumpyArray.reshape((xsize,ysize,zsize), order='F')
+    NumpyArray = vtk_to_numpy(Array)
+    return NumpyArray.reshape((xsize,ysize,zsize), order='F')
 
 #Reorder arrays
 def VTKVectorToXYZ(Array, xsize, ysize, zsize):
-  NumpyArray = vtk_to_numpy(Array)
-  return NumpyArray.reshape((xsize,ysize,zsize,3), order='F')
+    NumpyArray = vtk_to_numpy(Array)
+    return NumpyArray.reshape((xsize,ysize,zsize,3), order='F')
 
 #Sorting function
 def FileNumber(s):
-  return int(str.split(str.split(s,'_')[-1],'.')[0])
+    return int(str.split(str.split(s,'_')[-1],'.')[0])
 
 
 
@@ -80,7 +81,7 @@ args = parser.parse_args()
 ##Sanitize input
 #Default dest is input folder
 if not args.destination:
-  args.destination = args.foldername
+    args.destination = args.foldername
 
 #For convenience store sizes to vars
 xsize = args.dimension[0]
@@ -90,7 +91,7 @@ zsize = args.dimension[2]
 #Get the files to process and sort them by number
 Files = []
 for i in glob.iglob(os.path.join(args.foldername + '/output/', '*.vtk')):
-  Files.append(i)
+    Files.append(i)
 
 Files.sort(key=FileNumber)
 
@@ -110,50 +111,52 @@ reader = vtkUnstructuredGridReader()
 
 #Go through all files
 for filename in Files:
-  print 'Reading ' + filename
-  reader.SetFileName(filename)
-  reader.ReadAllScalarsOn()
-  reader.ReadAllVectorsOn()
-  reader.ReadAllFieldsOn()
-  reader.Update()
-  ugrid = reader.GetOutput()
+    print 'Reading ' + filename
+    reader.SetFileName(filename)
+    reader.ReadAllScalarsOn()
+    reader.ReadAllVectorsOn()
+    reader.ReadAllFieldsOn()
+    reader.Update()
+    ugrid = reader.GetOutput()
+    
+    #Only perform this check if specified on one file
+    if FileNumber(filename) == 0 and args.check == True:
+        points = ugrid.GetPoints().GetData()
+        cells = ugrid.GetCells().GetData()
+        
+        points = vtk_to_numpy(points)
+        cells  = vtk_to_numpy(cells)
+        
+        indices = RunMatch(points, cells, args.gridspacing, 
+                           range(xsize), range(ysize), range(zsize))
+        
+        #If nothing changes when sorting, it is ok
+        if indices.sort() == indices:
+            print "Geometry passed check, Format as expected"
+        else:
+            print "Geometry did not pass, different Format as expected"
+            print "You might want to adapt the script to reflect the changes"
+            sys.exit()
+         
+    #Read out Scalars
+    Concentration.append(VTKScalarToXYZ(ugrid.GetCellData().GetScalars("concentration"),
+                                     xsize, ysize, zsize))
+    Potential.append(VTKScalarToXYZ(ugrid.GetCellData().GetScalars("potential"),
+                                     xsize, ysize, zsize))
+    Overpotential.append(VTKScalarToXYZ(ugrid.GetCellData().GetScalars("overpotential"),
+                                     xsize, ysize, zsize))
+    MaterialIdentifier.append(VTKScalarToXYZ(ugrid.GetCellData().GetScalars("materialIdentifier"),
+                                     xsize, ysize, zsize))
+    IndividualOCV.append(VTKScalarToXYZ(ugrid.GetCellData().GetScalars("individualOCV"),
+                                     xsize, ysize, zsize))
+    
+    #Read out Vectors
+    ParticleFlux.append(VTKVectorToXYZ(ugrid.GetCellData().GetVectors("particle_flux"),
+                         xsize, ysize, zsize))
+    CurrentDensity.append(VTKVectorToXYZ(ugrid.GetCellData().GetVectors("current_density"),
+                         xsize, ysize, zsize))
+    
 
-  #Only perform this check if specified on one file
-  if FileNumber(filename) == 0 and args.check == True:
-    points = ugrid.GetPoints().GetData()
-    cells = ugrid.GetCells().GetData()
-    
-    points = vtk_to_numpy(points)
-    cells  = vtk_to_numpy(cells)
-    
-    indices = RunMatch(points, cells, args.gridspacing, 
-                       range(xsize), range(ysize), range(zsize))
-    
-    #If nothing changes when sorting, it is ok
-    if indices.sort() == indices:
-      print "Geometry passed check, Format as expected"
-    else:
-      print "Geometry did not pass, different Format as expected"
-      print "You might want to adapt the script to reflect the changes"
-      sys.exit()
-     
-  #Read out Scalars
-  Concentration.append(VTKScalarToXYZ(ugrid.GetCellData().GetScalars("concentration"),
-                                   xsize, ysize, zsize))
-  Potential.append(VTKScalarToXYZ(ugrid.GetCellData().GetScalars("potential"),
-                                   xsize, ysize, zsize))
-  Overpotential.append(VTKScalarToXYZ(ugrid.GetCellData().GetScalars("overpotential"),
-                                   xsize, ysize, zsize))
-  MaterialIdentifier.append(VTKScalarToXYZ(ugrid.GetCellData().GetScalars("materialIdentifier"),
-                                   xsize, ysize, zsize))
-  IndividualOCV.append(VTKScalarToXYZ(ugrid.GetCellData().GetScalars("individualOCV"),
-                                   xsize, ysize, zsize))
-
-  #Read out Vectors
-  ParticleFlux.append(VTKVectorToXYZ(ugrid.GetCellData().GetVectors("particle_flux"),
-                       xsize, ysize, zsize))
-  CurrentDensity.append(VTKVectorToXYZ(ugrid.GetCellData().GetVectors("current_density"),
-                       xsize, ysize, zsize))
 
 
 #Convert lists to arrays
@@ -166,12 +169,18 @@ IndividualOCV = np.asarray(IndividualOCV)
 ParticleFlux = np.asarray(ParticleFlux)
 CurrentDensity = np.asarray(CurrentDensity)
 
+
+#We also would like to have the parameters and the paramters_application
+Parameters = et.parse(args.foldername + '/configuration/' + 'parameters.xml').getroot()
+ParamApplication = et.parse(args.foldername + '/configuration/' + 'parameters_application.xml').getroot()
+
+
 ##Store the arrays into npy, npz or mat files
 #Extract File name
 Filename = str.split(args.foldername,'/')[-1]
 
 if args.matlab:
-  spio.savemat(args.destination + '/' + Filename + '.mat',
+    spio.savemat(args.destination + '/' + Filename + '.mat',
                {'Concentration':Concentration,
                 'Potential':Potential,
                 'Overpotential':Overpotential, 
@@ -179,20 +188,22 @@ if args.matlab:
                 'IndividualOCV':IndividualOCV,
                 'ParticleFlux':ParticleFlux,
                 'CurrentDensity':CurrentDensity})
-  print 'Storing to ' + args.destination + '/' + Filename + '.npy'
+    print 'Storing to ' + args.destination + '/' + Filename + '.mat'
 
 elif args.compress:
-  np.savez_compressed(args.destination + '/' + Filename, Concentration=Concentration,
+    np.savez_compressed(args.destination + '/' + Filename, Concentration=Concentration,
                       Potential=Potential, OverPotential=Overpotential,
                       MaterialIdentifier=MaterialIdentifier, IndividualOCV=IndividualOCV,
-                      ParticleFlux=ParticleFlux, CurrentDensity=CurrentDensity)
-  print 'Storing to ' + args.destination + '/' + Filename + 'npz'
+                      ParticleFlux=ParticleFlux, CurrentDensity=CurrentDensity, Parameters=Parameters,
+                      ParamApplication=ParamApplication)
+    print 'Storing to ' + args.destination + '/' + Filename + 'npz'
 
 else:
-  np.savez(args.destination + '/' + Filename, Concentration=Concentration,
+    np.savez(args.destination + '/' + Filename, Concentration=Concentration,
            Potential=Potential, OverPotential=Overpotential,
            MaterialIdentifier=MaterialIdentifier, IndividualOCV=IndividualOCV,
-           ParticleFlux=ParticleFlux, CurrentDensity=CurrentDensity)
+           ParticleFlux=ParticleFlux, CurrentDensity=CurrentDensity, Parameters=Parameters,
+           ParamApplication=ParamApplication)
 
-  print 'Storing to ' + args.destination + '/' + Filename + '.npy'
+    print 'Storing to ' + args.destination + '/' + Filename + '.npy'
 

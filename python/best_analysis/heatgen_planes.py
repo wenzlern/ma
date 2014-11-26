@@ -73,14 +73,14 @@ HeatGen = data['AbsCurrent']*(data['IndividualOCV']
 #We need as many colors as xsize
 xsize = np.shape(data['Concentration'])[1]
 timesteps = np.shape(data['Concentration'])[0]
-ColorMap = plt.get_cmap('gist_rainbow')
+ColorMap = plt.get_cmap('autumn_r')
 
 plt.subplot(121)
 plt.title('Active Material')
 plt.grid(True)
 plt.ylabel('Mean heat generation')
 plt.xlabel('Distance from Current Collector')
-plt.gca().set_color_cycle([ColorMap(1.*i/xsize) for i in range(xsize)])
+plt.gca().set_color_cycle([ColorMap(1.*i/timesteps) for i in range(timesteps)])
 
 
 plt.subplot(122)
@@ -88,7 +88,7 @@ plt.title('Electrolyte')
 plt.grid(True)
 plt.ylabel('Mean heat generation')
 plt.xlabel('Distance from Current Collector')
-plt.gca().set_color_cycle([ColorMap(1.*i/xsize) for i in range(xsize)])
+plt.gca().set_color_cycle([ColorMap(1.*i/timesteps) for i in range(timesteps)])
 
 CathodeIndexMat = FindSpecies(data, 'Cathode')
 ElectrolyteIndexMat = FindSpecies(data, 'Electrolyte')
@@ -105,10 +105,11 @@ for j in range(timesteps):
     MeanNrNeighborsC.append(np.asarray(TempC))
     MeanNrNeighborsE.append(np.asarray(TempE))
     
-    plt.subplot(121)
-    plt.plot(range(xsize)[::-1], MeanNrNeighborsC[j], color = ColorMap(1.0*j/xsize))
-    plt.subplot(122)
-    plt.plot(range(xsize)[::-1], MeanNrNeighborsE[j], color = ColorMap(1.0*j/xsize))
+    if j > 0:
+        plt.subplot(121)
+        plt.plot(range(xsize), MeanNrNeighborsC[j], color = ColorMap(1.0*j/timesteps))
+        plt.subplot(122)
+        plt.plot(range(xsize), MeanNrNeighborsE[j], color = ColorMap(1.0*j/timesteps))
 
 #    if j > 0:
 #        if  not(np.allclose(MeanNrNeighborsC[j-1], MeanNrNeighborsC[j], rtol=0.0001)):

@@ -75,7 +75,7 @@ HeatGen = data['AbsCurrent']*(data['IndividualOCV']
 #Plot colors
 #We need as many colors as timesteps
 timesteps = np.shape(data['Concentration'])[0]
-ColorMap = plt.get_cmap('gist_rainbow')
+ColorMap = plt.get_cmap('autumn_r')
 
 plt.subplot(121)
 plt.title('Active Material')
@@ -97,7 +97,7 @@ for j in range(timesteps):
     #We have a maximum of 8 neighbors
     TempC = []
     TempE = []    
-    for i in range(9):
+    for i in range(7):
         CathodeIndexMat = ((FilteredData['NrSameNeighborsCathode']-i) == 0)
         ElectrolyteIndexMat = ((FilteredData['NrSameNeighborsElectrolyte']-i) == 0)
         
@@ -107,10 +107,11 @@ for j in range(timesteps):
     MeanNrNeighborsC.append(np.asarray(TempC))
     MeanNrNeighborsE.append(np.asarray(TempE))
     
-    plt.subplot(121)
-    plt.plot(range(9)[::-1], MeanNrNeighborsC[j], color = ColorMap(1.0*j/timesteps))
-    plt.subplot(122)
-    plt.plot(range(9)[::-1], MeanNrNeighborsE[j], color = ColorMap(1.0*j/timesteps))
+    if j > 0:
+        plt.subplot(121)
+        plt.plot(range(7)[::-1], MeanNrNeighborsC[j], color = ColorMap(1.0*j/timesteps))
+        plt.subplot(122)
+        plt.plot(range(7)[::-1], MeanNrNeighborsE[j], color = ColorMap(1.0*j/timesteps))
 
 #    if j > 0:
 #        if  not(np.allclose(MeanNrNeighborsC[j-1], MeanNrNeighborsC[j], rtol=0.0001)):

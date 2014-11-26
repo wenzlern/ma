@@ -8,7 +8,7 @@ __email__      = "wenzlern@ethz.ch"
 
 #imports
 import numpy as np
-#from enum import Enum
+import scipy.io as spio
 
 Materials = { 'Anode' : 0,
               'Cathode' : 100,
@@ -16,6 +16,12 @@ Materials = { 'Anode' : 0,
               'CCAnode' : 300,
               'CCCathode' : 400,
 }
+
+def ReadMat(file):
+    return spio.loadmat(file)
+
+def ReadNPZ(file):
+    return np.load(file)
 
 def FilterForSpecies(data, fields, species):
     """Returns a dict of of the specified fields with all 
@@ -54,13 +60,18 @@ def FindNrNeighbors(data):
     xr, yr, zr = np.shape(data['MaterialIdentifier'][0])
 
     res = np.zeros((xr, yr, zr))
-    cube = np.zeros((3,3,3))
-    for x in range(1,xr):
-        for y in range(1, yr):
-            for z in range(1, zr):
-                cube = data['MaterialIdentifier'][0, x-1:x+1, y-1:y+1, z-1:z+1]
-                res[x,y,z] = np.sum(cube == cube[1,1,1])
-
+    for x in range(1,xr-1):
+        for y in range(1, yr-1):
+            for z in range(1, zr-1):
+                mat = data['MaterialIdentifier'][0, x, y, z]
+               # cube = data['MaterialIdentifier'][0, x-1:x+2, y-1:y+2, z-1:z+2]
+               # res[x,y,z] = np.sum(cube == cube[1,1,1])
+                res[x,y,z] += 1.0*(mat == data['MaterialIdentifier'][0, x+1, y, z])
+                res[x,y,z] += 1.0*(mat == data['MaterialIdentifier'][0, x-1, y, z])
+                res[x,y,z] += 1.0*(mat == data['MaterialIdentifier'][0, x, y+1, z])
+                res[x,y,z] += 1.0*(mat == data['MaterialIdentifier'][0, x, y-1, z])
+                res[x,y,z] += 1.0*(mat == data['MaterialIdentifier'][0, x, y, z+1])
+                res[x,y,z] += 1.0*(mat == data['MaterialIdentifier'][0, x, y, z-1])
     return res
 
 def AbsCurrent(data, volume = 1):
@@ -82,10 +93,6 @@ def AbsCurrent(data, volume = 1):
 
     return res
 
-
-#def ExtractSpecies(data, field, species):
-#    """Returns a numpy array cropped to the size of the specified species."""
-    
 
     
       
