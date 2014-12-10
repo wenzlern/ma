@@ -1,0 +1,36 @@
+<GadAddDialog>
+Unit 2
+KeepStructure 0
+<World>
+PeriodicX False
+PeriodicY False
+PeriodicZ False
+OriginX 0
+OriginY 0
+OriginZ 0
+VoxelLength 5e-07
+WorldMode VoxelNumber
+NX 40
+NY 110
+NZ 110
+OverlapMode OverlapColor
+Color 0
+</World>
+NumberOfObjects 1
+<Object1>
+Color 1
+Type PlanarPolyhedron
+Position 9.9999999999999995e-07, 3.9999999999999998e-06, 3.0000000000000001e-06
+Thickness 1e-06
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -0.82903757255504162, -0.5591929034707469
+Rays 4
+RayLength1 2e-06
+RayLength2 2e-06
+RayLength3 2e-06
+RayLength4 2e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object1>
+</GadAddDialog>

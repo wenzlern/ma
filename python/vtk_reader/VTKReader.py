@@ -14,7 +14,9 @@ import glob
 import os
 import numpy as np
 import scipy.io as spio
-import xml.etree.ElementTree as et
+import xmltodict
+import re
+import pdb
 
 from vtk import *
 from vtk.util.numpy_support import vtk_to_numpy
@@ -42,7 +44,25 @@ def VTKVectorToXYZ(Array, xsize, ysize, zsize):
 def FileNumber(s):
     return int(str.split(str.split(s,'_')[-1],'.')[0])
 
+#Get interface area from logfile
+def InterfaceAreaFromLogFile(file):
+    match = []
+    res = dict()
+    fd = open(file, 'r')
+    for line in fd:
+        if re.search('interfaceArea',line):
+            match.append(line)
+    for line in match:
+        if re.search('Anode1',line):
+            res['Anode'] = float(filter(None,line.split(' '))[-3])
 
+        if re.search('Cathode1',line):
+            res['Cathode'] = float(filter(None,line.split(' '))[-3])
+
+        if re.search('PureElectrolyte',line):
+            res['Electrolyte'] = float(filter(None,line.split(' '))[-3])
+
+    return res
 
 ## Parse command line arguments
 parser = argparse.ArgumentParser()
@@ -97,6 +117,7 @@ Files.sort(key=FileNumber)
 
 ##Main
 #Empty lists for easy appending of all vtk data
+Time               = []
 Concentration      = [] 
 Potential          = [] 
 Overpotential      = [] 
@@ -137,7 +158,11 @@ for filename in Files:
             print "Geometry did not pass, different Format as expected"
             print "You might want to adapt the script to reflect the changes"
             sys.exit()
-         
+
+    # We want the time so we can figure out when this was recorded
+    # (and relate it to the Uoft.log file
+    Time.append(ugrid.GetFieldData().GetArray('TIME').GetComponent(0,0))
+
     #Read out Scalars
     Concentration.append(VTKScalarToXYZ(ugrid.GetCellData().GetScalars("concentration"),
                                      xsize, ysize, zsize))
@@ -171,9 +196,35 @@ CurrentDensity = np.asarray(CurrentDensity)
 
 
 #We also would like to have the parameters and the paramters_application
-Parameters = et.parse(args.foldername + '/configuration/' + 'parameters.xml').getroot()
-ParamApplication = et.parse(args.foldername + '/configuration/' + 'parameters_application.xml').getroot()
+Parameters = xmltodict.parse(open(args.foldername + '/configuration/' + 'parameters.xml'))
+ParamApplication = xmltodict.parse(open(args.foldername + '/configuration/' + 'parameters_application.xml'))
 
+#Furthermore the interface area from the log-file
+InterfaceAreas = InterfaceAreaFromLogFile(args.foldername + '/BESTmicro.log')
+
+# We also want the values from the Uoft.log file
+# However we will only take the ones corresponding to the vtk time stamps
+logfile  = np.loadtxt(args.foldername + '/Uoft.log')
+
+TransfCharge = []
+CellPot = []
+CellCurrent = []
+i=0
+
+for j in range(len(Time)):
+    while i < np.shape(logfile)[0]:
+        if Time[j] == logfile[i,0]:
+            TransfCharge.append(logfile[i,1])
+            CellPot.append(logfile[i,2])
+            CellCurrent.append(logfile[i,3])
+            break
+        else:
+            i+=1
+             
+
+TranfCharge = np.asarray(TransfCharge)
+CellPot = np.asarray(CellPot)
+CellCurrent = np.asarray(CellCurrent)
 
 ##Store the arrays into npy, npz or mat files
 #Extract File name
@@ -187,23 +238,32 @@ if args.matlab:
                 'MaterialIdentifier':MaterialIdentifier,
                 'IndividualOCV':IndividualOCV,
                 'ParticleFlux':ParticleFlux,
-                'CurrentDensity':CurrentDensity})
+                'CurrentDensity':CurrentDensity,
+                'Parameters':Parameters,
+                'ParamApplication':ParamApplication,
+                'InterfaceAreas':InterfaceAreas,
+                'Time':Time,
+                'TransfCharge':TransfCharge,
+                'CellPot':CellPot,
+                'CellCurrent':CellCurrent})
     print 'Storing to ' + args.destination + '/' + Filename + '.mat'
 
 elif args.compress:
     np.savez_compressed(args.destination + '/' + Filename, Concentration=Concentration,
-                      Potential=Potential, OverPotential=Overpotential,
+                      Potential=Potential, Overpotential=Overpotential,
                       MaterialIdentifier=MaterialIdentifier, IndividualOCV=IndividualOCV,
                       ParticleFlux=ParticleFlux, CurrentDensity=CurrentDensity, Parameters=Parameters,
-                      ParamApplication=ParamApplication)
+                      ParamApplication=ParamApplication, InterfaceAreas=InterfaceAreas,
+                      Time=Time, TransfCharge=TransfCharge, CellPot=CellPot, CellCurrent=CellCurrent)
     print 'Storing to ' + args.destination + '/' + Filename + 'npz'
 
 else:
     np.savez(args.destination + '/' + Filename, Concentration=Concentration,
-           Potential=Potential, OverPotential=Overpotential,
+           Potential=Potential, Overpotential=Overpotential,
            MaterialIdentifier=MaterialIdentifier, IndividualOCV=IndividualOCV,
            ParticleFlux=ParticleFlux, CurrentDensity=CurrentDensity, Parameters=Parameters,
-           ParamApplication=ParamApplication)
+           ParamApplication=ParamApplication, InterfaceAreas=InterfaceAreas,
+           Time=Time, TransfCharge=TransfCharge, CellPot=CellPot, CellCurrent=CellCurrent)
 
-    print 'Storing to ' + args.destination + '/' + Filename + '.npy'
+    print 'Storing to ' + args.destination + '/' + Filename + '.npz'
 
