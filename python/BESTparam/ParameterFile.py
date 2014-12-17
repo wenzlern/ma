@@ -9,7 +9,7 @@ __email__      = "wenzlern@ethz.ch"
 
 # Imports
 import numpy as np
-import textwrap
+from textwrap import fill
 
 # Classes
 class Parametrization:
@@ -20,38 +20,54 @@ class Parametrization:
         self.Name = name
         self.Comment = comment
 
-    def AddList(self, list):
+    def AddByList(self, list, derivlist):
         self.Values = list
+        self.Values_c = derivlist
+
+    def AddValues(self, list):
+        self.Values = list
+
+    def AddValues_c(self, list):
+        self.Values_c = list
 
     def AddByFunction(self, func, deriv, start, stop, step):
         for i in np.arange(start, stop, step):
             self.Values.append(func(i))
             self.Values_c.append(deriv(i))
 
+    def AddFunc(self, func, start, stop, step):
+        for i in np.arange(start, stop, step):
+            self.Values.append(func(i))
+
+    def AddFunc_c(self, func, start, stop, step):
+        for i in np.arange(start, stop, step):
+            self.Values_c.append(func(i))
+
     def ToString(self):
         Header = "/*This file is auto generated and contains the LUT  and the function for\n"
         Header +=" the BEST parametrization\n*/"
-        ret = Header + '\n/*' + self.Comment + '/*\n'
+        ret = Header + '\n/*' + self.Comment + '*/\n'
         ret += '\n#include \"fpCommon.h\"\n'
 
         values = str()
         values_c = str()
-        for i in range(len(self.Values)):
+        for i in range(len(self.Values_c)):
             values += str(self.Values[i]) + ', '
             values_c += str(self.Values_c[i]) + ', '
 
-        ret += '\nconst static data[] = {\n'
-        ret += fill(values) + '}\n'
+        # Fill wraps the text to 70 characters, [:-1] leaves away the last ','
+        ret += '\nconst static double data[] = {\n'
+        ret += fill(values)[:-1] + '};\n'
 
-        ret += '\nconst static data_c[] = {\n'
-        ret += fill(values_c) + '}\n'
+        ret += '\nconst static double data_c[] = {\n'
+        ret += fill(values_c)[:-1]+ '};\n'
 
-        ret += 'DLL_EXPORT double ' + self.name + '(short *err, double *param){\n'
-        ret += '  return data[param[BATTERY_SOC]*' + str(len(self.Values)) + '];\n}\n'
+        ret += '\nDLL_EXPORT double ' + self.Name + '(short *err, double *param){\n'
+        ret += '  return data[(int)param[BATTERY_SOC]*' + str(len(self.Values)) + '];\n}\n'
 
 
-        ret += 'DLL_EXPORT double ' + self.name + '_c(short *err, double *param){\n'
-        ret += '  return data_c[param[BATTERY_SOC]*' + str(len(self.Values_c)) + '];\n}'
+        ret += '\nDLL_EXPORT double ' + self.Name + '_c(short *err, double *param){\n'
+        ret += '  return data_c[(int)param[BATTERY_SOC]*' + str(len(self.Values_c)) + '];\n}'
 
         return ret
 
