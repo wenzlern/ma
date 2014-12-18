@@ -65,3 +65,4 @@ class Electrode:
         f = open(Filename, 'w')
         f.write(self.ToString())
         f.close()
+        print 'Output written to ' + Filename

@@ -84,15 +84,15 @@ class Platelet:
 
         #Fill in the info
         self.Name = 'Object' + str(number)
-        self.Param['Color'] = 1
+        self.Param['Color'] = random.randint(1,2**4-1)
 
         self.Param['Type'] = 'PlanarPolyhedron'
-        self.Param['Position'] = str(position).strip('[] ')
+        self.Param['Position'] = position
         self.Param['Thickness'] = thickness
 
         axis1, axis2 = GetAxis(direction, angle)
-        self.Param['Axis1'] = str(axis1).strip('[] ')
-        self.Param['Axis2'] = str(axis2).strip('[] ')
+        self.Param['Axis1'] = axis1
+        self.Param['Axis2'] = axis2
 
         RayLengths = GetRayLengths(longdiam, shortdiam, sizedisp, shapedisp)
         self.Param['Rays'] = 4
@@ -105,10 +105,19 @@ class Platelet:
         self.Param['RayAngle2'] = 90
         self.Param['RayAngle3'] = 90
 
+    def GetPos(self):
+        return np.asarray(self.Param['Position'])
+
+    def GetAx1(self):
+        return np.asarray(self.Param['Axis1'])
+
+    def GetAx2(self):
+        return np.asarray(self.Param['Axis2'])
+
     def ToString(self):
         # Return a string with dictionary key and value
         ret = '<' + self.Name + '>\n'
         for k, v in self.Param.items():
-            ret += str(k) + ' ' + str(v) + '\n' 
+            ret += str(k) + ' ' + str(v).strip('[] ') + '\n' 
         ret += '</' + self.Name + '>\n'
         return ret
