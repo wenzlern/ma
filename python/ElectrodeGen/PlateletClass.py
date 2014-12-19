@@ -114,10 +114,14 @@ class Platelet:
     def GetAx2(self):
         return np.asarray(self.Param['Axis2'])
 
+    
+    def SetNr(self, number):
+        self.Name = 'Object' + str(number)
+    
     def ToString(self):
-        # Return a string with dictionary key and value
-        ret = '<' + self.Name + '>\n'
-        for k, v in self.Param.items():
-            ret += str(k) + ' ' + str(v).strip('[] ') + '\n' 
-        ret += '</' + self.Name + '>\n'
-        return ret
+            # Return a string with dictionary key and value
+            ret = '<' + self.Name + '>\n'
+            for k, v in self.Param.items():
+                ret += str(k) + ' ' + str(v).strip('[] ') + '\n' 
+            ret += '</' + self.Name + '>\n'
+            return ret

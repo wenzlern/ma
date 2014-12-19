@@ -62,7 +62,36 @@ class Electrode:
         return ret
 
     def SaveToFile(self,Filename):
-        f = open(Filename, 'w')
+        f = open(Filename + '.gps', 'w')
         f.write(self.ToString())
         f.close()
         print 'Output written to ' + Filename
+
+    def CreateMacro(self,Filename):
+        header = open('Template.gmc','r')
+        footer = 'GeoDict:SaveFile {\n'
+        footer += 'FileName ' + Filename + '.gdt\n}\n\n</Macro> '
+
+        # Read header from template
+        ret = header.read() + '\n' + 'NumberOfObjects ' + str(len(self.Objects)) + '\n'
+
+        # Add the World info
+        ret += '<World>\n'
+        # Return a string with dictionary key and value
+        for k, v in self.Param.items():
+            ret += str(k) + ' ' + str(v) + '\n' 
+        ret += '</World>\n'
+
+        # Add the Objects
+        for s in self.Objects:
+            ret += s.ToString()
+
+        # And finally the footer
+        ret += '}\n' + footer
+
+
+        f = open(Filename + '.gmc', 'w')
+        f.write(ret)
+        f.close()
+        print 'Output written to ' + Filename
+
