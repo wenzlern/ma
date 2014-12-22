@@ -58,10 +58,10 @@ def GetRayLengths(longdiam, shortdiam, sizedisp=None, shapedisp=None):
 
     elif sizedisp:
         # Lets keep them symetrical, since we can set the other thing with the angles
-        Lengths[0] = random.uniform(longdiam-longdiam*sizedisp,
-                                    longdiam+longdiam*sizedisp)
-        Lengths[1] = random.uniform(shortdiam-shortdiam*sizedisp,
-                                    shortdiam+shortdiam*sizedisp)
+        Lengths[0] = random.uniform(longdiam/2-longdiam/2*sizedisp,
+                                    longdiam/2+longdiam/2*sizedisp)
+        Lengths[1] = random.uniform(shortdiam/2-shortdiam/2*sizedisp,
+                                    shortdiam/2+shortdiam/2*sizedisp)
         Lengths[2] = Lengths[0]
         Lengths[3] = Lengths[1]
         return Lengths
@@ -79,12 +79,15 @@ class Platelet:
     """This class saves all the information for one Platelet"""
     def __init__(self, number, position, direction, angle, 
                  longdiam=4e-6, shortdiam=2e-6, thickness=1e-6,
-                 sizedisp=None, thicknessdisp=None, shapedisp=None):
+                 sizedisp=None, thicknessdisp=None, shapedisp=None, color=None):
         self.Param = collections.OrderedDict()
 
         #Fill in the info
         self.Name = 'Object' + str(number)
-        self.Param['Color'] = random.randint(1,2**4-1)
+        if color:
+            self.Param['Color'] = random.randint(1,2**4-1)
+        else:
+            self.Param['Color'] = 1 
 
         self.Param['Type'] = 'PlanarPolyhedron'
         self.Param['Position'] = position
@@ -105,6 +108,8 @@ class Platelet:
         self.Param['RayAngle2'] = 90
         self.Param['RayAngle3'] = 90
 
+        self.Modified = False
+
     def GetPos(self):
         return np.asarray(self.Param['Position'])
 
@@ -113,10 +118,18 @@ class Platelet:
 
     def GetAx2(self):
         return np.asarray(self.Param['Axis2'])
-
     
+    def SetAx1(self, ax):
+        self.Param['Axis1'] = ax
+        self.Modified = True
+
+    def SetAx2(self, ax):
+        self.Param['Axis2'] = ax
+        self.Modified = True
+
     def SetNr(self, number):
         self.Name = 'Object' + str(number)
+        self.Modified = True
     
     def ToString(self):
             # Return a string with dictionary key and value
