@@ -1,0 +1,43 @@
+<Header>
+  Release      2013
+  Revision     4010
+  BuildDate    04 Jul 2014
+  CreationDate 19 Dec 2014
+  CreationTime 16:45:50
+  Creator      unknown
+  Platform     64 bit Linux
+</Header>
+
+<Description>
+Macro file for GeoDict 2013
+recorded at 16:45:50 on Fri Dec 19 2014
+by Jens Eller of ETH Zurich
+</Description>
+
+<Variables>
+  NumberOfVariables 0
+//  <Variable1>
+//    Name dummy
+//    Type double
+//    BuiltinDefault 0.0
+//  </Variable1>
+</Variables>
+
+<Macro>
+
+GeoDict:Preferences {
+  SpecifyThreadNumber       false
+  NumberOfThreads           20
+  <Gad>                           
+    UseXMLStyle             true
+    UseDiameter             true
+  </Gad>                           
+  <IO>                           
+    WriteDbgPrintfToConsole false
+    WriteDbgPrintfToLogfile true
+  </IO>
+}
+
+GadAddCmd {
+
+

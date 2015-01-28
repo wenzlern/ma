@@ -13,6 +13,9 @@ from ElectrodeClass import *
 import argparse
 from multiprocessing import Pool
 import os
+import matplotlib.pyplot as plt
+import numpy as np
+
 
 # Functions 
 def GetNrOfPlatelets(size, plateletdim, porosity):
@@ -97,6 +100,10 @@ parser.add_argument('-b', '--blocksize', nargs='?', type=float,
 parser.add_argument('-c', '--color', action='store_true',
                     help='Assign a random color to each platelet for illustration')
 
+parser.add_argument('--stats', action='store_true',
+                    help='Display statistics about the electrode')
+
+
 args = parser.parse_args()
 
 
@@ -161,3 +168,17 @@ Anode.Objects = TestedPlatelets
 Anode.CreateMacro(args.output)
 os.system('/usr/scratch/vanadium/lne-software/geodict/GeoDict2013/geodict2013 ' + args.output + '.gmc')
 
+if args.stats:
+    # Now we also want to display some stats
+    # Calculate the distribution of directions
+    # Our normal direction is the 100 (x-dir)
+    DotProducts = []
+    for s in Anode.Objects:
+        DotProducts.append(np.dot(s.Param['Axis1'], [1,0,0]))
+
+    print 'Mean of dot Product with 100: ', np.mean(DotProducts)
+    #Distribution = np.sort(DotProducts)
+    Distribution = np.histogram(DotProducts, bins=np.linspace(-1,1,num=31, endpoint=True))
+    plt.plot(np.linspace(-1,1,30), Distribution[0].astype(float)/float(len(DotProducts)))
+    plt.axis([-1, 1, 0, 1])
+    plt.show()

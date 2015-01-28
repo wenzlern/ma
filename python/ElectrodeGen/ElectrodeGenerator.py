@@ -17,8 +17,8 @@ def statusbar(progress, total):
 def GetRandomPlatelet(number, electrodedim, plateletdim, disparity=None, color=None):
     position = [random.uniform(0, electrodedim[0]), random.uniform(0, electrodedim[1]),
                 random.uniform(0, electrodedim[2])]
-    direction = [random.uniform(0, 1), random.uniform(0, 1),
-                random.uniform(0, 1)]
+    direction = [random.uniform(-1, 1), random.uniform(-1, 1),
+                random.uniform(-1, 1)]
     angle = random.randint(0,360)
 
     return Platelet(number, position, direction, angle,
@@ -56,13 +56,21 @@ def InterferenceAlign(object1, object2, objectdim, NrOfPos):
         if dist < (objectdim[0]):
             if (dist < (np.dot(object1.GetAx2(), object2.GetAx2())*objectdim[0])) or (dist < (np.dot(object1Ax3, object2Ax3)*objectdim[1])) or (dist < (np.dot(-object1.GetAx2(), object2.GetAx2())*objectdim[0])) or (dist < (np.dot(-object1Ax3, object2Ax3)*objectdim[1])) or (dist < (np.dot(object1.GetAx2(), -object2.GetAx2())*objectdim[0])) or (dist < (np.dot(object1Ax3, -object2Ax3)*objectdim[1])) or (dist < (np.dot(-object1.GetAx2(), -object2.GetAx2())*objectdim[0])) or (dist < (np.dot(-object1Ax3, -object2Ax3)*objectdim[1])):
                 ax1, ax2 = GetAxis(object1.GetAx1(), NrOfPos)
-                object2.SetAx1([ax1[0]*random.uniform(0,0.4), 
-                                  ax1[1]*random.uniform(0,0.4), 
-                                  ax1[1]*random.uniform(0,0.4)])
+                #object2.SetAx1([ax1[0]*random.uniform(0,1), 
+                #                  ax1[1]*random.uniform(0,1), 
+                #                  ax1[1]*random.uniform(0,1)])
 
-                object2.SetAx2([ax2[0]*random.uniform(0,0.4), 
-                                  ax2[1]*random.uniform(0,0.4), 
-                                  ax2[2]*random.uniform(0,0.4)])
+                #object2.SetAx2([ax2[0]*random.uniform(0,1), 
+                #                  ax2[1]*random.uniform(0,1), 
+                #                  ax2[2]*random.uniform(0,1)])
+
+                object2.SetAx1([random.uniform(-1,1), 
+                                random.uniform(-1,1), 
+                                random.uniform(-1,1)])
+
+                object2.SetAx2([random.uniform(-1,1), 
+                                random.uniform(-1,1), 
+                                random.uniform(-1,1)])
 
                 return InterferenceAlign(object1, object2, objectdim, NrOfPos - 1)
             else:
