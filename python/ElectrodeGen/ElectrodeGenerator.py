@@ -14,12 +14,17 @@ import sys
 def statusbar(progress, total):  
     print('\r[{0:10}]{1:>2}%'.format('#' * int(progress * 10 /total), progress))
 
-def GetRandomPlatelet(number, electrodedim, plateletdim, disparity=None, color=None):
+def GetRandomPlatelet(number, electrodedim, plateletdim, disparity=None, color=None, align=None):
     position = [random.uniform(0, electrodedim[0]), random.uniform(0, electrodedim[1]),
                 random.uniform(0, electrodedim[2])]
-    direction = [random.uniform(-1, 1), random.uniform(-1, 1),
-                random.uniform(-1, 1)]
-    angle = random.randint(0,360)
+    if align:
+        direction = [random.uniform(-0.2,0.2),random.uniform(-0.2,0.2)
+                    ,random.uniform(0.8,1)]
+        angle = random.randint(0,180)
+    else:
+        direction = [random.uniform(-1, 1), random.uniform(-1, 1),
+                     random.uniform(-1, 1)]
+        angle = random.randint(0,360)
 
     return Platelet(number, position, direction, angle,
                     longdiam = plateletdim[0], shortdiam = plateletdim[1],
@@ -46,32 +51,76 @@ def InterferenceDistance(object1, object2, objectdim):
     else:
         return False
 
-def InterferenceAlign(object1, object2, objectdim, NrOfPos):
+def InterferenceRand(object1, object2, objectdim, NrOfPos):
     if NrOfPos == 0:
+        print "This particle is doooomed"
         return True
     else:
         dist = np.linalg.norm(object1.GetPos()-object2.GetPos())
         object1Ax3 = Rotate3DVector(object1.GetAx2(), object1.GetAx1(), 90)
         object2Ax3 = Rotate3DVector(object2.GetAx2(), object2.GetAx1(), 90)
         if dist < (objectdim[0]):
-            if (dist < (np.dot(object1.GetAx2(), object2.GetAx2())*objectdim[0])) or (dist < (np.dot(object1Ax3, object2Ax3)*objectdim[1])) or (dist < (np.dot(-object1.GetAx2(), object2.GetAx2())*objectdim[0])) or (dist < (np.dot(-object1Ax3, object2Ax3)*objectdim[1])) or (dist < (np.dot(object1.GetAx2(), -object2.GetAx2())*objectdim[0])) or (dist < (np.dot(object1Ax3, -object2Ax3)*objectdim[1])) or (dist < (np.dot(-object1.GetAx2(), -object2.GetAx2())*objectdim[0])) or (dist < (np.dot(-object1Ax3, -object2Ax3)*objectdim[1])):
-                ax1, ax2 = GetAxis(object1.GetAx1(), NrOfPos)
-                #object2.SetAx1([ax1[0]*random.uniform(0,1), 
-                #                  ax1[1]*random.uniform(0,1), 
-                #                  ax1[1]*random.uniform(0,1)])
+            if (dist < (np.dot(object1.GetAx2(), object2.GetAx2())*objectdim[0]/2)) or (dist < (np.dot(object1Ax3, object2Ax3)*objectdim[1]/2)) or (dist < (np.dot(-object1.GetAx2(), object2.GetAx2())*objectdim[0]/2)) or (dist < (np.dot(-object1Ax3, object2Ax3)*objectdim[1]/2)) or (dist < (np.dot(object1.GetAx2(), -object2.GetAx2())*objectdim[0]/2)) or (dist < (np.dot(object1Ax3, -object2Ax3)*objectdim[1]/2)) or (dist < (np.dot(-object1.GetAx2(), -object2.GetAx2())*objectdim[0]/2)) or (dist < (np.dot(-object1Ax3, -object2Ax3)*objectdim[1]/2)):
+                #ax1, ax2 = GetAxis(object1.GetAx1(), NrOfPos)
+                ##object2.SetAx1([ax1[0]*random.uniform(0,1), 
+                ##                  ax1[1]*random.uniform(0,1), 
+                ##                  ax1[2]*random.uniform(0,1)])
 
-                #object2.SetAx2([ax2[0]*random.uniform(0,1), 
-                #                  ax2[1]*random.uniform(0,1), 
-                #                  ax2[2]*random.uniform(0,1)])
+                ##object2.SetAx2([ax2[0]*random.uniform(0,1), 
+                ##                  ax2[1]*random.uniform(0,1), 
+                ##                  ax2[2]*random.uniform(0,1)])
 
-                object2.SetAx1([random.uniform(-1,1), 
-                                random.uniform(-1,1), 
-                                random.uniform(-1,1)])
+                #object2.SetAx1([random.uniform(-1,1), 
+                #                random.uniform(-1,1), 
+                #                random.uniform(-1,1)])
 
-                object2.SetAx2([random.uniform(-1,1), 
-                                random.uniform(-1,1), 
-                                random.uniform(-1,1)])
+                #object2.SetAx2([random.uniform(-1,1), 
+                #                random.uniform(-1,1), 
+                #                random.uniform(-1,1)])
 
+                ax1, ax2 = GetAxis([random.uniform(-1,1), 
+                                    random.uniform(-1,1), 
+                                    random.uniform(-1,1)],random.uniform(0,180))
+
+                object2.SetAx1(ax1)
+                object2.SetAx2(ax2)
+
+                #object2.SetAx1(Rotate3DVector(object2.GetAx1(), object2.GetAx2(), NrOfPos))
+
+
+
+                return InterferenceRand(object1, object2, objectdim, NrOfPos - 1)
+            else:
+                return False
+        else:
+            return False
+
+def InterferenceAlign(object1, object2, objectdim, NrOfPos):
+    if NrOfPos == 0:
+        print "This particle is doooomed"
+        return True
+    else:
+        dist = np.linalg.norm(object1.GetPos()-object2.GetPos())
+        object1Ax3 = Rotate3DVector(object1.GetAx2(), object1.GetAx1(), 90)
+        object2Ax3 = Rotate3DVector(object2.GetAx2(), object2.GetAx1(), 90)
+        if dist < (objectdim[0]):
+            if (dist < (np.dot(object1.GetAx2(), object2.GetAx2())*objectdim[0]/2)) or (dist < (np.dot(object1Ax3, object2Ax3)*objectdim[1]/2)) or (dist < (np.dot(-object1.GetAx2(), object2.GetAx2())*objectdim[0]/2)) or (dist < (np.dot(-object1Ax3, object2Ax3)*objectdim[1]/2)) or (dist < (np.dot(object1.GetAx2(), -object2.GetAx2())*objectdim[0]/2)) or (dist < (np.dot(object1Ax3, -object2Ax3)*objectdim[1]/2)) or (dist < (np.dot(-object1.GetAx2(), -object2.GetAx2())*objectdim[0]/2)) or (dist < (np.dot(-object1Ax3, -object2Ax3)*objectdim[1]/2)):
+                #ax1, ax2 = GetAxis(object2.GetAx1(), NrOfPos)
+                #object2.SetAx1([ax1[0]*random.uniform(0.001,0.1), 
+                #                  ax1[1]*random.uniform(0.001,0.1), 
+                #                  ax1[2]*random.uniform(0.001,0.1)])
+
+                ax1, ax2 = GetAxis([random.uniform(-0.2,0.2),random.uniform(-0.2,0.2)
+                                   ,random.uniform(0.8,1)] ,random.uniform(0,180))
+
+                object2.SetAx1(ax1)
+                object2.SetAx2(ax2)
+
+                #object2.SetAx2([ax2[0]*random.uniform(0,0.1), 
+                #                  ax2[1]*random.uniform(0,0.1), 
+                #                  ax2[2]*random.uniform(0,0.1)])
+
+                #object2.SetAx1(ax1)
                 return InterferenceAlign(object1, object2, objectdim, NrOfPos - 1)
             else:
                 return False
@@ -155,7 +204,7 @@ def AlignNonOverlapping(size, plateletdim, voxelsize,
             # Generate a random platelet
             temp = GetRandomPlatelet(i, size, plateletdim, disparity=disparity)
             for s in Platelets:
-                if InterferenceAlign(s, temp, plateletdim, 180):
+                if InterferenceRand(s, temp, plateletdim, 180):
                     break 
                 else:
                     checked += 1

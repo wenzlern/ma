@@ -16,6 +16,7 @@ import os
 import matplotlib.pyplot as plt
 import numpy as np
 
+from mpl_toolkits.mplot3d import axes3d, Axes3D
 
 # Functions 
 def GetNrOfPlatelets(size, plateletdim, porosity):
@@ -34,13 +35,13 @@ def GetNrOfPlatelets(size, plateletdim, porosity):
 
 
 def GetNewPlatelets(size, plateletdim, voxelsize, porosity, disparity,
-                    NrOfPlatelets, color=None):
-    Platelets = [GetRandomPlatelet(1, size, plateletdim, disparity=disparity)]
+                    NrOfPlatelets, color=None, align=None):
+    Platelets = [GetRandomPlatelet(1, size, plateletdim, disparity=disparity, align=align)]
     for i in range(2,NrOfPlatelets+1):
         while True:
             checked = 0
             # Generate a random platelet
-            temp = GetRandomPlatelet(i, size, plateletdim, disparity=disparity, color=color)
+            temp = GetRandomPlatelet(i, size, plateletdim, disparity=disparity, color=color, align=align)
             for s in Platelets:
                 if InterferenceDistance(s, temp, plateletdim):
                     break 
@@ -53,6 +54,23 @@ def GetNewPlatelets(size, plateletdim, voxelsize, porosity, disparity,
     print 'Generated  ', NrOfPlatelets, ' Platelets'
     return Platelets
 
+def NonOverlapping(tup):
+    TestedPlatelets, NewPlatelet = tup
+    # Artifically set the new one to modified
+    NewPlatelet.Modified = True
+    while NewPlatelet.Modified == True:
+        # Reset flag before commiting it to the test (which can alter the object)
+        NewPlatelet.Modified=False
+
+        for s in TestedPlatelets:
+            if InterferenceRand(s, NewPlatelet, args.platelet, 10):
+            #if InterferenceDistance(s, NewPlatelet, args.platelet):
+                return
+
+    # If we got until here we succeded
+    return NewPlatelet
+
+
 def AlignNonOverlapping(tup):
     TestedPlatelets, NewPlatelet = tup
     # Artifically set the new one to modified
@@ -62,8 +80,7 @@ def AlignNonOverlapping(tup):
         NewPlatelet.Modified=False
 
         for s in TestedPlatelets:
-            if InterferenceAlign(s, NewPlatelet, args.platelet, 180):
-            #if InterferenceDistance(s, NewPlatelet, args.platelet):
+            if InterferenceAlign(s, NewPlatelet, args.platelet, 10):
                 return
 
     # If we got until here we succeded
@@ -100,6 +117,9 @@ parser.add_argument('-b', '--blocksize', nargs='?', type=float,
 parser.add_argument('-c', '--color', action='store_true',
                     help='Assign a random color to each platelet for illustration')
 
+parser.add_argument('-a', '--align', action='store_true',
+                    help='Align the platelet with the large face normal to x')
+
 parser.add_argument('--stats', action='store_true',
                     help='Display statistics about the electrode')
 
@@ -115,7 +135,7 @@ NrOfPlatelets = GetNrOfPlatelets(size, args.platelet, args.porosity)
 # Get a bunch of noninterfering particles to start with 
 # We need to 'define' global variables here
 TestedPlatelets = GetNewPlatelets(size, args.platelet, args.voxel, 
-                                  args.porosity, args.disparity, args.blocksize)
+                                  args.porosity, args.disparity, args.blocksize, align=args.align)
 
 # Get a worker pool
 pool = Pool()
@@ -128,8 +148,11 @@ while len(TestedPlatelets) != NrOfPlatelets:
     Remaining = min(NrOfPlatelets-len(TestedPlatelets), args.blocksize)
     # Generate platelets to fill in
     UntestedPlatelets = GetNewPlatelets(size, args.platelet, args.voxel, 
-                            args.porosity, args.disparity, Remaining, color=args.color)
-    GoodPlatelets = pool.map(AlignNonOverlapping, [(TestedPlatelets, x) for x in UntestedPlatelets])
+                            args.porosity, args.disparity, Remaining, color=args.color, align=args.align)
+    if args.align:
+        GoodPlatelets = pool.map(AlignNonOverlapping, [(TestedPlatelets, x) for x in UntestedPlatelets])
+    else:
+        GoodPlatelets = pool.map(NonOverlapping, [(TestedPlatelets, x) for x in UntestedPlatelets])
     print 'Found ', len(filter(None,GoodPlatelets)), ' non-interfering Platelets'
     # Append them to our list
     TestedPlatelets.extend(filter(None,GoodPlatelets))
@@ -172,13 +195,44 @@ if args.stats:
     # Now we also want to display some stats
     # Calculate the distribution of directions
     # Our normal direction is the 100 (x-dir)
-    DotProducts = []
+#    DotProducts = []
+#    for s in Anode.Objects:
+#        DotProducts.append(np.dot(s.Param['Axis1'], [0,1,0]))
+#
+#    Angles = 57.276*np.arccos(DotProducts)
+#
+#    print 'Mean of dot Product with 100: ', np.mean(DotProducts)
+#    print 'Mean of angle with 100: ', np.mean(Angles)
+#    Distribution = np.histogram(Angles, bins=np.linspace(0,180,num=21, endpoint=True))
+#    plt.plot(np.linspace(0,180,20), Distribution[0].astype(float)/float(len(Distribution[0])))
+    
+#    
+    x = []
+    y = []
+    z = []
     for s in Anode.Objects:
-        DotProducts.append(np.dot(s.Param['Axis1'], [1,0,0]))
+        x.append(s.Param['Axis1'][0])
+        y.append(s.Param['Axis1'][1])
+        z.append(s.Param['Axis1'][2])
 
-    print 'Mean of dot Product with 100: ', np.mean(DotProducts)
-    #Distribution = np.sort(DotProducts)
-    Distribution = np.histogram(DotProducts, bins=np.linspace(-1,1,num=31, endpoint=True))
-    plt.plot(np.linspace(-1,1,30), Distribution[0].astype(float)/float(len(DotProducts)))
-    plt.axis([-1, 1, 0, 1])
+#    fig = plt.figure()
+#    ax = Axes3D(fig)
+#    ax.set_aspect("equal")
+#    
+#    ax.contour(Axis[:][0], Axis[:][1], Axis[:][2])#, 16, extend3d=True)
+
+    
+
+    histx = np.histogram(x, bins=np.linspace(-1,1,num=21, endpoint=True))
+    histy = np.histogram(y, bins=np.linspace(-1,1,num=21, endpoint=True))
+    histz = np.histogram(z, bins=np.linspace(-1,1,num=21, endpoint=True))
+    plt.plot(np.linspace(-1,1,20), histx[0].astype(float)/float(len(x)), label='x')
+    plt.plot(np.linspace(-1,1,20), histy[0].astype(float)/float(len(y)), label='y')
+    plt.plot(np.linspace(-1,1,20), histz[0].astype(float)/float(len(z)), label='z')
+    plt.axis([-1,1,0,1])
+
+
+#    Distribution = np.histogram(Axis, bins=np.linspace(-1,1,num=31, endpoint=True))
+#    plt.plot(np.linspace(-1,1,20), Distribution[0].astype(float)/float(len(Distribution[0])))
+    plt.legend()
     plt.show()
