@@ -74,6 +74,19 @@ def GetRayLengths(longdiam, shortdiam, sizedisp=None, shapedisp=None):
         return Lengths
 
 
+# Calculate plane from 3 points
+def PlaneFrom3Points(p1, p2, p3):
+    # Assemble points to matrix
+    P = np.transpose(np.vstack((p1, p2, p3)))
+
+    # Calculate the coefficients
+    ab = p2-p1
+    ac = p3-p1
+    A = np.cross(ab,ac)
+    d = -np.dot(np.cross(ab,ac), p1)
+
+    return A, d
+
 # Classes
 class Platelet:
     """This class saves all the information for one Platelet"""
@@ -109,6 +122,58 @@ class Platelet:
         self.Param['RayAngle3'] = 90
 
         self.Modified = False
+        
+        # Matrix description of the platelet
+        self.A = np.zeros((6,3))
+        self.b = np.zeros((6,1))
+
+
+    # Calculate the definition of the paltelet via hyperplanes
+    def GetPlateletDef(self):
+        # We need the 3rd axis, so for easier use we calculate it here
+        Axis3 = Rotate3DVector(self.Param['Axis2'], self.Param['Axis1'], 90)
+        
+        # Define the corners of the platelet clockwise (up and down)
+        P11 = np.asarray(self.Param['Position'])
+        P11 += (self.Param['RayLength1'] * np.asarray(self.Param['Axis2']))
+        P11 += (self.Param['Thickness']  * np.asarray(self.Param['Axis1']))
+                                                                     
+        P12 = np.asarray(self.Param['Position'])
+        P12 += (self.Param['RayLength1'] * np.asarray(self.Param['Axis2']))
+        P12 -= (self.Param['Thickness'] *  np.asarray(self.Param['Axis1']))
+                                                                     
+        P21 = np.asarray(self.Param['Position'])
+        P21 += (self.Param['RayLength2'] * Axis3)
+        P21 += (self.Param['Thickness'] *  np.asarray(self.Param['Axis1']))
+                                                                     
+        P22 = np.asarray(self.Param['Position'])
+        P22 += (self.Param['RayLength2'] * Axis3)              
+        P22 -= (self.Param['Thickness'] *  np.asarray(self.Param['Axis1']))
+                                                                     
+        P31 = np.asarray(self.Param['Position'])
+        P31 -= (self.Param['RayLength3'] * np.asarray(self.Param['Axis2']))
+        P31 += (self.Param['Thickness'] *  np.asarray(self.Param['Axis1']))
+                                                                     
+        P32 = np.asarray(self.Param['Position'])
+        P32 -= (self.Param['RayLength3'] * np.asarray(self.Param['Axis2']))
+        P32 -= (self.Param['Thickness'] *  np.asarray(self.Param['Axis1']))
+                                                                     
+        P41 = np.asarray(self.Param['Position'])
+        P41 -= (self.Param['RayLength4'] * Axis3)              
+        P41 += (self.Param['Thickness'] *  np.asarray(self.Param['Axis1']))
+                                                                     
+        P42 = np.asarray(self.Param['Position'])
+        P42 -= (self.Param['RayLength4'] * Axis3)              
+        P42 -= (self.Param['Thickness'] *  np.asarray(self.Param['Axis1']))
+
+        # Now we calculate the hyperplane coefficients
+        self.A[0], self.b[0] = PlaneFrom3Points(P11, P12, P21)
+        self.A[1], self.b[1] = PlaneFrom3Points(P21, P22, P31)
+        self.A[2], self.b[2] = PlaneFrom3Points(P31, P32, P41)
+        self.A[3], self.b[3] = PlaneFrom3Points(P41, P42, P11)
+        self.A[4], self.b[4] = PlaneFrom3Points(P11, P21, P31)
+        self.A[5], self.b[5] = PlaneFrom3Points(P12, P22, P32)
+
 
     def GetPos(self):
         return np.asarray(self.Param['Position'])

@@ -55,7 +55,7 @@ parser.add_argument('--nolegend', action='store_true',
 parser.add_argument('-u', '--update', action='store_true',
                     help='Keep updating plot')
 
-parser.add_argument('-c', '--crate', nargs='*', type=int,
+parser.add_argument('-c', '--crate', nargs='*', type=float,
                     help='C-Rate of the simulation')
 
 parser.add_argument('-t', '--title', nargs='*', type=str,
@@ -95,7 +95,7 @@ plt.grid(True)
 if args.axis:
     plt.axis(args.axis)
 
-plt.xlabel('x in Li_xC6[-]')
+plt.xlabel('x in Li_xFePO4[-]')
 plt.ylabel('Cell Voltage[V]')
 
 if not args.nolegend:

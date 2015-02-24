@@ -13,6 +13,7 @@ from math import exp
 import sys
 import matplotlib.pyplot as plt
 import numpy as np
+import argparse
 
 def LFPFitting(soc):
 
@@ -47,23 +48,57 @@ def LFPFittingTest(soc):
 
     return ocp
 
+def movingaverage(interval, window_size):
+    window = np.ones(int(window_size))/float(window_size)
+    return np.convolve(interval, window, 'same')
+
+## Parse command line arguments
+parser = argparse.ArgumentParser()
+# Command line arguments
+parser.add_argument('filename', nargs='?', type=str,  
+                    help='The folder that contains the data')
+
+parser.add_argument('--s', '--start', nargs='?', type=float,  
+                    help='The start voltage of the curve')
+
+parser.add_argument('--e', '--end', nargs='?', type=float,  
+                    help='The end voltage of the curve')
+
+parser.add_argument('-p', '--plot', action='store_true',
+                    help='Keep updating plot')
+
+args = parser.parse_args()
+
+
 comment = 'LFP SignatureCurve @25 degree celsius, from DOI: 10.1149/1.3567007'
 
 Paramfile = Parametrization('LFP_OCP_RT', comment = comment)
 
-Paramfile.AddFunc(LFPFittingInv, 0, 1, 0.01)
+if args.filename:
+    data = np.loadtxt(args.filename, skiprows=2)
+    var = np.asarray(data[:,1][:])
+
+else:
+    Paramfile.AddFunc(LFPFitting, 0, 1, 0.01)
+    var = Paramfile.Values
+
+
 # To calculate the numerical differentiation we need one more value at each
 # end of the range.
-var =np.concatenate(([2.5], Paramfile.Values, [LFPFittingInv(1.01)]))
-var_c = var[2:len(var)] - var[0:-2]
-#Paramfile.AddValues_c(np.diff(np.concatenate(([2.5], Paramfile.Values, [LFPFittingInv(1.01)])))[1:-1])
-Paramfile.AddValues_c(var_c)
+#var =np.concatenate(([4.2], Paramfile.Values))
+#var = movingaverage(var, 4)
+step = 1/float(len(var))
+#var_c = np.diff(np.hstack(args.voltage,var))/step
+var_c = (var[1:] - var[0:-1])/step
+print step, var_c[0]
+
+
+Paramfile.AddValues(var)
+Paramfile.AddValues_c(np.hstack((var_c[1],var_c[1:],var_c[-1])))
 
 Paramfile.SaveToFile('LFP_OCP_RT.c')
-
-if sys.argv[1] == '-p':
-    print Paramfile.Values[0], Paramfile.Values[1]
-    print Paramfile.Values_c[0], Paramfile.Values_c[1]
+    
+if args.plot:
     plt.plot(range(len(Paramfile.Values)), Paramfile.Values)
     plt.plot(range(len(Paramfile.Values_c)), Paramfile.Values_c)
     plt.show()

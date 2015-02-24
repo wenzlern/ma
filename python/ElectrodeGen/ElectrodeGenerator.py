@@ -10,6 +10,8 @@ __email__      = "wenzlern@ethz.ch"
 from PlateletClass import *
 import random
 import sys
+import ecos
+from scipy.sparse import csr_matrix
 
 def statusbar(progress, total):  
     print('\r[{0:10}]{1:>2}%'.format('#' * int(progress * 10 /total), progress))
@@ -117,8 +119,8 @@ def InterferenceAlign(object1, object2, objectdim, NrOfPos):
                 object2.SetAx2(ax2)
 
                 #object2.SetAx2([ax2[0]*random.uniform(0,0.1), 
-                #                  ax2[1]*random.uniform(0,0.1), 
-                #                  ax2[2]*random.uniform(0,0.1)])
+                #                ax2[1]*random.uniform(0,0.1), 
+                #                ax2[2]*random.uniform(0,0.1)])
 
                 #object2.SetAx1(ax1)
                 return InterferenceAlign(object1, object2, objectdim, NrOfPos - 1)
@@ -127,6 +129,33 @@ def InterferenceAlign(object1, object2, objectdim, NrOfPos):
         else:
             return False
 
+def FarkasInterferenceTest(obj1, obj2, threshold):
+    # We only use the Farkas lemma if we could have interference 
+    # due to it beeing expensive computationally
+    dist = np.linalg.norm(obj1.GetPos()-obj2.GetPos())
+    if dist < threshold:
+        # Calculate the Matrix description of the platelet
+        obj1.GetPlateletDef()
+        obj2.GetPlateletDef()
+
+        # Build the matrizes that describe the linear programing problem
+        A = csr_matrix(np.transpose(np.vstack((obj1.A, obj2.A))))
+        b = np.zeros(12)
+        c = np.ones(12)
+        G = csr_matrix(np.vstack((np.transpose(-np.vstack((obj1.b, obj2.b))), -np.identity(12))))
+        h = np.zeros(13)
+
+        print 'Shape A = ', np.shape(A)
+        print 'Shape b = ', np.shape(b)
+        print 'Shape c = ', np.shape(c)
+        print 'Shape G = ', np.shape(G)
+        print 'Shape h = ', np.shape(h)
+
+        res = ecos.solve(c, G, h, {},  A, b)
+        return res
+
+    else:
+        return False
 
 # Generators
 def RandomOverlapping(size, plateletdim, voxelsize, 
