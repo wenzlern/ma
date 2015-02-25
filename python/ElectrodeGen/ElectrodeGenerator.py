@@ -140,10 +140,12 @@ def FarkasInterferenceTest(obj1, obj2, threshold):
 
         # Build the matrizes that describe the linear programing problem
         A = csr_matrix(np.transpose(np.vstack((obj1.A, obj2.A))))
-        b = np.zeros(12)
+        b = np.zeros(3)
         c = np.ones(12)
-        G = csr_matrix(np.vstack((np.transpose(-np.vstack((obj1.b, obj2.b))), -np.identity(12))))
+        G = csr_matrix(np.vstack((np.transpose(np.vstack((obj1.b, obj2.b))), -np.identity(12))))
         h = np.zeros(13)
+
+        dims = {'l': np.shape(G)[0], 'g': []}
 
         print 'Shape A = ', np.shape(A)
         print 'Shape b = ', np.shape(b)
@@ -151,7 +153,13 @@ def FarkasInterferenceTest(obj1, obj2, threshold):
         print 'Shape G = ', np.shape(G)
         print 'Shape h = ', np.shape(h)
 
-        res = ecos.solve(c, G, h, {},  A, b)
+        print 'A = ', A
+        print 'b = ', b
+        print 'c = ', c
+        print 'G = ', G
+        print 'h = ', h
+
+        res = ecos.solve(c, G, h, dims,  A, b)
         return res
 
     else:

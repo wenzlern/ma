@@ -31,6 +31,23 @@ def Rotate3DVector(vector, axis, theta):
 
     return np.dot(RotMat, vector)
 
+def unit_vector(vector):
+    """ Returns the unit vector of the vector."""
+    return vector / np.linalg.norm(vector)
+
+def angle(v1, v2):
+
+    v1_u = unit_vector(v1)
+    v2_u = unit_vector(v2)
+
+    angle = np.arccos(np.dot(v1_u, v2_u))
+    if np.isnan(angle):
+        if (v1_u == v2_u).all():
+            return 0.0
+        else:
+            return np.pi
+    return angle
+
 def GetAxis(direction, angle):
     """Converts a direction vector (3-dim) to 2 axis for geodict"""
     #Direction/Axis1 is perpendicular to the plane of the platelet
@@ -173,6 +190,26 @@ class Platelet:
         self.A[3], self.b[3] = PlaneFrom3Points(P41, P42, P11)
         self.A[4], self.b[4] = PlaneFrom3Points(P11, P21, P31)
         self.A[5], self.b[5] = PlaneFrom3Points(P12, P22, P32)
+
+        # The three planes that have a positive distance from the origin of 
+        # the platelet need to have their normal vector (A) inverted in order
+        # to get an "enclosed area" instead of an exclusive between the
+        # parallel planes
+        #Axis1ToPosVec = angle(np.asarray(self.Param['Position']), 
+        #                      np.asarray(self.Param['Axis1']))
+        #Axis2ToPosVec = angle(np.asarray(self.Param['Position']), 
+        #                      np.asarray(self.Param['Axis2']))
+        #Axis3ToPosVec = angle(np.asarray(self.Param['Position']), 
+        #                      np.asarray(self.Param['Axis3']))
+
+        #for l in np.shape(self.A)[0]:
+            
+        self.A[0] = -1*self.A[0]
+        self.A[1] = -1*self.A[1]
+        self.A[2] = -1*self.A[2]
+        self.A[3] = -1*self.A[3]
+        self.A[4] = -1*self.A[4]
+        #self.A[5] = -1*self.A[5]
 
 
     def GetPos(self):
