@@ -55,7 +55,7 @@ def InterferenceDistance(object1, object2, objectdim):
 
 def InterferenceRand(object1, object2, objectdim, NrOfPos):
     if NrOfPos == 0:
-        print "This particle is doooomed"
+        print("This particle is doooomed")
         return True
     else:
         dist = np.linalg.norm(object1.GetPos()-object2.GetPos())
@@ -99,7 +99,7 @@ def InterferenceRand(object1, object2, objectdim, NrOfPos):
 
 def InterferenceAlign(object1, object2, objectdim, NrOfPos):
     if NrOfPos == 0:
-        print "This particle is doooomed"
+        print("This particle is doooomed")
         return True
     else:
         dist = np.linalg.norm(object1.GetPos()-object2.GetPos())
@@ -147,18 +147,6 @@ def FarkasInterferenceTest(obj1, obj2, threshold):
 
         dims = {'l': np.shape(G)[0], 'g': []}
 
-        print 'Shape A = ', np.shape(A)
-        print 'Shape b = ', np.shape(b)
-        print 'Shape c = ', np.shape(c)
-        print 'Shape G = ', np.shape(G)
-        print 'Shape h = ', np.shape(h)
-
-        print 'A = ', A
-        print 'b = ', b
-        print 'c = ', c
-        print 'G = ', G
-        print 'h = ', h
-
         res = ecos.solve(c, G, h, dims,  A, b)
         return res
 
@@ -177,9 +165,9 @@ def RandomOverlapping(size, plateletdim, voxelsize,
     NrOfPlatelets = int(np.round((1-porosity)*(ElectrodeVolume/PlateletVolume)))
 
 
-    print 'Electrode Volume [um^3]: ', ElectrodeVolume
-    print 'Platelet Volume [um^3]: ', PlateletVolume
-    print 'NrOfPlatelets: ', NrOfPlatelets
+    print('Electrode Volume [um^3]: ', ElectrodeVolume)
+    print('Platelet Volume [um^3]: ', PlateletVolume)
+    print('NrOfPlatelets: ', NrOfPlatelets)
 
     Platelets = []
     for i in range(NrOfPlatelets):
@@ -197,9 +185,9 @@ def RandomNonOverlapping(plateletdim, voxelsize,
     # Find the number of platelets we want
     NrOfPlatelets = int(np.round((1-porosity)*(ElectrodeVolume/PlateletVolume)))
 
-    print 'Electrode Volume [um^3]: ', ElectrodeVolume
-    print 'Platelet Volume [um^3]: ', PlateletVolume
-    print 'NrOfPlatelets: ', NrOfPlatelets
+    print('Electrode Volume [um^3]: ', ElectrodeVolume)
+    print('Platelet Volume [um^3]: ', PlateletVolume)
+    print('NrOfPlatelets: ', NrOfPlatelets)
 
     Platelets = [GetRandomPlatelet(1, size, plateletdim, disparity=disparity)]
     for i in range(2,NrOfPlatelets+1):
@@ -216,7 +204,7 @@ def RandomNonOverlapping(plateletdim, voxelsize,
                 Platelets.append(temp)
                 break
 
-        print 'Platetelet ', i, 'of ', NrOfPlatelets
+        print('Platetelet ', i, 'of ', NrOfPlatelets)
 
     return Platelets
 
@@ -230,9 +218,9 @@ def AlignNonOverlapping(size, plateletdim, voxelsize,
     # Find the number of platelets we want
     NrOfPlatelets = int(np.round((1-porosity)*(ElectrodeVolume/PlateletVolume)))
 
-    print 'Electrode Volume [um^3]: ', ElectrodeVolume
-    print 'Platelet Volume [um^3]: ', PlateletVolume
-    print 'NrOfPlatelets: ', NrOfPlatelets
+    print('Electrode Volume [um^3]: ', ElectrodeVolume)
+    print('Platelet Volume [um^3]: ', PlateletVolume)
+    print('NrOfPlatelets: ', NrOfPlatelets)
 
     Platelets = [GetRandomPlatelet(1, size, plateletdim, disparity=disparity)]
     for i in range(2,NrOfPlatelets+1):
@@ -249,7 +237,7 @@ def AlignNonOverlapping(size, plateletdim, voxelsize,
                 Platelets.append(temp)
                 break
 
-        print 'Platetelet ', i, 'of ', NrOfPlatelets
+        print('Platetelet ', i, 'of ', NrOfPlatelets)
 
     return Platelets
 

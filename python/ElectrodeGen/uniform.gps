@@ -1,0 +1,4852 @@
+<GadAddDialog>
+Unit 2
+KeepStructure 0
+<World>
+PeriodicX False
+PeriodicY False
+PeriodicZ False
+OriginX 0
+OriginY 0
+OriginZ 0
+VoxelLength 2.5e-07
+WorldMode VoxelNumber
+NX 40
+NY 110
+NZ 110
+OverlapMode OverlapColor
+Color 0
+</World>
+NumberOfObjects 302
+<Object1>
+Color 6
+Type PlanarPolyhedron
+Position 5.8970286507431986e-06, 1.0813391204224637e-05, 2.6845111559417626e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.8318046325e-06
+RayLength2 2.16943335789e-06
+RayLength3 4.8318046325e-06
+RayLength4 2.16943335789e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object1>
+<Object2>
+Color 8
+Type PlanarPolyhedron
+Position 5.8049061172977797e-06, 8.5263520736562188e-06, 2.2219091313209705e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.82091529929e-06
+RayLength2 1.88993889379e-06
+RayLength3 4.82091529929e-06
+RayLength4 1.88993889379e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object2>
+<Object3>
+Color 2
+Type PlanarPolyhedron
+Position 1.7274422698819278e-06, 1.2135444760960943e-05, 9.384566088008033e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.60159229025e-06
+RayLength2 2.15085879104e-06
+RayLength3 4.60159229025e-06
+RayLength4 2.15085879104e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object3>
+<Object4>
+Color 15
+Type PlanarPolyhedron
+Position 7.5166941982247044e-07, 8.6856826656153913e-06, 3.8745521194722511e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.44214646562e-06
+RayLength2 2.0770791899e-06
+RayLength3 5.44214646562e-06
+RayLength4 2.0770791899e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object4>
+<Object5>
+Color 13
+Type PlanarPolyhedron
+Position 3.0865502055446247e-07, 6.5707090602192899e-06, 1.2954423294547966e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.67936288941e-06
+RayLength2 1.82920559495e-06
+RayLength3 4.67936288941e-06
+RayLength4 1.82920559495e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object5>
+<Object6>
+Color 4
+Type PlanarPolyhedron
+Position 3.3835767866655316e-07, 5.894768860258644e-06, 1.9989227451420244e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.21979054197e-06
+RayLength2 2.09621034922e-06
+RayLength3 5.21979054197e-06
+RayLength4 2.09621034922e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object6>
+<Object7>
+Color 15
+Type PlanarPolyhedron
+Position 8.2737155724748181e-06, 1.0469439440180338e-05, 2.4691345128862058e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.36058907579e-06
+RayLength2 2.16201921534e-06
+RayLength3 5.36058907579e-06
+RayLength4 2.16201921534e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object7>
+<Object8>
+Color 3
+Type PlanarPolyhedron
+Position 4.3784485609107259e-06, 3.7755353136543573e-06, 2.547789185295648e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.47289634129e-06
+RayLength2 1.97996719828e-06
+RayLength3 5.47289634129e-06
+RayLength4 1.97996719828e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object8>
+<Object9>
+Color 3
+Type PlanarPolyhedron
+Position 6.732574640526935e-06, 1.1741182145494481e-05, 5.600579099532671e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.72948757558e-06
+RayLength2 2.06624843234e-06
+RayLength3 4.72948757558e-06
+RayLength4 2.06624843234e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object9>
+<Object10>
+Color 2
+Type PlanarPolyhedron
+Position 5.669142734020471e-06, 2.2864549055769772e-05, 1.9678450130008625e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.24036980049e-06
+RayLength2 1.93522101475e-06
+RayLength3 5.24036980049e-06
+RayLength4 1.93522101475e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object10>
+<Object11>
+Color 12
+Type PlanarPolyhedron
+Position 8.8138876671975982e-06, 2.639180869484138e-05, 1.9560100025526699e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.27451171233e-06
+RayLength2 1.89866347567e-06
+RayLength3 5.27451171233e-06
+RayLength4 1.89866347567e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object11>
+<Object12>
+Color 3
+Type PlanarPolyhedron
+Position 9.1412781616081077e-06, 2.4919987614349866e-05, 5.7670742266293291e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.13699846024e-06
+RayLength2 2.1150893929e-06
+RayLength3 5.13699846024e-06
+RayLength4 2.1150893929e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object12>
+<Object13>
+Color 8
+Type PlanarPolyhedron
+Position 3.5141908212611104e-06, 4.9319214800690291e-06, 2.2423668076008836e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.4430991875e-06
+RayLength2 2.01036454762e-06
+RayLength3 5.4430991875e-06
+RayLength4 2.01036454762e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object13>
+<Object14>
+Color 7
+Type PlanarPolyhedron
+Position 2.74183068641189e-06, 1.911398823274807e-05, 1.432867371928777e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.74795800605e-06
+RayLength2 2.10060436772e-06
+RayLength3 4.74795800605e-06
+RayLength4 2.10060436772e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object14>
+<Object15>
+Color 1
+Type PlanarPolyhedron
+Position 4.4090494264926259e-06, 1.2147596784777672e-05, 2.2600941843068143e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.19298798673e-06
+RayLength2 2.14339671409e-06
+RayLength3 5.19298798673e-06
+RayLength4 2.14339671409e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object15>
+<Object16>
+Color 13
+Type PlanarPolyhedron
+Position 4.4937039574976078e-06, 1.0611206565550252e-05, 3.1326257357765384e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.64120869036e-06
+RayLength2 1.94396874304e-06
+RayLength3 4.64120869036e-06
+RayLength4 1.94396874304e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object16>
+<Object17>
+Color 3
+Type PlanarPolyhedron
+Position 9.5314595224967743e-06, 1.0804823660330048e-05, 2.5658875569960041e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.3692592468e-06
+RayLength2 2.11286350266e-06
+RayLength3 5.3692592468e-06
+RayLength4 2.11286350266e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object17>
+<Object18>
+Color 13
+Type PlanarPolyhedron
+Position 2.0174947436256061e-06, 7.4752483115524667e-06, 8.4340099553241212e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.67710395456e-06
+RayLength2 2.07453569706e-06
+RayLength3 4.67710395456e-06
+RayLength4 2.07453569706e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object18>
+<Object19>
+Color 10
+Type PlanarPolyhedron
+Position 3.4071163773872821e-06, 1.9438463824333792e-05, 4.9696708711039105e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.26612856657e-06
+RayLength2 1.8921991595e-06
+RayLength3 5.26612856657e-06
+RayLength4 1.8921991595e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object19>
+<Object20>
+Color 12
+Type PlanarPolyhedron
+Position 1.0420235424978762e-06, 2.410389969649e-05, 2.4685011301848981e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.56451311811e-06
+RayLength2 2.0937249299e-06
+RayLength3 4.56451311811e-06
+RayLength4 2.0937249299e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object20>
+<Object21>
+Color 3
+Type PlanarPolyhedron
+Position 7.490359832947039e-06, 2.3945704268920283e-05, 2.7028654479951418e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.1347679228e-06
+RayLength2 2.10512279497e-06
+RayLength3 5.1347679228e-06
+RayLength4 2.10512279497e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object21>
+<Object22>
+Color 13
+Type PlanarPolyhedron
+Position 9.9211038533633552e-06, 3.5034022992805544e-06, 3.0224383763932943e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.33924395229e-06
+RayLength2 2.16063160533e-06
+RayLength3 5.33924395229e-06
+RayLength4 2.16063160533e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object22>
+<Object23>
+Color 9
+Type PlanarPolyhedron
+Position 8.6954051226821736e-06, 6.541307362590696e-06, 5.8598361720043537e-07
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.9859143296e-06
+RayLength2 2.04962907494e-06
+RayLength3 4.9859143296e-06
+RayLength4 2.04962907494e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object23>
+<Object24>
+Color 4
+Type PlanarPolyhedron
+Position 3.9471672120266253e-07, 1.9207398248120517e-05, 2.1385172765063773e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.38808898647e-06
+RayLength2 1.85964428173e-06
+RayLength3 5.38808898647e-06
+RayLength4 1.85964428173e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object24>
+<Object25>
+Color 8
+Type PlanarPolyhedron
+Position 2.5579701227637439e-06, 1.401856221658033e-05, 1.8923633024329605e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.13564589229e-06
+RayLength2 2.18580213661e-06
+RayLength3 5.13564589229e-06
+RayLength4 2.18580213661e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object25>
+<Object26>
+Color 1
+Type PlanarPolyhedron
+Position 3.7506139382674647e-06, 1.3621597958521919e-05, 4.4978654087870383e-07
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.19819030529e-06
+RayLength2 1.91700459561e-06
+RayLength3 5.19819030529e-06
+RayLength4 1.91700459561e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object26>
+<Object27>
+Color 10
+Type PlanarPolyhedron
+Position 4.038686323870763e-06, 1.6389233601553671e-05, 1.0855835109753607e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.24393869259e-06
+RayLength2 2.08953519172e-06
+RayLength3 5.24393869259e-06
+RayLength4 2.08953519172e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object27>
+<Object28>
+Color 9
+Type PlanarPolyhedron
+Position 4.4422488731591441e-06, 2.1602294032810368e-06, 2.3487985255042947e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.73326234441e-06
+RayLength2 1.87415525787e-06
+RayLength3 4.73326234441e-06
+RayLength4 1.87415525787e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object28>
+<Object29>
+Color 1
+Type PlanarPolyhedron
+Position 7.5567126737565272e-06, 1.649010923808475e-05, 1.8666171389704048e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.40287395598e-06
+RayLength2 1.80624629442e-06
+RayLength3 5.40287395598e-06
+RayLength4 1.80624629442e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object29>
+<Object30>
+Color 4
+Type PlanarPolyhedron
+Position 8.3058072099778991e-06, 1.0820333483074369e-05, 2.0832263443531851e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.64449931321e-06
+RayLength2 1.85964419801e-06
+RayLength3 4.64449931321e-06
+RayLength4 1.85964419801e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object30>
+<Object31>
+Color 5
+Type PlanarPolyhedron
+Position 6.7340708769294978e-06, 1.5227582358843987e-05, 1.2133980476980254e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.84278540118e-06
+RayLength2 2.09211743532e-06
+RayLength3 4.84278540118e-06
+RayLength4 2.09211743532e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object31>
+<Object32>
+Color 2
+Type PlanarPolyhedron
+Position 6.5156285550537826e-06, 2.0532824032411621e-05, 1.5642503884545631e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.79129341288e-06
+RayLength2 2.13108280845e-06
+RayLength3 4.79129341288e-06
+RayLength4 2.13108280845e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object32>
+<Object33>
+Color 11
+Type PlanarPolyhedron
+Position 4.0624492161035541e-06, 1.1001208921380088e-05, 1.6939503604007729e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.21366141947e-06
+RayLength2 1.89690137344e-06
+RayLength3 5.21366141947e-06
+RayLength4 1.89690137344e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object33>
+<Object34>
+Color 4
+Type PlanarPolyhedron
+Position 4.6793395142479962e-06, 1.2538350076666822e-05, 1.5481048433650312e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.74051031572e-06
+RayLength2 1.94572435648e-06
+RayLength3 4.74051031572e-06
+RayLength4 1.94572435648e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object34>
+<Object35>
+Color 7
+Type PlanarPolyhedron
+Position 6.8061275564757093e-06, 1.0806858650984939e-05, 1.5174092877141854e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.90022205937e-06
+RayLength2 2.06254469272e-06
+RayLength3 4.90022205937e-06
+RayLength4 2.06254469272e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object35>
+<Object36>
+Color 10
+Type PlanarPolyhedron
+Position 9.4954731849227754e-07, 1.4609980749613092e-05, 1.1530379675972539e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.21050187574e-06
+RayLength2 1.94522137115e-06
+RayLength3 5.21050187574e-06
+RayLength4 1.94522137115e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object36>
+<Object37>
+Color 12
+Type PlanarPolyhedron
+Position 9.9724785088114002e-06, 1.1245853691873289e-05, 1.8503548830513644e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.04822711643e-06
+RayLength2 1.80111834008e-06
+RayLength3 5.04822711643e-06
+RayLength4 1.80111834008e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object37>
+<Object38>
+Color 12
+Type PlanarPolyhedron
+Position 7.8776677783831467e-06, 7.5011863016312941e-06, 2.4313951717192968e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.28382982433e-06
+RayLength2 1.84329712488e-06
+RayLength3 5.28382982433e-06
+RayLength4 1.84329712488e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object38>
+<Object39>
+Color 1
+Type PlanarPolyhedron
+Position 9.8154691311465988e-06, 1.2447430763565976e-05, 2.5932697645525325e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.57660166889e-06
+RayLength2 1.93542195844e-06
+RayLength3 4.57660166889e-06
+RayLength4 1.93542195844e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object39>
+<Object40>
+Color 6
+Type PlanarPolyhedron
+Position 8.5073997163452535e-06, 1.4088652876403831e-05, 4.1836628997077236e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.34673269362e-06
+RayLength2 2.07382851618e-06
+RayLength3 5.34673269362e-06
+RayLength4 2.07382851618e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object40>
+<Object41>
+Color 15
+Type PlanarPolyhedron
+Position 2.6273040292858359e-06, 2.5379935364888241e-05, 1.1036492106742177e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.6126736987e-06
+RayLength2 2.007720167e-06
+RayLength3 4.6126736987e-06
+RayLength4 2.007720167e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object41>
+<Object42>
+Color 11
+Type PlanarPolyhedron
+Position 1.2985787638390476e-06, 1.761587013127917e-05, 2.6952478242608335e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.43941530199e-06
+RayLength2 2.06325650209e-06
+RayLength3 5.43941530199e-06
+RayLength4 2.06325650209e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object42>
+<Object43>
+Color 2
+Type PlanarPolyhedron
+Position 9.0584889752753027e-06, 2.6215275662835572e-07, 3.8234367743925855e-07
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.72415333262e-06
+RayLength2 2.16354524057e-06
+RayLength3 4.72415333262e-06
+RayLength4 2.16354524057e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object43>
+<Object44>
+Color 9
+Type PlanarPolyhedron
+Position 3.9883555831840282e-06, 1.8331951260465504e-05, 1.8977049829549112e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.11644937276e-06
+RayLength2 2.01768397779e-06
+RayLength3 5.11644937276e-06
+RayLength4 2.01768397779e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object44>
+<Object45>
+Color 11
+Type PlanarPolyhedron
+Position 8.3528365739463038e-06, 4.737494402812972e-07, 5.6331524299244406e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.67338699643e-06
+RayLength2 2.1734684142e-06
+RayLength3 4.67338699643e-06
+RayLength4 2.1734684142e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object45>
+<Object46>
+Color 12
+Type PlanarPolyhedron
+Position 7.2589399316881179e-06, 1.0585377924990198e-05, 2.5518685920894074e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.18919405008e-06
+RayLength2 1.89340408898e-06
+RayLength3 5.18919405008e-06
+RayLength4 1.89340408898e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object46>
+<Object47>
+Color 3
+Type PlanarPolyhedron
+Position 8.4390103381367865e-06, 1.6622850853538455e-05, 1.7103446151493627e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.54222293059e-06
+RayLength2 2.17968905885e-06
+RayLength3 4.54222293059e-06
+RayLength4 2.17968905885e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object47>
+<Object48>
+Color 10
+Type PlanarPolyhedron
+Position 4.1720808841293571e-06, 2.0939232383470313e-05, 9.4834910314410485e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.10431825637e-06
+RayLength2 1.96414970096e-06
+RayLength3 5.10431825637e-06
+RayLength4 1.96414970096e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object48>
+<Object49>
+Color 11
+Type PlanarPolyhedron
+Position 7.5177547403376561e-07, 8.3023314194907275e-06, 1.1952096211519717e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.81118790109e-06
+RayLength2 1.98341513724e-06
+RayLength3 4.81118790109e-06
+RayLength4 1.98341513724e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object49>
+<Object50>
+Color 5
+Type PlanarPolyhedron
+Position 4.8944536449757458e-06, 1.7218409019242885e-06, 8.5143219532334722e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.96148076306e-06
+RayLength2 2.05257094915e-06
+RayLength3 4.96148076306e-06
+RayLength4 2.05257094915e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object50>
+<Object51>
+Color 13
+Type PlanarPolyhedron
+Position 7.8481734755333666e-06, 3.4982997946621264e-06, 2.5334441550618034e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.57637696576e-06
+RayLength2 2.16133870637e-06
+RayLength3 4.57637696576e-06
+RayLength4 2.16133870637e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object51>
+<Object52>
+Color 4
+Type PlanarPolyhedron
+Position 6.6377732396137019e-06, 1.7018717628793651e-05, 5.6948318044742375e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.39644344792e-06
+RayLength2 2.02525870418e-06
+RayLength3 5.39644344792e-06
+RayLength4 2.02525870418e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object52>
+<Object53>
+Color 14
+Type PlanarPolyhedron
+Position 8.7636945645883057e-06, 1.3771892700567162e-05, 1.6229292137793852e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.51985035312e-06
+RayLength2 1.94897042954e-06
+RayLength3 4.51985035312e-06
+RayLength4 1.94897042954e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object53>
+<Object54>
+Color 12
+Type PlanarPolyhedron
+Position 4.5854427817487308e-06, 1.3743893708150716e-05, 8.8261476648963152e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.94426398845e-06
+RayLength2 2.00120047954e-06
+RayLength3 4.94426398845e-06
+RayLength4 2.00120047954e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object54>
+<Object55>
+Color 9
+Type PlanarPolyhedron
+Position 1.6559606350244214e-06, 2.4889139694032632e-05, 2.3996771578590115e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.39541884038e-06
+RayLength2 1.88032939322e-06
+RayLength3 5.39541884038e-06
+RayLength4 1.88032939322e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object55>
+<Object56>
+Color 13
+Type PlanarPolyhedron
+Position 5.0280587640747686e-06, 6.8514236032176861e-06, 8.0618576913423358e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.4372203124e-06
+RayLength2 1.97824965511e-06
+RayLength3 5.4372203124e-06
+RayLength4 1.97824965511e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object56>
+<Object57>
+Color 4
+Type PlanarPolyhedron
+Position 5.4077960847443479e-06, 2.4732578828169789e-05, 1.4458759193888443e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.7479121188e-06
+RayLength2 2.14743693365e-06
+RayLength3 4.7479121188e-06
+RayLength4 2.14743693365e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object57>
+<Object58>
+Color 15
+Type PlanarPolyhedron
+Position 5.5892391260472505e-06, 2.5882540286409955e-05, 2.3900007353706746e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.3756376132e-06
+RayLength2 2.12736381554e-06
+RayLength3 5.3756376132e-06
+RayLength4 2.12736381554e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object58>
+<Object59>
+Color 2
+Type PlanarPolyhedron
+Position 8.0939820490976666e-06, 7.4716035960539345e-06, 6.3422711168823094e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.00398506165e-06
+RayLength2 2.17808009547e-06
+RayLength3 5.00398506165e-06
+RayLength4 2.17808009547e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object59>
+<Object60>
+Color 9
+Type PlanarPolyhedron
+Position 8.9984145034130953e-06, 1.8628914490740056e-05, 2.6773444143923407e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.11456525243e-06
+RayLength2 1.82773604408e-06
+RayLength3 5.11456525243e-06
+RayLength4 1.82773604408e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object60>
+<Object61>
+Color 11
+Type PlanarPolyhedron
+Position 4.0036267786176061e-06, 2.2143709613318845e-05, 2.7409112461372027e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.79431520455e-06
+RayLength2 2.09247922415e-06
+RayLength3 4.79431520455e-06
+RayLength4 2.09247922415e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object61>
+<Object62>
+Color 3
+Type PlanarPolyhedron
+Position 1.2043148809609392e-06, 5.7879747552382512e-06, 1.0162799665001966e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.9258040636e-06
+RayLength2 2.01132672404e-06
+RayLength3 4.9258040636e-06
+RayLength4 2.01132672404e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object62>
+<Object63>
+Color 4
+Type PlanarPolyhedron
+Position 7.0672117129885865e-06, 1.6752410905295854e-05, 2.5017251648809282e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.43249720271e-06
+RayLength2 2.02305735971e-06
+RayLength3 5.43249720271e-06
+RayLength4 2.02305735971e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object63>
+<Object64>
+Color 14
+Type PlanarPolyhedron
+Position 5.4973025983013262e-06, 5.1761248234272081e-06, 5.9976885171092054e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.88484132943e-06
+RayLength2 2.1738149786e-06
+RayLength3 4.88484132943e-06
+RayLength4 2.1738149786e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object64>
+<Object65>
+Color 2
+Type PlanarPolyhedron
+Position 7.4148461875356099e-06, 2.2331617253790883e-05, 3.4334532403957292e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.52722570221e-06
+RayLength2 1.9745749453e-06
+RayLength3 4.52722570221e-06
+RayLength4 1.9745749453e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object65>
+<Object66>
+Color 4
+Type PlanarPolyhedron
+Position 7.2283428498652194e-06, 2.3606292209394577e-05, 1.5595543741612996e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.61430654998e-06
+RayLength2 2.18701013579e-06
+RayLength3 4.61430654998e-06
+RayLength4 2.18701013579e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object66>
+<Object67>
+Color 9
+Type PlanarPolyhedron
+Position 5.7809554402063664e-06, 1.8421747116395377e-05, 2.1301164760109861e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.42759173155e-06
+RayLength2 1.96125048197e-06
+RayLength3 5.42759173155e-06
+RayLength4 1.96125048197e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object67>
+<Object68>
+Color 9
+Type PlanarPolyhedron
+Position 1.8253222570149829e-07, 2.1585745589805808e-05, 1.4552762890781737e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.7062423061e-06
+RayLength2 2.16388037712e-06
+RayLength3 4.7062423061e-06
+RayLength4 2.16388037712e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object68>
+<Object69>
+Color 3
+Type PlanarPolyhedron
+Position 2.7530789420463607e-06, 1.2279850563326787e-05, 5.2537824410911862e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.19799961707e-06
+RayLength2 2.04080771819e-06
+RayLength3 5.19799961707e-06
+RayLength4 2.04080771819e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object69>
+<Object70>
+Color 3
+Type PlanarPolyhedron
+Position 8.1283550483613616e-06, 1.2743431658706187e-05, 8.6365345050364482e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.91165623756e-06
+RayLength2 1.95438382388e-06
+RayLength3 4.91165623756e-06
+RayLength4 1.95438382388e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object70>
+<Object71>
+Color 8
+Type PlanarPolyhedron
+Position 2.8825188172599824e-07, 8.0946293355472025e-06, 6.9595712568998033e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.23195792613e-06
+RayLength2 2.0344055628e-06
+RayLength3 5.23195792613e-06
+RayLength4 2.0344055628e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object71>
+<Object72>
+Color 7
+Type PlanarPolyhedron
+Position 1.3833295803888922e-09, 1.8420330084727404e-05, 2.0378890298801736e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.97539689709e-06
+RayLength2 2.17412701673e-06
+RayLength3 4.97539689709e-06
+RayLength4 2.17412701673e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object72>
+<Object73>
+Color 3
+Type PlanarPolyhedron
+Position 5.9019405717859882e-06, 2.0896391023065165e-05, 2.2028469525638643e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.25697609387e-06
+RayLength2 1.83136536471e-06
+RayLength3 5.25697609387e-06
+RayLength4 1.83136536471e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object73>
+<Object74>
+Color 8
+Type PlanarPolyhedron
+Position 5.7370381259887454e-06, 2.8000727759876719e-06, 1.2808672551950218e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.43937774047e-06
+RayLength2 2.12112018534e-06
+RayLength3 5.43937774047e-06
+RayLength4 2.12112018534e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object74>
+<Object75>
+Color 10
+Type PlanarPolyhedron
+Position 4.9449367322493874e-06, 1.3050993968708798e-05, 2.053330232476214e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.29190820935e-06
+RayLength2 1.93433064123e-06
+RayLength3 5.29190820935e-06
+RayLength4 1.93433064123e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object75>
+<Object76>
+Color 5
+Type PlanarPolyhedron
+Position 6.7836363662818381e-06, 5.5079018090912648e-06, 6.7372669923929093e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.52030764191e-06
+RayLength2 2.15724120328e-06
+RayLength3 4.52030764191e-06
+RayLength4 2.15724120328e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object76>
+<Object77>
+Color 8
+Type PlanarPolyhedron
+Position 7.8442297301629542e-06, 2.5452163035688377e-05, 2.2930832052991043e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.16763947829e-06
+RayLength2 2.01853714446e-06
+RayLength3 5.16763947829e-06
+RayLength4 2.01853714446e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object77>
+<Object78>
+Color 13
+Type PlanarPolyhedron
+Position 6.7632609164950393e-06, 2.0307406248897068e-05, 1.1723527304286169e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.24341414973e-06
+RayLength2 1.93024787819e-06
+RayLength3 5.24341414973e-06
+RayLength4 1.93024787819e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object78>
+<Object79>
+Color 3
+Type PlanarPolyhedron
+Position 8.171148914117645e-06, 2.2620859636314667e-05, 1.2210414607828001e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.86609975438e-06
+RayLength2 1.85135939039e-06
+RayLength3 4.86609975438e-06
+RayLength4 1.85135939039e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object79>
+<Object80>
+Color 9
+Type PlanarPolyhedron
+Position 7.7938362177307754e-07, 2.5877643604799795e-05, 2.3630067932013136e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.20481701661e-06
+RayLength2 1.82533660338e-06
+RayLength3 5.20481701661e-06
+RayLength4 1.82533660338e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object80>
+<Object81>
+Color 9
+Type PlanarPolyhedron
+Position 2.4076164258110419e-06, 6.5573164492962876e-06, 1.1770836607247801e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.84130697896e-06
+RayLength2 2.12351454523e-06
+RayLength3 4.84130697896e-06
+RayLength4 2.12351454523e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object81>
+<Object82>
+Color 13
+Type PlanarPolyhedron
+Position 5.3457895611509305e-06, 2.6828463950262724e-05, 1.8347058461625253e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.30957930124e-06
+RayLength2 2.05640143088e-06
+RayLength3 5.30957930124e-06
+RayLength4 2.05640143088e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object82>
+<Object83>
+Color 7
+Type PlanarPolyhedron
+Position 5.4396499227125258e-06, 2.5867619729145421e-05, 2.2999118121599353e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.91010482169e-06
+RayLength2 1.93427259264e-06
+RayLength3 4.91010482169e-06
+RayLength4 1.93427259264e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object83>
+<Object84>
+Color 5
+Type PlanarPolyhedron
+Position 3.5985189614768084e-06, 2.6389896097398169e-05, 2.107346741919641e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.77987462532e-06
+RayLength2 2.01419846351e-06
+RayLength3 4.77987462532e-06
+RayLength4 2.01419846351e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object84>
+<Object85>
+Color 9
+Type PlanarPolyhedron
+Position 5.4737144048451076e-06, 2.6313269709532726e-05, 1.1823226198566109e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.51660134502e-06
+RayLength2 1.89609974516e-06
+RayLength3 4.51660134502e-06
+RayLength4 1.89609974516e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object85>
+<Object86>
+Color 11
+Type PlanarPolyhedron
+Position 8.1925346256001223e-07, 1.7587971829791655e-05, 3.6078263418952754e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.98450209771e-06
+RayLength2 2.14781098955e-06
+RayLength3 4.98450209771e-06
+RayLength4 2.14781098955e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object86>
+<Object87>
+Color 13
+Type PlanarPolyhedron
+Position 7.3822486055187182e-06, 1.4646335323188338e-05, 1.6620656809487048e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.26337523162e-06
+RayLength2 1.96401513362e-06
+RayLength3 5.26337523162e-06
+RayLength4 1.96401513362e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object87>
+<Object88>
+Color 4
+Type PlanarPolyhedron
+Position 3.7475039676584307e-06, 5.6549408923841137e-06, 3.0768075825144439e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.01203693096e-06
+RayLength2 1.97814094749e-06
+RayLength3 5.01203693096e-06
+RayLength4 1.97814094749e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object88>
+<Object89>
+Color 14
+Type PlanarPolyhedron
+Position 2.3227252664960117e-06, 1.0517157017654674e-05, 2.4129723820202616e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.04507462285e-06
+RayLength2 1.91810772133e-06
+RayLength3 5.04507462285e-06
+RayLength4 1.91810772133e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object89>
+<Object90>
+Color 10
+Type PlanarPolyhedron
+Position 5.6723936099103615e-06, 2.1900457266797215e-05, 1.4067475098984005e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.89345791221e-06
+RayLength2 2.11886144016e-06
+RayLength3 4.89345791221e-06
+RayLength4 2.11886144016e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object90>
+<Object91>
+Color 11
+Type PlanarPolyhedron
+Position 6.7014576082093616e-06, 9.6766635289914375e-06, 1.5251786158134514e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.93423071767e-06
+RayLength2 2.11845847488e-06
+RayLength3 4.93423071767e-06
+RayLength4 2.11845847488e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object91>
+<Object92>
+Color 15
+Type PlanarPolyhedron
+Position 5.7167797091904656e-06, 1.2610150570690078e-05, 2.4983862186211919e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.10109031061e-06
+RayLength2 1.83050623837e-06
+RayLength3 5.10109031061e-06
+RayLength4 1.83050623837e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object92>
+<Object93>
+Color 3
+Type PlanarPolyhedron
+Position 6.6238502342823372e-06, 9.288273915046276e-06, 1.4315639153065595e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.14020716055e-06
+RayLength2 2.10960111543e-06
+RayLength3 5.14020716055e-06
+RayLength4 2.10960111543e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object93>
+<Object94>
+Color 6
+Type PlanarPolyhedron
+Position 9.0270311343253358e-06, 2.1858310067964681e-05, 1.5448970411219702e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.92678575204e-06
+RayLength2 1.81304447915e-06
+RayLength3 4.92678575204e-06
+RayLength4 1.81304447915e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object94>
+<Object95>
+Color 12
+Type PlanarPolyhedron
+Position 1.5745761329826302e-07, 1.6343480990282714e-05, 9.3870279880778436e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.48407725147e-06
+RayLength2 2.13291404835e-06
+RayLength3 5.48407725147e-06
+RayLength4 2.13291404835e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object95>
+<Object96>
+Color 1
+Type PlanarPolyhedron
+Position 7.0834791015824863e-06, 2.4835983686343795e-05, 1.4298230170317989e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.18036290709e-06
+RayLength2 2.07663630033e-06
+RayLength3 5.18036290709e-06
+RayLength4 2.07663630033e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object96>
+<Object97>
+Color 13
+Type PlanarPolyhedron
+Position 6.0987345035044819e-06, 5.8583805855236111e-06, 2.6047969322545759e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.41422346432e-06
+RayLength2 1.84855708524e-06
+RayLength3 5.41422346432e-06
+RayLength4 1.84855708524e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object97>
+<Object98>
+Color 14
+Type PlanarPolyhedron
+Position 1.2381992638322291e-07, 1.8432171865483127e-05, 1.6368390399612408e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.67431665724e-06
+RayLength2 2.0728209118e-06
+RayLength3 4.67431665724e-06
+RayLength4 2.0728209118e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object98>
+<Object99>
+Color 4
+Type PlanarPolyhedron
+Position 8.2093668437963599e-06, 1.1567445051254921e-05, 2.6739770176880367e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.06629806948e-06
+RayLength2 2.15418640081e-06
+RayLength3 5.06629806948e-06
+RayLength4 2.15418640081e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object99>
+<Object100>
+Color 14
+Type PlanarPolyhedron
+Position 2.3656480868337659e-06, 2.074510089537377e-05, 4.3605173091474456e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.73958786171e-06
+RayLength2 1.99858220799e-06
+RayLength3 4.73958786171e-06
+RayLength4 1.99858220799e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object100>
+<Object101>
+Color 3
+Type PlanarPolyhedron
+Position 5.8099061102169332e-07, 2.2954926955066622e-06, 1.7779676219630225e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.71438711434e-06
+RayLength2 1.89368969706e-06
+RayLength3 4.71438711434e-06
+RayLength4 1.89368969706e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object101>
+<Object102>
+Color 1
+Type PlanarPolyhedron
+Position 7.1465677283097525e-06, 1.2796837974860042e-05, 6.3729774625462325e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.53638954011e-06
+RayLength2 1.92143694672e-06
+RayLength3 4.53638954011e-06
+RayLength4 1.92143694672e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object102>
+<Object103>
+Color 5
+Type PlanarPolyhedron
+Position 2.6936490375829436e-06, 1.3593706530078898e-05, 9.5079374750099409e-07
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.67392401447e-06
+RayLength2 1.94005252322e-06
+RayLength3 4.67392401447e-06
+RayLength4 1.94005252322e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object103>
+<Object104>
+Color 15
+Type PlanarPolyhedron
+Position 6.7553570222721584e-06, 1.4023101488714686e-05, 2.449028066904771e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.9865998291e-06
+RayLength2 1.99731367462e-06
+RayLength3 4.9865998291e-06
+RayLength4 1.99731367462e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object104>
+<Object105>
+Color 9
+Type PlanarPolyhedron
+Position 4.7196993969715879e-08, 2.6326512755523257e-05, 2.3434539131457495e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.56232412647e-06
+RayLength2 2.0112200998e-06
+RayLength3 4.56232412647e-06
+RayLength4 2.0112200998e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object105>
+<Object106>
+Color 11
+Type PlanarPolyhedron
+Position 3.1609274513855654e-06, 1.4094459132708865e-05, 2.1533202963170561e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.08557165397e-06
+RayLength2 2.10725471575e-06
+RayLength3 5.08557165397e-06
+RayLength4 2.10725471575e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object106>
+<Object107>
+Color 9
+Type PlanarPolyhedron
+Position 2.4301862934250828e-06, 1.0491069382209982e-05, 1.5613331490654077e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.88417692086e-06
+RayLength2 1.9986390552e-06
+RayLength3 4.88417692086e-06
+RayLength4 1.9986390552e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object107>
+<Object108>
+Color 7
+Type PlanarPolyhedron
+Position 9.7348549801588808e-06, 1.2523267811787936e-05, 3.9178225456519883e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.45304001451e-06
+RayLength2 1.91218088364e-06
+RayLength3 5.45304001451e-06
+RayLength4 1.91218088364e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object108>
+<Object109>
+Color 5
+Type PlanarPolyhedron
+Position 3.9729255354318179e-06, 7.841834524601946e-06, 5.3779530799662331e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.63680469109e-06
+RayLength2 2.02776126649e-06
+RayLength3 4.63680469109e-06
+RayLength4 2.02776126649e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object109>
+<Object110>
+Color 11
+Type PlanarPolyhedron
+Position 8.1029262384215069e-06, 5.1975746471314477e-06, 2.1093786463065106e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.54319466112e-06
+RayLength2 1.8150433976e-06
+RayLength3 4.54319466112e-06
+RayLength4 1.8150433976e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object110>
+<Object111>
+Color 15
+Type PlanarPolyhedron
+Position 2.0194519955166278e-06, 1.5148452862510502e-05, 2.1211054929558614e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.63331848275e-06
+RayLength2 1.89915079334e-06
+RayLength3 4.63331848275e-06
+RayLength4 1.89915079334e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object111>
+<Object112>
+Color 13
+Type PlanarPolyhedron
+Position 2.6022379607920642e-06, 2.4066766497314126e-06, 2.0230940812494043e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.34764437172e-06
+RayLength2 1.94013394977e-06
+RayLength3 5.34764437172e-06
+RayLength4 1.94013394977e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object112>
+<Object113>
+Color 5
+Type PlanarPolyhedron
+Position 8.9676931229309518e-06, 1.7687488193874654e-05, 1.0721241905576734e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.05318846686e-06
+RayLength2 2.06148473115e-06
+RayLength3 5.05318846686e-06
+RayLength4 2.06148473115e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object113>
+<Object114>
+Color 2
+Type PlanarPolyhedron
+Position 3.0450383000559241e-07, 2.5072393778131294e-05, 1.6308647526614695e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.34135608875e-06
+RayLength2 1.91930818382e-06
+RayLength3 5.34135608875e-06
+RayLength4 1.91930818382e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object114>
+<Object115>
+Color 4
+Type PlanarPolyhedron
+Position 7.0414963513289548e-06, 1.823290961765565e-05, 2.6019199254321463e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.39989361106e-06
+RayLength2 2.1388527091e-06
+RayLength3 5.39989361106e-06
+RayLength4 2.1388527091e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object115>
+<Object116>
+Color 9
+Type PlanarPolyhedron
+Position 6.4261290718437349e-06, 1.4765463853641627e-05, 4.1171815630110515e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.62622179169e-06
+RayLength2 1.92587834595e-06
+RayLength3 4.62622179169e-06
+RayLength4 1.92587834595e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object116>
+<Object117>
+Color 6
+Type PlanarPolyhedron
+Position 9.2719211184508653e-06, 1.39395370892694e-06, 9.5421483264755936e-07
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.6326847165e-06
+RayLength2 1.95094704884e-06
+RayLength3 4.6326847165e-06
+RayLength4 1.95094704884e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object117>
+<Object118>
+Color 8
+Type PlanarPolyhedron
+Position 5.6078249500106353e-06, 6.3447111008516042e-07, 2.5608137352272828e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.26260053318e-06
+RayLength2 2.13268407645e-06
+RayLength3 5.26260053318e-06
+RayLength4 2.13268407645e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object118>
+<Object119>
+Color 7
+Type PlanarPolyhedron
+Position 5.5542490455362778e-06, 1.1921321105729478e-05, 1.6076723777777508e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.7979993544e-06
+RayLength2 2.06256714632e-06
+RayLength3 4.7979993544e-06
+RayLength4 2.06256714632e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object119>
+<Object120>
+Color 15
+Type PlanarPolyhedron
+Position 6.9281042619984374e-06, 3.3349436510231058e-07, 1.5261214271224528e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.35653883041e-06
+RayLength2 2.09783189539e-06
+RayLength3 5.35653883041e-06
+RayLength4 2.09783189539e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object120>
+<Object121>
+Color 4
+Type PlanarPolyhedron
+Position 3.9549128254255115e-06, 3.4336811697444622e-07, 1.1368252606481568e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.9344380927e-06
+RayLength2 2.01648150867e-06
+RayLength3 4.9344380927e-06
+RayLength4 2.01648150867e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object121>
+<Object122>
+Color 7
+Type PlanarPolyhedron
+Position 5.2113247280651126e-06, 1.2996644873081733e-05, 1.9525359033633902e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.49331662998e-06
+RayLength2 1.90791975614e-06
+RayLength3 5.49331662998e-06
+RayLength4 1.90791975614e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object122>
+<Object123>
+Color 4
+Type PlanarPolyhedron
+Position 1.1360071663902037e-06, 1.332517461470734e-06, 2.2162005124544393e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.74393615728e-06
+RayLength2 2.19319877435e-06
+RayLength3 4.74393615728e-06
+RayLength4 2.19319877435e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object123>
+<Object124>
+Color 9
+Type PlanarPolyhedron
+Position 3.4050569164660788e-06, 2.7417610795416705e-05, 1.2857433544200176e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.03383550998e-06
+RayLength2 2.06110338245e-06
+RayLength3 5.03383550998e-06
+RayLength4 2.06110338245e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object124>
+<Object125>
+Color 5
+Type PlanarPolyhedron
+Position 2.5350278358786545e-06, 3.3612223905055031e-06, 1.0695061846582904e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.10204434851e-06
+RayLength2 2.05801541743e-06
+RayLength3 5.10204434851e-06
+RayLength4 2.05801541743e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object125>
+<Object126>
+Color 3
+Type PlanarPolyhedron
+Position 2.8329442368521837e-06, 2.5517710973208878e-05, 1.545381773759621e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.22575070495e-06
+RayLength2 1.87472172717e-06
+RayLength3 5.22575070495e-06
+RayLength4 1.87472172717e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object126>
+<Object127>
+Color 10
+Type PlanarPolyhedron
+Position 5.0776897669345484e-06, 1.9389844171691636e-05, 5.1804732003701864e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.90860484509e-06
+RayLength2 2.14343840795e-06
+RayLength3 4.90860484509e-06
+RayLength4 2.14343840795e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object127>
+<Object128>
+Color 12
+Type PlanarPolyhedron
+Position 1.7147179221315888e-06, 2.2369310751270933e-05, 1.9042618775071927e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.36346980246e-06
+RayLength2 1.94051492765e-06
+RayLength3 5.36346980246e-06
+RayLength4 1.94051492765e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object128>
+<Object129>
+Color 9
+Type PlanarPolyhedron
+Position 2.9094628237782934e-06, 1.5729664493731561e-06, 1.4379189043790336e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.15364502199e-06
+RayLength2 2.03307774542e-06
+RayLength3 5.15364502199e-06
+RayLength4 2.03307774542e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object129>
+<Object130>
+Color 4
+Type PlanarPolyhedron
+Position 8.525130336265518e-07, 1.2729572788495355e-05, 2.3141835709239408e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.95905135414e-06
+RayLength2 2.09730771206e-06
+RayLength3 4.95905135414e-06
+RayLength4 2.09730771206e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object130>
+<Object131>
+Color 13
+Type PlanarPolyhedron
+Position 3.4542157405214901e-06, 2.4284626130891329e-05, 2.0355350148044763e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.9981444965e-06
+RayLength2 2.06851948988e-06
+RayLength3 4.9981444965e-06
+RayLength4 2.06851948988e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object131>
+<Object132>
+Color 4
+Type PlanarPolyhedron
+Position 3.4604648172784556e-06, 1.6304398551215182e-05, 1.0876653767744739e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.55003087864e-06
+RayLength2 1.82742631377e-06
+RayLength3 4.55003087864e-06
+RayLength4 1.82742631377e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object132>
+<Object133>
+Color 8
+Type PlanarPolyhedron
+Position 3.773748031330651e-06, 2.0779448253932786e-06, 2.5402277055543863e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.16422121659e-06
+RayLength2 2.12332713069e-06
+RayLength3 5.16422121659e-06
+RayLength4 2.12332713069e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object133>
+<Object134>
+Color 13
+Type PlanarPolyhedron
+Position 2.8172947450199557e-06, 2.0428511210674823e-05, 2.5541960327113097e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.6587442022e-06
+RayLength2 2.11827829767e-06
+RayLength3 4.6587442022e-06
+RayLength4 2.11827829767e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object134>
+<Object135>
+Color 8
+Type PlanarPolyhedron
+Position 3.853053223409691e-06, 9.9855034319960436e-06, 3.6303833921867563e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.1532676101e-06
+RayLength2 1.9209231687e-06
+RayLength3 5.1532676101e-06
+RayLength4 1.9209231687e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object135>
+<Object136>
+Color 9
+Type PlanarPolyhedron
+Position 8.2498509570686616e-06, 2.5677425582621787e-06, 3.2072608811231362e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.21067964768e-06
+RayLength2 1.92772974518e-06
+RayLength3 5.21067964768e-06
+RayLength4 1.92772974518e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object136>
+<Object137>
+Color 2
+Type PlanarPolyhedron
+Position 6.0922246207603313e-06, 8.1508742965080835e-06, 5.4542694091022495e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.03926452302e-06
+RayLength2 2.18944273246e-06
+RayLength3 5.03926452302e-06
+RayLength4 2.18944273246e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object137>
+<Object138>
+Color 4
+Type PlanarPolyhedron
+Position 9.7645616508404855e-07, 6.399873893966238e-06, 1.103381935146029e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.9059318633e-06
+RayLength2 1.89907159514e-06
+RayLength3 4.9059318633e-06
+RayLength4 1.89907159514e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object138>
+<Object139>
+Color 7
+Type PlanarPolyhedron
+Position 1.3697916627858129e-07, 2.4227041650345665e-05, 1.467601421529753e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.09786851531e-06
+RayLength2 1.83571868283e-06
+RayLength3 5.09786851531e-06
+RayLength4 1.83571868283e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object139>
+<Object140>
+Color 14
+Type PlanarPolyhedron
+Position 8.9529376973411443e-07, 9.0856486348771618e-06, 2.6135758383213047e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.03252522469e-06
+RayLength2 2.01480773221e-06
+RayLength3 5.03252522469e-06
+RayLength4 2.01480773221e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object140>
+<Object141>
+Color 1
+Type PlanarPolyhedron
+Position 1.0242878314578163e-06, 6.0343099779618839e-06, 6.1253559995762738e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.98497987209e-06
+RayLength2 2.14259336739e-06
+RayLength3 4.98497987209e-06
+RayLength4 2.14259336739e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object141>
+<Object142>
+Color 15
+Type PlanarPolyhedron
+Position 5.9711880688531011e-06, 2.1217453819280061e-05, 1.6824204419647273e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.76415592705e-06
+RayLength2 1.89511056497e-06
+RayLength3 4.76415592705e-06
+RayLength4 1.89511056497e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object142>
+<Object143>
+Color 1
+Type PlanarPolyhedron
+Position 8.7633197029820855e-07, 2.2802757353880601e-05, 1.6209666585112612e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.26132027898e-06
+RayLength2 1.89776850421e-06
+RayLength3 5.26132027898e-06
+RayLength4 1.89776850421e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object143>
+<Object144>
+Color 11
+Type PlanarPolyhedron
+Position 9.2632904161906356e-06, 8.3121866390831347e-06, 1.4897255402283561e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.12082853122e-06
+RayLength2 1.83841197853e-06
+RayLength3 5.12082853122e-06
+RayLength4 1.83841197853e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object144>
+<Object145>
+Color 9
+Type PlanarPolyhedron
+Position 8.0491346044115423e-06, 1.0891749362899071e-05, 4.4565864473215865e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.16895061774e-06
+RayLength2 1.87328114777e-06
+RayLength3 5.16895061774e-06
+RayLength4 1.87328114777e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object145>
+<Object146>
+Color 12
+Type PlanarPolyhedron
+Position 6.3138709372812172e-06, 9.3770445030976302e-06, 2.7433180010497356e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.68367163207e-06
+RayLength2 1.85274522652e-06
+RayLength3 4.68367163207e-06
+RayLength4 1.85274522652e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object146>
+<Object147>
+Color 12
+Type PlanarPolyhedron
+Position 6.2792662237388899e-06, 1.9375235997165125e-05, 2.7270201645592291e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.67873776685e-06
+RayLength2 1.91951402783e-06
+RayLength3 4.67873776685e-06
+RayLength4 1.91951402783e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object147>
+<Object148>
+Color 13
+Type PlanarPolyhedron
+Position 8.3680387358674919e-06, 5.7376015964226519e-06, 8.9904278258279806e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.41513632327e-06
+RayLength2 2.12053260183e-06
+RayLength3 5.41513632327e-06
+RayLength4 2.12053260183e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object148>
+<Object149>
+Color 12
+Type PlanarPolyhedron
+Position 8.5568873987890463e-06, 9.2042599494795176e-06, 2.3445632156663028e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.93931612785e-06
+RayLength2 2.03088490602e-06
+RayLength3 4.93931612785e-06
+RayLength4 2.03088490602e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object149>
+<Object150>
+Color 15
+Type PlanarPolyhedron
+Position 1.8460723064830029e-06, 2.5886958883626447e-05, 2.0541068428711911e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.820907935e-06
+RayLength2 1.90252928496e-06
+RayLength3 4.820907935e-06
+RayLength4 1.90252928496e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object150>
+<Object151>
+Color 12
+Type PlanarPolyhedron
+Position 9.314503686666185e-06, 9.1509789532018669e-06, 3.3425940095964308e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.24100334072e-06
+RayLength2 2.02882777672e-06
+RayLength3 5.24100334072e-06
+RayLength4 2.02882777672e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object151>
+<Object152>
+Color 6
+Type PlanarPolyhedron
+Position 9.2604023181876316e-07, 1.1390793640341599e-05, 1.850517970837183e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.15176041741e-06
+RayLength2 1.83657057395e-06
+RayLength3 5.15176041741e-06
+RayLength4 1.83657057395e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object152>
+<Object153>
+Color 1
+Type PlanarPolyhedron
+Position 6.4031061425093245e-06, 6.3107142854324862e-06, 2.473675892574445e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.15968459053e-06
+RayLength2 1.97673442366e-06
+RayLength3 5.15968459053e-06
+RayLength4 1.97673442366e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object153>
+<Object154>
+Color 13
+Type PlanarPolyhedron
+Position 4.3453606366155489e-06, 1.8386915213521298e-05, 1.1379729447271677e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.11498429356e-06
+RayLength2 2.07972335257e-06
+RayLength3 5.11498429356e-06
+RayLength4 2.07972335257e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object154>
+<Object155>
+Color 14
+Type PlanarPolyhedron
+Position 4.5448353022754081e-06, 9.7617647824956818e-07, 1.0724097163017309e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.74552272014e-06
+RayLength2 2.15020715257e-06
+RayLength3 4.74552272014e-06
+RayLength4 2.15020715257e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object155>
+<Object156>
+Color 5
+Type PlanarPolyhedron
+Position 9.0946675642970892e-06, 1.3368205191278222e-05, 1.7570011083250951e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.11468009191e-06
+RayLength2 2.0331449198e-06
+RayLength3 5.11468009191e-06
+RayLength4 2.0331449198e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object156>
+<Object157>
+Color 10
+Type PlanarPolyhedron
+Position 5.3851936391727287e-06, 1.5822877122131811e-05, 1.1393010366028602e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.52337855279e-06
+RayLength2 2.03267581219e-06
+RayLength3 4.52337855279e-06
+RayLength4 2.03267581219e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object157>
+<Object158>
+Color 12
+Type PlanarPolyhedron
+Position 4.7677019113163353e-07, 5.991271297667363e-06, 2.0918196162677209e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.78985221678e-06
+RayLength2 1.98672383542e-06
+RayLength3 4.78985221678e-06
+RayLength4 1.98672383542e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object158>
+<Object159>
+Color 12
+Type PlanarPolyhedron
+Position 4.2954224457335072e-06, 8.6630493780195123e-06, 2.418977628396865e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.43158364324e-06
+RayLength2 2.02521714195e-06
+RayLength3 5.43158364324e-06
+RayLength4 2.02521714195e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object159>
+<Object160>
+Color 9
+Type PlanarPolyhedron
+Position 5.2871898400557004e-06, 2.435817820607927e-05, 1.8996006290819105e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.9464607485e-06
+RayLength2 2.18602548911e-06
+RayLength3 4.9464607485e-06
+RayLength4 2.18602548911e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object160>
+<Object161>
+Color 7
+Type PlanarPolyhedron
+Position 6.2565019394015018e-06, 2.117017180214547e-05, 2.2519065529950433e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.29300985876e-06
+RayLength2 2.02798308597e-06
+RayLength3 5.29300985876e-06
+RayLength4 2.02798308597e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object161>
+<Object162>
+Color 13
+Type PlanarPolyhedron
+Position 9.5207593285049996e-06, 2.7192615617220561e-05, 5.0960391076347001e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.64828151821e-06
+RayLength2 2.06849831602e-06
+RayLength3 4.64828151821e-06
+RayLength4 2.06849831602e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object162>
+<Object163>
+Color 2
+Type PlanarPolyhedron
+Position 2.2958179364420148e-06, 1.3594633948825256e-05, 5.6343957431660499e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.75083054005e-06
+RayLength2 1.98878764855e-06
+RayLength3 4.75083054005e-06
+RayLength4 1.98878764855e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object163>
+<Object164>
+Color 8
+Type PlanarPolyhedron
+Position 9.2417774888682831e-06, 1.5860353890193429e-05, 1.8996118001669013e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.8011425115e-06
+RayLength2 2.19857590411e-06
+RayLength3 4.8011425115e-06
+RayLength4 2.19857590411e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object164>
+<Object165>
+Color 6
+Type PlanarPolyhedron
+Position 4.304560941008848e-06, 1.7461631936377773e-05, 2.5368013992609512e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.28953704841e-06
+RayLength2 2.16687482773e-06
+RayLength3 5.28953704841e-06
+RayLength4 2.16687482773e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object165>
+<Object166>
+Color 8
+Type PlanarPolyhedron
+Position 6.2038293821196839e-06, 3.4654259641655967e-06, 1.7225004989434076e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.98502032625e-06
+RayLength2 2.15583953316e-06
+RayLength3 4.98502032625e-06
+RayLength4 2.15583953316e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object166>
+<Object167>
+Color 8
+Type PlanarPolyhedron
+Position 9.1075100222759885e-06, 1.3651581412002064e-06, 1.7975884912751037e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.24313520175e-06
+RayLength2 2.15173317491e-06
+RayLength3 5.24313520175e-06
+RayLength4 2.15173317491e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object167>
+<Object168>
+Color 10
+Type PlanarPolyhedron
+Position 5.8298606045025265e-06, 2.1955349429834689e-05, 1.7209771786284642e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.3878791215e-06
+RayLength2 2.12777268515e-06
+RayLength3 5.3878791215e-06
+RayLength4 2.12777268515e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object168>
+<Object169>
+Color 3
+Type PlanarPolyhedron
+Position 9.3709591481379632e-06, 4.1608941753394671e-06, 1.5505401464600673e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.27774306177e-06
+RayLength2 2.17687751383e-06
+RayLength3 5.27774306177e-06
+RayLength4 2.17687751383e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object169>
+<Object170>
+Color 11
+Type PlanarPolyhedron
+Position 7.724841945493263e-06, 2.0542250216258335e-05, 1.6453646150398212e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.46767914159e-06
+RayLength2 2.17808392551e-06
+RayLength3 5.46767914159e-06
+RayLength4 2.17808392551e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object170>
+<Object171>
+Color 13
+Type PlanarPolyhedron
+Position 1.2389182054070611e-06, 1.3238801183254708e-05, 2.188713494171232e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.59421603731e-06
+RayLength2 2.16906321149e-06
+RayLength3 4.59421603731e-06
+RayLength4 2.16906321149e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object171>
+<Object172>
+Color 12
+Type PlanarPolyhedron
+Position 4.7581343724258051e-06, 2.4705771530650892e-05, 1.8906967965694267e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.39987124958e-06
+RayLength2 2.08379104135e-06
+RayLength3 5.39987124958e-06
+RayLength4 2.08379104135e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object172>
+<Object173>
+Color 11
+Type PlanarPolyhedron
+Position 3.6637001562014845e-06, 1.7894810739446838e-05, 1.7689641341596763e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.95252973449e-06
+RayLength2 1.8601454217e-06
+RayLength3 4.95252973449e-06
+RayLength4 1.8601454217e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object173>
+<Object174>
+Color 15
+Type PlanarPolyhedron
+Position 7.3544252668805503e-06, 2.2694472601753542e-05, 7.6141342463155448e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.17083015861e-06
+RayLength2 2.17775462223e-06
+RayLength3 5.17083015861e-06
+RayLength4 2.17775462223e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object174>
+<Object175>
+Color 11
+Type PlanarPolyhedron
+Position 9.3797432206155116e-06, 9.6901202971726465e-06, 1.2188952202601472e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.63628378178e-06
+RayLength2 1.87623909872e-06
+RayLength3 4.63628378178e-06
+RayLength4 1.87623909872e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object175>
+<Object176>
+Color 6
+Type PlanarPolyhedron
+Position 2.4417503989841993e-06, 1.3320281616213548e-05, 3.3910160933666366e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.65059789499e-06
+RayLength2 2.18902375513e-06
+RayLength3 4.65059789499e-06
+RayLength4 2.18902375513e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object176>
+<Object177>
+Color 14
+Type PlanarPolyhedron
+Position 1.5194735702013017e-06, 1.6446758678767387e-05, 2.4119089006360727e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.76508368312e-06
+RayLength2 1.96989581241e-06
+RayLength3 4.76508368312e-06
+RayLength4 1.96989581241e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object177>
+<Object178>
+Color 5
+Type PlanarPolyhedron
+Position 1.9948889965373938e-06, 2.0573023080753774e-05, 1.4728525637296178e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.8208230901e-06
+RayLength2 2.00760886254e-06
+RayLength3 4.8208230901e-06
+RayLength4 2.00760886254e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object178>
+<Object179>
+Color 1
+Type PlanarPolyhedron
+Position 4.0486539883159311e-07, 5.6525783671947069e-07, 5.4187201951410361e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.8817478092e-06
+RayLength2 2.06091515769e-06
+RayLength3 4.8817478092e-06
+RayLength4 2.06091515769e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object179>
+<Object180>
+Color 12
+Type PlanarPolyhedron
+Position 9.535437785935544e-06, 2.1783577384329033e-05, 2.3935176285719611e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.87635671992e-06
+RayLength2 2.07316690953e-06
+RayLength3 4.87635671992e-06
+RayLength4 2.07316690953e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object180>
+<Object181>
+Color 2
+Type PlanarPolyhedron
+Position 7.6031677388025624e-07, 2.0861630875943512e-06, 4.3651486264106889e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.6849271395e-06
+RayLength2 1.93343796292e-06
+RayLength3 4.6849271395e-06
+RayLength4 1.93343796292e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object181>
+<Object182>
+Color 8
+Type PlanarPolyhedron
+Position 4.4782937432971881e-06, 1.8979564298807012e-05, 1.1949307198405089e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.11127766038e-06
+RayLength2 2.13311498644e-06
+RayLength3 5.11127766038e-06
+RayLength4 2.13311498644e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object182>
+<Object183>
+Color 9
+Type PlanarPolyhedron
+Position 1.2767399138684943e-06, 6.9179323107138423e-07, 3.1058015828834551e-08
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.75010422115e-06
+RayLength2 2.07528513989e-06
+RayLength3 4.75010422115e-06
+RayLength4 2.07528513989e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object183>
+<Object184>
+Color 15
+Type PlanarPolyhedron
+Position 4.8151783676253933e-06, 1.8000200363314512e-05, 2.1113624199083422e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.01293944421e-06
+RayLength2 2.15709195749e-06
+RayLength3 5.01293944421e-06
+RayLength4 2.15709195749e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object184>
+<Object185>
+Color 2
+Type PlanarPolyhedron
+Position 1.9262571934041882e-06, 2.443712527377854e-06, 1.044181271570786e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.69244893134e-06
+RayLength2 1.90439685409e-06
+RayLength3 4.69244893134e-06
+RayLength4 1.90439685409e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object185>
+<Object186>
+Color 2
+Type PlanarPolyhedron
+Position 4.9414954036717534e-06, 8.9221170055008017e-06, 8.834153051639632e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.17413156082e-06
+RayLength2 1.84637302145e-06
+RayLength3 5.17413156082e-06
+RayLength4 1.84637302145e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object186>
+<Object187>
+Color 1
+Type PlanarPolyhedron
+Position 3.9734806183206968e-06, 8.4883158077958831e-06, 1.3506252534840444e-07
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.23973659721e-06
+RayLength2 1.85442039438e-06
+RayLength3 5.23973659721e-06
+RayLength4 1.85442039438e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object187>
+<Object188>
+Color 15
+Type PlanarPolyhedron
+Position 3.4899997767246592e-06, 7.0780649805511386e-06, 9.384271953124986e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.19666810781e-06
+RayLength2 1.80084901573e-06
+RayLength3 5.19666810781e-06
+RayLength4 1.80084901573e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object188>
+<Object189>
+Color 2
+Type PlanarPolyhedron
+Position 9.8207439158064846e-06, 1.8531172079319509e-05, 1.5889039320039578e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.21910196818e-06
+RayLength2 2.07844302832e-06
+RayLength3 5.21910196818e-06
+RayLength4 2.07844302832e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object189>
+<Object190>
+Color 3
+Type PlanarPolyhedron
+Position 3.8983785225736722e-06, 1.1476822326793792e-05, 1.4284720091054546e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.5453209447e-06
+RayLength2 1.89792793633e-06
+RayLength3 4.5453209447e-06
+RayLength4 1.89792793633e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object190>
+<Object191>
+Color 8
+Type PlanarPolyhedron
+Position 7.2782572647254408e-06, 8.8416899964401438e-06, 8.2820988027438141e-07
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.25365950781e-06
+RayLength2 1.86889334359e-06
+RayLength3 5.25365950781e-06
+RayLength4 1.86889334359e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object191>
+<Object192>
+Color 7
+Type PlanarPolyhedron
+Position 7.7150775288832375e-06, 2.0279114268041423e-05, 1.9417579868537861e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.6051186613e-06
+RayLength2 2.00335062426e-06
+RayLength3 4.6051186613e-06
+RayLength4 2.00335062426e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object192>
+<Object193>
+Color 1
+Type PlanarPolyhedron
+Position 4.2593306013953056e-06, 2.506384713643626e-05, 7.2441644077134704e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.80544484286e-06
+RayLength2 2.12334267695e-06
+RayLength3 4.80544484286e-06
+RayLength4 2.12334267695e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object193>
+<Object194>
+Color 9
+Type PlanarPolyhedron
+Position 5.7824999780525913e-06, 2.5265174408582445e-05, 8.9909700950979378e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.0819655826e-06
+RayLength2 1.92802976288e-06
+RayLength3 5.0819655826e-06
+RayLength4 1.92802976288e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object194>
+<Object195>
+Color 8
+Type PlanarPolyhedron
+Position 9.2718979280902584e-06, 3.2896539911788096e-06, 2.3765020138942306e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.86462646922e-06
+RayLength2 2.13963002368e-06
+RayLength3 4.86462646922e-06
+RayLength4 2.13963002368e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object195>
+<Object196>
+Color 7
+Type PlanarPolyhedron
+Position 1.3113587036640904e-06, 8.0825015485061312e-06, 2.3582998751239934e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.20775947995e-06
+RayLength2 2.13769536205e-06
+RayLength3 5.20775947995e-06
+RayLength4 2.13769536205e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object196>
+<Object197>
+Color 3
+Type PlanarPolyhedron
+Position 2.9582533767410111e-06, 1.4587412666260888e-05, 8.4961302360419754e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.9934493254e-06
+RayLength2 1.90725854459e-06
+RayLength3 4.9934493254e-06
+RayLength4 1.90725854459e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object197>
+<Object198>
+Color 3
+Type PlanarPolyhedron
+Position 8.7503305511541035e-06, 7.7540915112883159e-06, 8.7821996389662589e-07
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.58412996414e-06
+RayLength2 2.15000413307e-06
+RayLength3 4.58412996414e-06
+RayLength4 2.15000413307e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object198>
+<Object199>
+Color 13
+Type PlanarPolyhedron
+Position 7.1424144174054456e-06, 1.0812360802162413e-05, 1.0766675315542766e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.95176510307e-06
+RayLength2 1.8384568609e-06
+RayLength3 4.95176510307e-06
+RayLength4 1.8384568609e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object199>
+<Object200>
+Color 8
+Type PlanarPolyhedron
+Position 9.5325066355497661e-06, 2.1112026413456583e-05, 4.8572472710357566e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.78631552037e-06
+RayLength2 1.96784203218e-06
+RayLength3 4.78631552037e-06
+RayLength4 1.96784203218e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object200>
+<Object201>
+Color 9
+Type PlanarPolyhedron
+Position 8.8142578585707154e-06, 3.9393973883120276e-06, 1.3642169727829651e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.40965921589e-06
+RayLength2 2.17222274115e-06
+RayLength3 5.40965921589e-06
+RayLength4 2.17222274115e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object201>
+<Object202>
+Color 10
+Type PlanarPolyhedron
+Position 6.1384898164536989e-06, 1.0670324844500575e-05, 2.726573095015799e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.94510969509e-06
+RayLength2 2.01113473583e-06
+RayLength3 4.94510969509e-06
+RayLength4 2.01113473583e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object202>
+<Object203>
+Color 7
+Type PlanarPolyhedron
+Position 6.7535753111068472e-06, 3.0976166561567617e-06, 7.2741502065018126e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.6023611912e-06
+RayLength2 1.9872191963e-06
+RayLength3 4.6023611912e-06
+RayLength4 1.9872191963e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object203>
+<Object204>
+Color 9
+Type PlanarPolyhedron
+Position 9.0304178382013352e-06, 1.3664479096845194e-05, 2.6392926203798479e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.15530058223e-06
+RayLength2 1.98773735136e-06
+RayLength3 5.15530058223e-06
+RayLength4 1.98773735136e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object204>
+<Object205>
+Color 10
+Type PlanarPolyhedron
+Position 4.5520140279279838e-06, 2.0417107089992081e-05, 4.9998681798570373e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.4435452968e-06
+RayLength2 2.04745744816e-06
+RayLength3 5.4435452968e-06
+RayLength4 2.04745744816e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object205>
+<Object206>
+Color 4
+Type PlanarPolyhedron
+Position 4.1391827054145502e-06, 1.6551448673718368e-05, 2.7854951766933483e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.71637317539e-06
+RayLength2 1.85659307198e-06
+RayLength3 4.71637317539e-06
+RayLength4 1.85659307198e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object206>
+<Object207>
+Color 8
+Type PlanarPolyhedron
+Position 8.5284018580386435e-06, 2.2212693926741013e-05, 9.1802011065495806e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.00620444343e-06
+RayLength2 1.98728336326e-06
+RayLength3 5.00620444343e-06
+RayLength4 1.98728336326e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object207>
+<Object208>
+Color 1
+Type PlanarPolyhedron
+Position 2.9091316188639422e-06, 6.4269549819870785e-06, 3.4367304893622891e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.62865911657e-06
+RayLength2 1.87166198457e-06
+RayLength3 4.62865911657e-06
+RayLength4 1.87166198457e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object208>
+<Object209>
+Color 7
+Type PlanarPolyhedron
+Position 1.8555741937340751e-06, 1.0756321847498761e-05, 2.2177273713018594e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.74600081455e-06
+RayLength2 1.96840897156e-06
+RayLength3 4.74600081455e-06
+RayLength4 1.96840897156e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object209>
+<Object210>
+Color 1
+Type PlanarPolyhedron
+Position 5.9625425415261033e-06, 2.0417385342501253e-05, 5.1912135463370583e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.35966844727e-06
+RayLength2 1.82953318742e-06
+RayLength3 5.35966844727e-06
+RayLength4 1.82953318742e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object210>
+<Object211>
+Color 14
+Type PlanarPolyhedron
+Position 9.4217001529590993e-07, 7.0811091330311097e-06, 5.3330082555330823e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.3642021049e-06
+RayLength2 1.94313356904e-06
+RayLength3 5.3642021049e-06
+RayLength4 1.94313356904e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object211>
+<Object212>
+Color 12
+Type PlanarPolyhedron
+Position 5.682525378892631e-06, 8.6333065451754471e-06, 1.9419263147970897e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.75170214138e-06
+RayLength2 1.83114047272e-06
+RayLength3 4.75170214138e-06
+RayLength4 1.83114047272e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object212>
+<Object213>
+Color 15
+Type PlanarPolyhedron
+Position 2.7168786934874851e-06, 2.897818682255376e-06, 2.3178564968857918e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.69240665969e-06
+RayLength2 2.10325587911e-06
+RayLength3 4.69240665969e-06
+RayLength4 2.10325587911e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object213>
+<Object214>
+Color 15
+Type PlanarPolyhedron
+Position 9.3623805398687214e-06, 5.9677814307973634e-06, 6.40190540459947e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.75891860262e-06
+RayLength2 2.00303721803e-06
+RayLength3 4.75891860262e-06
+RayLength4 2.00303721803e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object214>
+<Object215>
+Color 15
+Type PlanarPolyhedron
+Position 2.1341265524756558e-06, 1.5754561786193562e-05, 2.5090264862102349e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.49047010712e-06
+RayLength2 1.82325842232e-06
+RayLength3 5.49047010712e-06
+RayLength4 1.82325842232e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object215>
+<Object216>
+Color 12
+Type PlanarPolyhedron
+Position 5.9737011540054191e-06, 9.3813615482783125e-06, 1.0021938898784367e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.43625816229e-06
+RayLength2 2.10134753041e-06
+RayLength3 5.43625816229e-06
+RayLength4 2.10134753041e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object216>
+<Object217>
+Color 2
+Type PlanarPolyhedron
+Position 9.5001690669464377e-06, 1.1881634168377058e-05, 1.697335556652481e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.75251841717e-06
+RayLength2 1.96348081932e-06
+RayLength3 4.75251841717e-06
+RayLength4 1.96348081932e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object217>
+<Object218>
+Color 14
+Type PlanarPolyhedron
+Position 3.5448476864918097e-06, 3.2037991261151992e-06, 1.9063773564253808e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.00168503848e-06
+RayLength2 1.81833668331e-06
+RayLength3 5.00168503848e-06
+RayLength4 1.81833668331e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object218>
+<Object219>
+Color 5
+Type PlanarPolyhedron
+Position 8.438528872879791e-07, 6.9165043496880849e-06, 7.350116989146163e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.85932222692e-06
+RayLength2 2.18967609382e-06
+RayLength3 4.85932222692e-06
+RayLength4 2.18967609382e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object219>
+<Object220>
+Color 11
+Type PlanarPolyhedron
+Position 7.3236166631482897e-06, 1.4663891038235195e-05, 2.4599716394211896e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.50090833274e-06
+RayLength2 2.09200144972e-06
+RayLength3 4.50090833274e-06
+RayLength4 2.09200144972e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object220>
+<Object221>
+Color 15
+Type PlanarPolyhedron
+Position 6.0468646655236744e-06, 2.5768850950335596e-07, 1.7006184716031183e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.23399703256e-06
+RayLength2 1.99246890238e-06
+RayLength3 5.23399703256e-06
+RayLength4 1.99246890238e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object221>
+<Object222>
+Color 13
+Type PlanarPolyhedron
+Position 6.109470808285648e-06, 2.1242130162129956e-05, 2.3160825022624858e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.94345086383e-06
+RayLength2 2.08341399659e-06
+RayLength3 4.94345086383e-06
+RayLength4 2.08341399659e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object222>
+<Object223>
+Color 5
+Type PlanarPolyhedron
+Position 9.9410860931424132e-07, 2.7263925483665276e-05, 2.1326493515403679e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.92313341307e-06
+RayLength2 1.93942442285e-06
+RayLength3 4.92313341307e-06
+RayLength4 1.93942442285e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object223>
+<Object224>
+Color 9
+Type PlanarPolyhedron
+Position 9.649891011373629e-06, 1.8693449584784205e-05, 1.6819813094374293e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.24112758552e-06
+RayLength2 1.86267472882e-06
+RayLength3 5.24112758552e-06
+RayLength4 1.86267472882e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object224>
+<Object225>
+Color 10
+Type PlanarPolyhedron
+Position 7.694982989773519e-06, 2.2981691550123318e-05, 7.3523814584587992e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.70439512765e-06
+RayLength2 1.93267760305e-06
+RayLength3 4.70439512765e-06
+RayLength4 1.93267760305e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object225>
+<Object226>
+Color 7
+Type PlanarPolyhedron
+Position 8.6575683270099398e-06, 9.4870175112210564e-07, 8.7267343746813688e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.00153471394e-06
+RayLength2 2.15330427957e-06
+RayLength3 5.00153471394e-06
+RayLength4 2.15330427957e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object226>
+<Object227>
+Color 14
+Type PlanarPolyhedron
+Position 1.9711134327415524e-06, 1.4183353190182118e-06, 4.8592523732034549e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.63693691923e-06
+RayLength2 2.0360233836e-06
+RayLength3 4.63693691923e-06
+RayLength4 2.0360233836e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object227>
+<Object228>
+Color 11
+Type PlanarPolyhedron
+Position 9.9026805669871763e-06, 1.1974094195872132e-05, 1.1614635027162225e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.66452891638e-06
+RayLength2 1.91815837799e-06
+RayLength3 4.66452891638e-06
+RayLength4 1.91815837799e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object228>
+<Object229>
+Color 7
+Type PlanarPolyhedron
+Position 2.8605410101326321e-06, 8.0122677672175672e-06, 2.1488680906727166e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.74185402194e-06
+RayLength2 2.1332442034e-06
+RayLength3 4.74185402194e-06
+RayLength4 2.1332442034e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object229>
+<Object230>
+Color 7
+Type PlanarPolyhedron
+Position 4.3144474083171441e-06, 8.6667139758610462e-06, 3.6265708662224653e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.29464703457e-06
+RayLength2 1.88376410576e-06
+RayLength3 5.29464703457e-06
+RayLength4 1.88376410576e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object230>
+<Object231>
+Color 15
+Type PlanarPolyhedron
+Position 2.954139239462383e-06, 1.6383560954940832e-05, 1.9368226240255314e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.29338936803e-06
+RayLength2 2.08338512272e-06
+RayLength3 5.29338936803e-06
+RayLength4 2.08338512272e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object231>
+<Object232>
+Color 12
+Type PlanarPolyhedron
+Position 7.139138019798436e-06, 1.3237345307815628e-05, 3.9472098323981124e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.5180033471e-06
+RayLength2 2.11620830381e-06
+RayLength3 4.5180033471e-06
+RayLength4 2.11620830381e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object232>
+<Object233>
+Color 14
+Type PlanarPolyhedron
+Position 3.796163723095893e-06, 1.6240655339475517e-05, 8.2297579012726777e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.77559308741e-06
+RayLength2 1.93547884143e-06
+RayLength3 4.77559308741e-06
+RayLength4 1.93547884143e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object233>
+<Object234>
+Color 13
+Type PlanarPolyhedron
+Position 9.2063676954921785e-06, 2.1478246688216705e-05, 1.9302427354359399e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.71907842434e-06
+RayLength2 2.19785099262e-06
+RayLength3 4.71907842434e-06
+RayLength4 2.19785099262e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object234>
+<Object235>
+Color 2
+Type PlanarPolyhedron
+Position 2.2181347796386197e-06, 5.498203862333443e-06, 1.6535997143338982e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.60314529642e-06
+RayLength2 2.01236576301e-06
+RayLength3 4.60314529642e-06
+RayLength4 2.01236576301e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object235>
+<Object236>
+Color 13
+Type PlanarPolyhedron
+Position 6.3216892963822906e-06, 1.7967600493183135e-05, 8.4153397219884503e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.1968548809e-06
+RayLength2 1.99170891693e-06
+RayLength3 5.1968548809e-06
+RayLength4 1.99170891693e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object236>
+<Object237>
+Color 11
+Type PlanarPolyhedron
+Position 3.5523112965120714e-06, 2.549710421754781e-05, 1.1252635851749798e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.84204059753e-06
+RayLength2 2.15006254263e-06
+RayLength3 4.84204059753e-06
+RayLength4 2.15006254263e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object237>
+<Object238>
+Color 15
+Type PlanarPolyhedron
+Position 1.098666619724713e-06, 1.8913859294510645e-05, 7.2798950018553241e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.10124901978e-06
+RayLength2 1.82052889859e-06
+RayLength3 5.10124901978e-06
+RayLength4 1.82052889859e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object238>
+<Object239>
+Color 11
+Type PlanarPolyhedron
+Position 4.4015792616003384e-06, 1.0900172786761708e-05, 1.3389402080526716e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.43746065539e-06
+RayLength2 1.88685677369e-06
+RayLength3 5.43746065539e-06
+RayLength4 1.88685677369e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object239>
+<Object240>
+Color 12
+Type PlanarPolyhedron
+Position 1.2585738779771638e-06, 4.38429009284527e-06, 1.4393544069846856e-07
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.35139594452e-06
+RayLength2 1.97484314117e-06
+RayLength3 5.35139594452e-06
+RayLength4 1.97484314117e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object240>
+<Object241>
+Color 4
+Type PlanarPolyhedron
+Position 1.6975284333987716e-06, 1.9818968345245507e-05, 1.7253357118426894e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.29226779798e-06
+RayLength2 1.80375555379e-06
+RayLength3 5.29226779798e-06
+RayLength4 1.80375555379e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object241>
+<Object242>
+Color 10
+Type PlanarPolyhedron
+Position 4.2495083847361788e-06, 3.4054838647637516e-06, 1.1861731785326321e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.80497876998e-06
+RayLength2 1.86828079488e-06
+RayLength3 4.80497876998e-06
+RayLength4 1.86828079488e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object242>
+<Object243>
+Color 14
+Type PlanarPolyhedron
+Position 4.0084138613818319e-07, 2.3902660624117523e-05, 1.6184788873999866e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.21905421254e-06
+RayLength2 2.02583738856e-06
+RayLength3 5.21905421254e-06
+RayLength4 2.02583738856e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object243>
+<Object244>
+Color 4
+Type PlanarPolyhedron
+Position 4.2301822413181252e-07, 2.3242099651744588e-05, 1.3202259164663979e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.75871942763e-06
+RayLength2 2.00784047923e-06
+RayLength3 4.75871942763e-06
+RayLength4 2.00784047923e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object244>
+<Object245>
+Color 14
+Type PlanarPolyhedron
+Position 3.5287707322745108e-06, 2.0841342101077249e-05, 2.634619967785057e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.6888939129e-06
+RayLength2 2.08711598294e-06
+RayLength3 4.6888939129e-06
+RayLength4 2.08711598294e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object245>
+<Object246>
+Color 12
+Type PlanarPolyhedron
+Position 4.2611587362843432e-06, 1.4291838845282093e-05, 5.0946127382133995e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.63320104718e-06
+RayLength2 2.17252983449e-06
+RayLength3 4.63320104718e-06
+RayLength4 2.17252983449e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object246>
+<Object247>
+Color 8
+Type PlanarPolyhedron
+Position 8.0157315806484427e-06, 1.2278531941571525e-05, 5.0054941562162104e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.9154545469e-06
+RayLength2 1.93998615308e-06
+RayLength3 4.9154545469e-06
+RayLength4 1.93998615308e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object247>
+<Object248>
+Color 13
+Type PlanarPolyhedron
+Position 8.8727352093722277e-06, 1.2138615822937308e-05, 2.2975602289960838e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.55114724627e-06
+RayLength2 1.98184761576e-06
+RayLength3 4.55114724627e-06
+RayLength4 1.98184761576e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object248>
+<Object249>
+Color 15
+Type PlanarPolyhedron
+Position 4.1137667816771605e-06, 2.4981862087675308e-05, 2.0786467475134222e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.06737054442e-06
+RayLength2 2.05301737212e-06
+RayLength3 5.06737054442e-06
+RayLength4 2.05301737212e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object249>
+<Object250>
+Color 15
+Type PlanarPolyhedron
+Position 8.0227348431373309e-06, 2.5954213813028666e-05, 1.3702223273199547e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.47031078918e-06
+RayLength2 1.88974143758e-06
+RayLength3 5.47031078918e-06
+RayLength4 1.88974143758e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object250>
+<Object251>
+Color 8
+Type PlanarPolyhedron
+Position 2.8224061962590137e-06, 9.9552222815660635e-06, 4.2903452298761835e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.4093968189e-06
+RayLength2 2.15151944895e-06
+RayLength3 5.4093968189e-06
+RayLength4 2.15151944895e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object251>
+<Object252>
+Color 6
+Type PlanarPolyhedron
+Position 7.127496170587548e-06, 7.0145636695747559e-06, 1.3542369294408381e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.74287033064e-06
+RayLength2 2.10176160268e-06
+RayLength3 4.74287033064e-06
+RayLength4 2.10176160268e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object252>
+<Object253>
+Color 6
+Type PlanarPolyhedron
+Position 4.5177686922018942e-06, 7.6963331573894448e-06, 2.7110984016140611e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.33882931784e-06
+RayLength2 1.98048108451e-06
+RayLength3 5.33882931784e-06
+RayLength4 1.98048108451e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object253>
+<Object254>
+Color 2
+Type PlanarPolyhedron
+Position 7.1800817567261202e-06, 1.2545886009732444e-05, 1.8117730940309706e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.51891705928e-06
+RayLength2 2.17782242329e-06
+RayLength3 4.51891705928e-06
+RayLength4 2.17782242329e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object254>
+<Object255>
+Color 8
+Type PlanarPolyhedron
+Position 3.369602404013936e-06, 5.7540871134390001e-06, 9.2377291834986281e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.23791189352e-06
+RayLength2 1.98801691916e-06
+RayLength3 5.23791189352e-06
+RayLength4 1.98801691916e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object255>
+<Object256>
+Color 9
+Type PlanarPolyhedron
+Position 7.4235294243269125e-06, 5.5873361351633462e-06, 7.5855133730008061e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.50701445073e-06
+RayLength2 2.15943083999e-06
+RayLength3 4.50701445073e-06
+RayLength4 2.15943083999e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object256>
+<Object257>
+Color 14
+Type PlanarPolyhedron
+Position 9.362121710769404e-06, 2.0530448818405887e-05, 7.5883306025628952e-07
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.30405917008e-06
+RayLength2 2.05851713301e-06
+RayLength3 5.30405917008e-06
+RayLength4 2.05851713301e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object257>
+<Object258>
+Color 13
+Type PlanarPolyhedron
+Position 4.4634723731260438e-06, 4.0355304191385679e-06, 9.1382253044429706e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.78505810986e-06
+RayLength2 2.04586179123e-06
+RayLength3 4.78505810986e-06
+RayLength4 2.04586179123e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object258>
+<Object259>
+Color 8
+Type PlanarPolyhedron
+Position 9.9105288436822977e-06, 1.4899358699112758e-05, 9.30824617756892e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.64504927172e-06
+RayLength2 1.9216616348e-06
+RayLength3 4.64504927172e-06
+RayLength4 1.9216616348e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object259>
+<Object260>
+Color 14
+Type PlanarPolyhedron
+Position 4.7976350080453751e-06, 1.4225747421371944e-05, 2.5685511326410096e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.31350072304e-06
+RayLength2 2.05553165057e-06
+RayLength3 5.31350072304e-06
+RayLength4 2.05553165057e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object260>
+<Object261>
+Color 14
+Type PlanarPolyhedron
+Position 6.6375356982605466e-06, 1.8845879331112366e-05, 5.1456955572131647e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.42768604379e-06
+RayLength2 1.87257714711e-06
+RayLength3 5.42768604379e-06
+RayLength4 1.87257714711e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object261>
+<Object262>
+Color 2
+Type PlanarPolyhedron
+Position 1.9936179359953732e-06, 1.5167532180087164e-05, 1.0851757422627124e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.88670864033e-06
+RayLength2 2.00059215765e-06
+RayLength3 4.88670864033e-06
+RayLength4 2.00059215765e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object262>
+<Object263>
+Color 6
+Type PlanarPolyhedron
+Position 8.354357813042218e-06, 1.9112735427206671e-05, 6.2874395596679593e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.09716612532e-06
+RayLength2 1.86186219655e-06
+RayLength3 5.09716612532e-06
+RayLength4 1.86186219655e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object263>
+<Object264>
+Color 8
+Type PlanarPolyhedron
+Position 1.7250196459046994e-06, 1.3655395900771363e-05, 1.0148711726758252e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.95855300339e-06
+RayLength2 1.86654092014e-06
+RayLength3 4.95855300339e-06
+RayLength4 1.86654092014e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object264>
+<Object265>
+Color 13
+Type PlanarPolyhedron
+Position 9.9070940524091461e-06, 2.5974336540930478e-05, 8.4962243042829667e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.10973170297e-06
+RayLength2 2.15959894985e-06
+RayLength3 5.10973170297e-06
+RayLength4 2.15959894985e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object265>
+<Object266>
+Color 15
+Type PlanarPolyhedron
+Position 1.7388249001517251e-06, 2.508919340542459e-05, 6.9213716199864901e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.24479367182e-06
+RayLength2 2.13100141799e-06
+RayLength3 5.24479367182e-06
+RayLength4 2.13100141799e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object266>
+<Object267>
+Color 14
+Type PlanarPolyhedron
+Position 6.7598393876043698e-06, 1.8473111647299628e-05, 9.545435812893912e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.10988290052e-06
+RayLength2 1.99169623674e-06
+RayLength3 5.10988290052e-06
+RayLength4 1.99169623674e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object267>
+<Object268>
+Color 4
+Type PlanarPolyhedron
+Position 5.6101268829933619e-06, 1.3931971940551682e-05, 5.679514672566551e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.07868170918e-06
+RayLength2 1.85595530028e-06
+RayLength3 5.07868170918e-06
+RayLength4 1.85595530028e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object268>
+<Object269>
+Color 9
+Type PlanarPolyhedron
+Position 1.2148971966812337e-06, 1.5933294640241717e-05, 1.4885842523179126e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.91040874025e-06
+RayLength2 2.10024620745e-06
+RayLength3 4.91040874025e-06
+RayLength4 2.10024620745e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object269>
+<Object270>
+Color 10
+Type PlanarPolyhedron
+Position 5.0322053298977703e-06, 8.930690230051294e-06, 1.7823721619713341e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.37530492369e-06
+RayLength2 1.88253407481e-06
+RayLength3 5.37530492369e-06
+RayLength4 1.88253407481e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object270>
+<Object271>
+Color 5
+Type PlanarPolyhedron
+Position 6.7816563846041505e-06, 3.0930655740149585e-06, 9.8140666975343799e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.43742418897e-06
+RayLength2 1.94403134863e-06
+RayLength3 5.43742418897e-06
+RayLength4 1.94403134863e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object271>
+<Object272>
+Color 14
+Type PlanarPolyhedron
+Position 8.3913617362246839e-06, 1.4345224123196778e-05, 8.8581890344131081e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.14114328166e-06
+RayLength2 1.90160199579e-06
+RayLength3 5.14114328166e-06
+RayLength4 1.90160199579e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object272>
+<Object273>
+Color 6
+Type PlanarPolyhedron
+Position 8.2308012126858415e-06, 2.0930607059327023e-06, 2.5632740432354157e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.27126513576e-06
+RayLength2 2.12016077264e-06
+RayLength3 5.27126513576e-06
+RayLength4 2.12016077264e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object273>
+<Object274>
+Color 5
+Type PlanarPolyhedron
+Position 6.4481705316300378e-06, 2.3139714257390988e-05, 4.227982434964256e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.32551894527e-06
+RayLength2 1.82243017372e-06
+RayLength3 5.32551894527e-06
+RayLength4 1.82243017372e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object274>
+<Object275>
+Color 7
+Type PlanarPolyhedron
+Position 5.4497513244358822e-06, 8.0492107418503235e-06, 1.1321237247251054e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.98881929126e-06
+RayLength2 2.19647493154e-06
+RayLength3 4.98881929126e-06
+RayLength4 2.19647493154e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object275>
+<Object276>
+Color 4
+Type PlanarPolyhedron
+Position 3.4794832518473271e-06, 6.8827666285227676e-06, 1.0479622989914645e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.19792277859e-06
+RayLength2 1.84587845018e-06
+RayLength3 5.19792277859e-06
+RayLength4 1.84587845018e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object276>
+<Object277>
+Color 10
+Type PlanarPolyhedron
+Position 9.9638313664299013e-06, 2.6587506826315086e-05, 2.3937140975384495e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.93400677367e-06
+RayLength2 1.83963635018e-06
+RayLength3 4.93400677367e-06
+RayLength4 1.83963635018e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object277>
+<Object278>
+Color 15
+Type PlanarPolyhedron
+Position 6.5529439910079896e-06, 1.0861684170362394e-05, 2.1512941209743078e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.869888313e-06
+RayLength2 1.93487831716e-06
+RayLength3 4.869888313e-06
+RayLength4 1.93487831716e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object278>
+<Object279>
+Color 13
+Type PlanarPolyhedron
+Position 1.7027687982312831e-06, 2.614875520499727e-05, 3.7576688634192761e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.66471286596e-06
+RayLength2 2.19856096689e-06
+RayLength3 4.66471286596e-06
+RayLength4 2.19856096689e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object279>
+<Object280>
+Color 11
+Type PlanarPolyhedron
+Position 4.9852188016144992e-07, 4.4239385668136103e-06, 2.5495893127156801e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.71374913041e-06
+RayLength2 1.80140618642e-06
+RayLength3 4.71374913041e-06
+RayLength4 1.80140618642e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object280>
+<Object281>
+Color 13
+Type PlanarPolyhedron
+Position 5.6925099670981664e-06, 2.5111964597356556e-05, 2.3584342371925037e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.92053128811e-06
+RayLength2 1.8398466825e-06
+RayLength3 4.92053128811e-06
+RayLength4 1.8398466825e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object281>
+<Object282>
+Color 14
+Type PlanarPolyhedron
+Position 7.4174018189383566e-06, 3.3367364127543444e-06, 1.1518370632560425e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.42764096761e-06
+RayLength2 1.87740169093e-06
+RayLength3 5.42764096761e-06
+RayLength4 1.87740169093e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object282>
+<Object283>
+Color 9
+Type PlanarPolyhedron
+Position 6.7711406722850872e-06, 1.4065555077584037e-05, 7.2829913701641086e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.04009352738e-06
+RayLength2 2.10830442222e-06
+RayLength3 5.04009352738e-06
+RayLength4 2.10830442222e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object283>
+<Object284>
+Color 12
+Type PlanarPolyhedron
+Position 4.837788294313114e-06, 2.1846948784959724e-05, 3.1008281004577848e-06
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.10533423332e-06
+RayLength2 1.99033922378e-06
+RayLength3 5.10533423332e-06
+RayLength4 1.99033922378e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object284>
+<Object285>
+Color 6
+Type PlanarPolyhedron
+Position 6.4569161011717671e-06, 1.6724004633824135e-05, 1.5290723573678555e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.58950147095e-06
+RayLength2 1.87965430211e-06
+RayLength3 4.58950147095e-06
+RayLength4 1.87965430211e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object285>
+<Object286>
+Color 1
+Type PlanarPolyhedron
+Position 3.7247457287977801e-06, 1.4616960197211674e-07, 2.676540432825904e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.46165061815e-06
+RayLength2 1.91652625417e-06
+RayLength3 5.46165061815e-06
+RayLength4 1.91652625417e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object286>
+<Object287>
+Color 4
+Type PlanarPolyhedron
+Position 7.1812498972501483e-06, 1.1399059268521289e-05, 1.8342592734946633e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.77035301152e-06
+RayLength2 1.97525797157e-06
+RayLength3 4.77035301152e-06
+RayLength4 1.97525797157e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object287>
+<Object288>
+Color 7
+Type PlanarPolyhedron
+Position 9.3747472306414629e-06, 1.4988305413502463e-05, 2.1867848199965857e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.20759144751e-06
+RayLength2 2.12165795084e-06
+RayLength3 5.20759144751e-06
+RayLength4 2.12165795084e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object288>
+<Object289>
+Color 8
+Type PlanarPolyhedron
+Position 6.2410056031150382e-06, 1.963514817173884e-05, 1.4083722194125766e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.34322697958e-06
+RayLength2 1.96949950869e-06
+RayLength3 5.34322697958e-06
+RayLength4 1.96949950869e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object289>
+<Object290>
+Color 13
+Type PlanarPolyhedron
+Position 9.1429213412997586e-07, 1.0815635739784437e-05, 2.1972910429123468e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.40201804512e-06
+RayLength2 1.83758709194e-06
+RayLength3 5.40201804512e-06
+RayLength4 1.83758709194e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object290>
+<Object291>
+Color 3
+Type PlanarPolyhedron
+Position 1.8687354715433035e-06, 2.6287661845553471e-05, 2.2464900204879061e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.6202753597e-06
+RayLength2 1.87758521922e-06
+RayLength3 4.6202753597e-06
+RayLength4 1.87758521922e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object291>
+<Object292>
+Color 9
+Type PlanarPolyhedron
+Position 9.1040292790547357e-06, 1.7149067020272674e-05, 2.0056575635096751e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.35721859429e-06
+RayLength2 1.92923324065e-06
+RayLength3 5.35721859429e-06
+RayLength4 1.92923324065e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object292>
+<Object293>
+Color 8
+Type PlanarPolyhedron
+Position 8.7437842136286978e-06, 2.2242693860384091e-05, 6.431097751536374e-07
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.58592521363e-06
+RayLength2 2.17337356194e-06
+RayLength3 4.58592521363e-06
+RayLength4 2.17337356194e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object293>
+<Object294>
+Color 12
+Type PlanarPolyhedron
+Position 7.1195701299819333e-07, 2.2012510050402998e-05, 1.6170211069398263e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.86865594796e-06
+RayLength2 1.95966705141e-06
+RayLength3 4.86865594796e-06
+RayLength4 1.95966705141e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object294>
+<Object295>
+Color 2
+Type PlanarPolyhedron
+Position 9.339572269302575e-06, 8.1103893428244891e-06, 2.105069502442425e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.22594370497e-06
+RayLength2 2.0805532163e-06
+RayLength3 5.22594370497e-06
+RayLength4 2.0805532163e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object295>
+<Object296>
+Color 12
+Type PlanarPolyhedron
+Position 5.8500002601622799e-07, 2.0711871989864537e-05, 2.6364072072913508e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 4.56270138512e-06
+RayLength2 1.98389230709e-06
+RayLength3 4.56270138512e-06
+RayLength4 1.98389230709e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object296>
+<Object297>
+Color 4
+Type PlanarPolyhedron
+Position 8.9497560915592403e-06, 1.622636041011223e-05, 2.5785327195982579e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.43354415192e-06
+RayLength2 1.80807231842e-06
+RayLength3 5.43354415192e-06
+RayLength4 1.80807231842e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object297>
+<Object298>
+Color 13
+Type PlanarPolyhedron
+Position 8.3381782030339405e-06, 2.270239711675007e-06, 1.0814760924163672e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.09550514618e-06
+RayLength2 1.9621376077e-06
+RayLength3 5.09550514618e-06
+RayLength4 1.9621376077e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object298>
+<Object299>
+Color 9
+Type PlanarPolyhedron
+Position 2.1193201113827564e-06, 3.5291975939908596e-06, 1.7922200442505217e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.35290172574e-06
+RayLength2 1.9069779756e-06
+RayLength3 5.35290172574e-06
+RayLength4 1.9069779756e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object299>
+<Object300>
+Color 9
+Type PlanarPolyhedron
+Position 9.4405908573224494e-06, 5.91137285178777e-06, 1.9822986169384134e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.46832413005e-06
+RayLength2 1.99963496357e-06
+RayLength3 5.46832413005e-06
+RayLength4 1.99963496357e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object300>
+<Object301>
+Color 8
+Type PlanarPolyhedron
+Position 8.1420796256921932e-06, 2.3756042908065446e-06, 1.3647318306623414e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.34922376384e-06
+RayLength2 2.15475879867e-06
+RayLength3 5.34922376384e-06
+RayLength4 2.15475879867e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object301>
+<Object302>
+Color 2
+Type PlanarPolyhedron
+Position 3.1896801256692762e-06, 2.3962524011769901e-05, 2.7496446497780479e-05
+Thickness 5e-07
+Axis1 1.0, 0.0, 0.0
+Axis2 0.0, -1.0, 0.0
+Rays 4
+RayLength1 5.40933657535e-06
+RayLength2 1.87330263685e-06
+RayLength3 5.40933657535e-06
+RayLength4 1.87330263685e-06
+RayAngle1 90
+RayAngle2 90
+RayAngle3 90
+</Object302>
+</GadAddDialog>

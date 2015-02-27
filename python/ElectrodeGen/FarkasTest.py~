@@ -1,0 +1,5 @@
+from ElectrodeGenerator import *
+p1 = GetRandomPlatelet(1,[40,110,110], [8,4,1])
+p2 = GetRandomPlatelet(2,[40,110,110], [8,4,1])
+np.linalg.norm(p1.GetPos()-p2.GetPos())
+

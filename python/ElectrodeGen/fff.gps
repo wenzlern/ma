@@ -1,0 +1,36 @@
+  <GadAddDialog>
+    Unit 2
+    KeepStructure 0
+    <World>
+      PeriodicX false
+      PeriodicY false
+      PeriodicZ false
+      OriginX 0
+      OriginY 0
+      OriginZ 0
+      VoxelLength 1e-06
+      WorldMode VoxelNumber
+      NX 110
+      NY 110
+      NZ 110
+      OverlapMode OverlapColor
+      Color 0
+    </World>
+    NumberOfObjects 1
+    <Object1>
+      Color 1
+      Type PlanarPolyhedron
+      Position 1e-05,2e-05,2e-06
+      Thickness 3e-06
+      Axis1 0,0,1
+      Axis2 0,-1,0
+      Rays 4
+      RayLength1 2e-05
+      RayLength2 1e-05
+      RayLength3 2e-05
+      RayLength4 1e-05
+      RayAngle1 90
+      RayAngle2 90
+      RayAngle3 90
+    </Object1>
+  </GadAddDialog>

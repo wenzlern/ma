@@ -7,8 +7,8 @@ __maintainer__ = "Nils Wenzler"
 __email__      = "wenzlern@ethz.ch"
 
 # Imports
-import lxml.etree
-import lxml.builder
+#import lxml.etree
+#import lxml.builder
 import collections
 import random
 import numpy as np
@@ -31,14 +31,14 @@ def Rotate3DVector(vector, axis, theta):
 
     return np.dot(RotMat, vector)
 
-def unit_vector(vector):
+def normvec(vector):
     """ Returns the unit vector of the vector."""
     return vector / np.linalg.norm(vector)
 
 def angle(v1, v2):
 
-    v1_u = unit_vector(v1)
-    v2_u = unit_vector(v2)
+    v1_u = normvec(v1)
+    v2_u = normvec(v2)
 
     angle = np.arccos(np.dot(v1_u, v2_u))
     if np.isnan(angle):
@@ -55,7 +55,7 @@ def GetAxis(direction, angle):
     axis1 = direction/np.linalg.norm(direction) 
     axis2 = Rotate3DVector([0,-1,0], direction, angle)
 
-    return axis1.tolist(), axis2.tolist()
+    return (normvec(axis1)).tolist(), (normvec(axis2)).tolist()
 
 def GetRayLengths(longdiam, shortdiam, sizedisp=None, shapedisp=None):
     """Creates the raylength and angles from input param"""
@@ -99,10 +99,22 @@ def PlaneFrom3Points(p1, p2, p3):
     # Calculate the coefficients
     ab = p2-p1
     ac = p3-p1
-    A = np.cross(ab,ac)
-    d = -np.dot(np.cross(ab,ac), p1)
+    A = normvec(np.cross(ab,ac))
+    d = -np.dot(A, p1)
 
     return A, d
+
+def AxbEntryFrom3Points(p1,p2,p3):
+    # If the vector points in the negative direction of [1,1,1]
+    # we need to multiply A and b with (-1) to flip the sign of
+    # that respective Ax<=b entry
+    A, d = PlaneFrom3Points(p1, p2, p3)
+    if angle(A, np.asarray([1,1,1])) > (np.pi/2):
+        A = -A
+        d = -d
+
+    return A, d
+
 
 # Classes
 class Platelet:
@@ -141,7 +153,7 @@ class Platelet:
         self.Modified = False
         
         # Matrix description of the platelet
-        self.A = np.zeros((6,3))
+        self.A = np.zeros((6,3)) 
         self.b = np.zeros((6,1))
 
 
@@ -184,32 +196,23 @@ class Platelet:
         P42 -= (self.Param['Thickness'] *  np.asarray(self.Param['Axis1']))
 
         # Now we calculate the hyperplane coefficients
-        self.A[0], self.b[0] = PlaneFrom3Points(P11, P12, P21)
-        self.A[1], self.b[1] = PlaneFrom3Points(P21, P22, P31)
-        self.A[2], self.b[2] = PlaneFrom3Points(P31, P32, P41)
-        self.A[3], self.b[3] = PlaneFrom3Points(P41, P42, P11)
-        self.A[4], self.b[4] = PlaneFrom3Points(P11, P21, P31)
-        self.A[5], self.b[5] = PlaneFrom3Points(P12, P22, P32)
+        self.A[0], self.b[0] = AxbEntryFrom3Points(P12, P11, P21)#(P11, P12, P21)
+        self.A[1], self.b[1] = AxbEntryFrom3Points(P22, P21, P31)#(P21, P22, P31)
+        self.A[2], self.b[2] = AxbEntryFrom3Points(P32, P31, P41)#(P31, P32, P41)
+        self.A[3], self.b[3] = AxbEntryFrom3Points(P42, P41, P11)#(P41, P42, P11)
+        # Point order changed for A[4] so that the normal vector 
+        # points to the center of the platelet
+        self.A[4], self.b[4] = AxbEntryFrom3Points(P11, P21, P31)
+        self.A[5], self.b[5] = AxbEntryFrom3Points(P12, P22, P32)
 
-        # The three planes that have a positive distance from the origin of 
-        # the platelet need to have their normal vector (A) inverted in order
-        # to get an "enclosed area" instead of an exclusive between the
-        # parallel planes
-        #Axis1ToPosVec = angle(np.asarray(self.Param['Position']), 
-        #                      np.asarray(self.Param['Axis1']))
-        #Axis2ToPosVec = angle(np.asarray(self.Param['Position']), 
-        #                      np.asarray(self.Param['Axis2']))
-        #Axis3ToPosVec = angle(np.asarray(self.Param['Position']), 
-        #                      np.asarray(self.Param['Axis3']))
-
-        #for l in np.shape(self.A)[0]:
-            
-        self.A[0] = -1*self.A[0]
-        self.A[1] = -1*self.A[1]
-        self.A[2] = -1*self.A[2]
-        self.A[3] = -1*self.A[3]
-        self.A[4] = -1*self.A[4]
-        #self.A[5] = -1*self.A[5]
+#        self.A[0], self.b[0] = PlaneFrom3Points(P12, P11, P21)
+#        self.A[1], self.b[1] = PlaneFrom3Points(P22, P21, P31)
+#        self.A[2], self.b[2] = PlaneFrom3Points(P32, P31, P41)
+#        self.A[3], self.b[3] = PlaneFrom3Points(P42, P41, P11)
+#        # Point order changed for A[4] so that the normal vector 
+#        # points to the center of the platelet
+#        self.A[4], self.b[4] = PlaneFrom3Points(P11, P21, P31)
+#        self.A[5], self.b[5] = PlaneFrom3Points(P12, P22, P32)
 
 
     def GetPos(self):
