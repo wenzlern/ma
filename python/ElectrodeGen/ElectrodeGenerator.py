@@ -10,7 +10,7 @@ __email__      = "wenzlern@ethz.ch"
 from PlateletClass import *
 import random
 import sys
-import ecos
+#import ecos
 from scipy.sparse import csr_matrix
 
 def statusbar(progress, total):  
@@ -20,8 +20,9 @@ def GetRandomPlatelet(number, electrodedim, plateletdim, disparity=None, color=N
     position = [random.uniform(0, electrodedim[0]), random.uniform(0, electrodedim[1]),
                 random.uniform(0, electrodedim[2])]
     if align:
-        direction = [random.uniform(-0.2,0.2),random.uniform(-0.2,0.2)
-                    ,random.uniform(0.8,1)]
+        #direction = [random.uniform(-0.2,0.2),random.uniform(-0.2,0.2)
+        #            ,random.uniform(0.8,1)]
+        direction = [0,0,1]
         angle = random.randint(0,180)
     else:
         direction = [random.uniform(-1, 1), random.uniform(-1, 1),
@@ -102,56 +103,65 @@ def InterferenceAlign(object1, object2, objectdim, NrOfPos):
         print("This particle is doooomed")
         return True
     else:
-        dist = np.linalg.norm(object1.GetPos()-object2.GetPos())
-        object1Ax3 = Rotate3DVector(object1.GetAx2(), object1.GetAx1(), 90)
-        object2Ax3 = Rotate3DVector(object2.GetAx2(), object2.GetAx1(), 90)
+        distvec = object2.GetPos() - object1.GetPos()
+        distvecnorm = normvec(distvec)
+        dist = np.linalg.norm(distvec)
+
         if dist < (objectdim[0]):
-            if (dist < (np.dot(object1.GetAx2(), object2.GetAx2())*objectdim[0]/2)) or (dist < (np.dot(object1Ax3, object2Ax3)*objectdim[1]/2)) or (dist < (np.dot(-object1.GetAx2(), object2.GetAx2())*objectdim[0]/2)) or (dist < (np.dot(-object1Ax3, object2Ax3)*objectdim[1]/2)) or (dist < (np.dot(object1.GetAx2(), -object2.GetAx2())*objectdim[0]/2)) or (dist < (np.dot(object1Ax3, -object2Ax3)*objectdim[1]/2)) or (dist < (np.dot(-object1.GetAx2(), -object2.GetAx2())*objectdim[0]/2)) or (dist < (np.dot(-object1Ax3, -object2Ax3)*objectdim[1]/2)):
-                #ax1, ax2 = GetAxis(object2.GetAx1(), NrOfPos)
-                #object2.SetAx1([ax1[0]*random.uniform(0.001,0.1), 
-                #                  ax1[1]*random.uniform(0.001,0.1), 
-                #                  ax1[2]*random.uniform(0.001,0.1)])
 
-                ax1, ax2 = GetAxis([random.uniform(-0.2,0.2),random.uniform(-0.2,0.2)
-                                   ,random.uniform(0.8,1)] ,random.uniform(0,180))
+            object1Ax3 = Rotate3DVector(object1.GetAx2(), object1.GetAx1(), 90)
+            object2Ax3 = Rotate3DVector(object2.GetAx2(), object2.GetAx1(), 90)
 
-                object2.SetAx1(ax1)
-                object2.SetAx2(ax2)
+            # First check if the platelet (aligned) is less than it's thickness away in ax1 direction
+            if (np.abs(np.dot(distvec, object1.GetAx1())) < objectdim[2]):
+                if(np.abs(np.dot(distvec, object1.GetAx2()))*objectdim[1]/objectdim[0] < np.abs(np.dot(distvec, object1Ax3))):
+                    ax1, ax2 = GetAxis(object2.GetAx1(), NrOfPos)
+                    #object2.SetAx1([ax1[0]*random.uniform(0.001,0.1), 
+                    #                  ax1[1]*random.uniform(0.001,0.1), 
+                    #                  ax1[2]*random.uniform(0.001,0.1)])
 
-                #object2.SetAx2([ax2[0]*random.uniform(0,0.1), 
-                #                ax2[1]*random.uniform(0,0.1), 
-                #                ax2[2]*random.uniform(0,0.1)])
+                    #ax1, ax2 = GetAxis([random.uniform(-0.2,0.2),random.uniform(-0.2,0.2)
+                    #                   ,random.uniform(0.8,1)] ,random.uniform(0,180))
 
-                #object2.SetAx1(ax1)
-                return InterferenceAlign(object1, object2, objectdim, NrOfPos - 1)
+                    #object2.SetAx1(ax1)
+                    object2.SetAx2(ax2)
+
+                    #object2.SetAx2([ax2[0]*random.uniform(0,0.1), 
+                    #                ax2[1]*random.uniform(0,0.1), 
+                    #                ax2[2]*random.uniform(0,0.1)])
+
+                    #object2.SetAx1(ax1)
+                    return InterferenceAlign(object1, object2, objectdim, NrOfPos - 10)
+                else:
+                    return False
             else:
                 return False
         else:
             return False
 
-def FarkasInterferenceTest(obj1, obj2, threshold):
-    # We only use the Farkas lemma if we could have interference 
-    # due to it beeing expensive computationally
-    dist = np.linalg.norm(obj1.GetPos()-obj2.GetPos())
-    if dist < threshold:
-        # Calculate the Matrix description of the platelet
-        obj1.GetPlateletDef()
-        obj2.GetPlateletDef()
-
-        # Build the matrizes that describe the linear programing problem
-        A = csr_matrix(np.transpose(np.vstack((obj1.A, obj2.A))))
-        b = np.zeros(3)
-        c = np.ones(12)
-        G = csr_matrix(np.vstack((np.transpose(np.vstack((obj1.b, obj2.b))), -np.identity(12))))
-        h = np.zeros(13)
-
-        dims = {'l': np.shape(G)[0], 'g': []}
-
-        res = ecos.solve(c, G, h, dims,  A, b)
-        return res
-
-    else:
-        return False
+#def FarkasInterferenceTest(obj1, obj2, threshold):
+#    # We only use the Farkas lemma if we could have interference 
+#    # due to it beeing expensive computationally
+#    dist = np.linalg.norm(obj1.GetPos()-obj2.GetPos())
+#    if dist < threshold:
+#        # Calculate the Matrix description of the platelet
+#        obj1.GetPlateletDef()
+#        obj2.GetPlateletDef()
+#
+#        # Build the matrizes that describe the linear programing problem
+#        A = csr_matrix(np.transpose(np.vstack((obj1.A, obj2.A))))
+#        b = np.zeros(3)
+#        c = np.ones(12)
+#        G = csr_matrix(np.vstack((np.transpose(np.vstack((obj1.b, obj2.b))), -np.identity(12))))
+#        h = np.zeros(13)
+#
+#        dims = {'l': np.shape(G)[0], 'g': []}
+#
+#        res = ecos.solve(c, G, h, dims,  A, b)
+#        return res
+#
+#    else:
+#        return False
 
 # Generators
 def RandomOverlapping(size, plateletdim, voxelsize, 

@@ -80,7 +80,7 @@ def AlignNonOverlapping(tup):
         NewPlatelet.Modified=False
 
         for s in TestedPlatelets:
-            if InterferenceAlign(s, NewPlatelet, args.platelet, 10):
+            if InterferenceAlign(s, NewPlatelet, args.platelet, 100):
                 return
 
     # If we got until here we succeded
